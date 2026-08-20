@@ -1,0 +1,9 @@
+  ### Key Decisions Needed:
+
+  1. Azure Resource Setup: Do you have existing Azure credentials or an active subscription configured on this terminal? We will
+  need to set up resources like Azure App Service, Azure Database for MySQL, Azure Blob Storage, and Azure Cache for Redis.
+  2. Identity Protection: Should we integrate Azure AD B2C for credential flow, or are you looking to use a different OpenID Connect
+  (OIDC) provider?
+  3. Cognitive & Media Services: Would you prefer using Azure Language Services (for comment sentiment checks) and Azure Media
+  Services (for event-driven FFmpeg transcoding), or run them as custom integrations in Node?
+

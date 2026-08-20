@@ -1,0 +1,466 @@
+.index_header{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+
+  & .header_logo {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+
+    & > img{
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      align-self: flex-start;
+      object-fit: cover;
+    }
+
+    & > hr{
+      display: none;
+    }
+
+    & > span{
+      font-size: 24px;
+      font-family: 'Satisfy', cursive;
+      font-weight: bold;
+      line-height: 1.1;
+    }
+
+  }
+
+  & .right{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    & a{
+      border: 1px solid $ee;
+      outline: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #3d464d;
+      background: $ff;
+      text-decoration: none;
+      transition: all 0.15s ease;
+
+      &:hover{
+        background: rgba(0, 149, 246, 0.08);
+        color: $pric;
+        border-color: rgba(0, 149, 246, 0.3);
+      }
+
+      &:focus{
+        background: rgba(0, 149, 246, 0.12);
+        color: $pric;
+      }
+
+    }
+
+  }
+
+}
+
+.display_text {
+  text-align: center;
+	margin-bottom: 22px;
+
+	& > span{
+		font-size: 20px;
+    font-weight: 700;
+		color: $dark;
+	}
+
+}
+
+.log_sign{
+  position: absolute;
+  right: 32px;
+  top: 72px;
+  z-index: 10;
+
+	& > a{
+		padding: 8px 18px;
+		border-radius: 6px;
+		font-size: 13px;
+    font-weight: 600;
+    color: #ffffff !important;
+    background: $pric;
+    border: none;
+    box-shadow: 0 3px 10px rgba(0, 149, 246, 0.25);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &:link, &:visited, &:hover, &:focus, &:active {
+      color: #ffffff !important;
+    }
+
+    &:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 14px rgba(0, 149, 246, 0.35);
+    }
+	}
+
+}
+
+.cua{
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  padding: 36px 32px 28px 32px;
+  box-sizing: border-box;
+
+  & form > input{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    padding: 9px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: 1px solid #dbdbdb;
+    background: #fafafa;
+    box-sizing: border-box;
+
+    &:focus {
+      background: #ffffff;
+      border-color: $pric;
+      box-shadow: 0 0 0 3px rgba(0, 149, 246, 0.15);
+    }
+  }
+
+  & input[type='password']{
+    padding-right: 38px;
+  }
+
+  & input[type='submit']{
+    width: 100%;
+    height: 38px;
+    margin-top: 4px;
+    background: $pric;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    box-shadow: 0 3px 12px rgba(0, 149, 246, 0.28);
+    transition: all 0.15s ease;
+
+    &:hover, &:focus {
+      opacity: 0.94;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 16px rgba(0, 149, 246, 0.38);
+      color: #ffffff !important;
+    }
+  }
+
+  & .forgot_psswrd{
+    text-align: center;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #efefef;
+
+    & > a{
+      font-size: 12px;
+      color: $d_light;
+      position: static;
+
+      &:hover {
+        color: $pric;
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+}
+
+.show_psswrd{
+  position: absolute;
+  right: 12px;
+  top: 59px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8e8e8e;
+  font-size: 13.5px;
+  cursor: pointer;
+  z-index: 5;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $pric;
+  }
+}
+
+// FORGOT PASSWORD
+.forgot_password {
+
+  & .display_text {
+    margin-bottom: 66px;
+  }
+
+  & .fp_span {
+    font-size: 15px;
+  }
+
+  & input[type='email'] {
+    padding: 8px;
+    width: 300px;
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  & input[type='submit'] {
+    display: inline-block;
+    padding: 7px 18px;
+    width: 130px;
+  }
+
+}
+
+// REGISTER PAGE
+.register {
+  & .small_input {
+    position: relative;
+    width: 123px;
+    display: inline-block;
+  }
+
+  & .s_firstname {
+    margin-right: 5px;
+  }
+
+  & .terms_div {
+    position: relative;
+    margin-bottom: 14px;
+
+    & input[type='checkbox']{
+      position: relative;
+      top: 3px;
+    }
+
+  }
+
+  & .s_p_l {
+    bottom: 81px;
+    right: 17px;
+  }
+
+  & .username_checker {
+    position: absolute;
+    right: -188px;
+    top: 96px;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid $ee;
+    background: $fb;
+    display: none;
+    width: 160px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: wheat;
+      transform: rotate(45deg);
+      left: -5px;
+      top: 12px;
+      background: $fb;
+      border-left: 1px solid $ee;
+      border-bottom: 1px solid $ee;
+    }
+
+    & > .checker_icon {
+      position: absolute;
+      margin-left: 4px;
+
+      & > i {
+        font-size: 18px;
+      }
+    }
+
+  }
+
+}
+
+// REGISTERED PAGE
+.registered{
+  position: absolute;
+  background: $ff;
+  padding: 20px;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 0px $light_shadow;
+}
+
+// WELCOME AND ERROR PAGE
+.welcome_div{
+  @include center;
+  & img{
+    height: 300px;
+  }
+}
+
+// GITHUB STATS ON WELCOME PAGE
+.github-stats {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+// QUICK LOGIN
+.quick_login{
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+
+  & .clear_all_ql{
+    display: block;
+    position: absolute;
+    width: 100%;
+    width: 153px;
+    right: 1px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 15px;
+    top: -45px;
+  }
+
+  & .q_l_div{
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+
+    &:hover{
+      transform: translateY(-5px);
+    }
+
+    & img{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+  }
+
+}
+
+// QUICK LOGIN MODAL
+.q_l_model{
+  background: #fff;
+  z-index: 3;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  border-radius: 3px;
+  width: 300px;
+  display: none;
+  transition: display .4s;
+
+  & .q_l_m_cancel_div{
+    text-align: right;
+
+    & .q_l_m_cancel{
+      display: inline-block;
+      cursor: pointer;
+      height: 24px;
+      border-radius: 2px;
+
+      &:hover{
+        background: #f7f5f5;
+      }
+    }
+
+  }
+
+  & .q_l_m_main{
+
+    & .q_l_m_img_div{
+      text-align: center;
+
+      & img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+
+      & .q_l_username{
+        font-weight: 600;
+        font-size: 15px;
+        display: block;
+        margin-top: 4px;
+      }
+
+    }
+
+    & .q_l_m_form{
+      margin-top: 21px;
+      text-align: center;
+
+      & #q_l_password{
+        display: block;
+        padding: 7px;
+        width: 94.4%;
+        font-size: 14px;
+      }
+
+      & input[type="submit"]{
+        padding: 7px 15px;
+        margin-top: 6px;
+        width: 100%;
+        font-size: 14px;
+      }
+
+      & .s_p_ql {
+        bottom: 82px;
+        right: 28px;
+      }
+
+      & .q_l_m_bottom{
+        margin-top: 4px;
+        text-align: left;
+
+        & .q_l_show_psswrd{
+          right: 25px;
+          top: 198px;
+        }
+      }
+
+    }
+
+    & .q_l_remove{
+      position: absolute;
+      top: 16px;
+      font-weight: 600;
+      padding: 3px 12px;
+    }
+
+  }
+
+}
