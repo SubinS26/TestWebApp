@@ -1,4 +1,5 @@
 // POST IT
+.popup-wrapper-class,
 .post{
   position: fixed;
   top: 50%;
@@ -14,7 +15,7 @@
   border-radius: 12px;
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.28);
   border: 1px solid #e4e4e4;
-  z-index: 1000;
+  z-index: 9999;
   box-sizing: border-box;
   overflow: visible;
   transition: all .1s ease-in-out;
@@ -341,10 +342,24 @@
 
       & a.pri_btn, & a.p_post{
         padding: 6px 18px;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 12.5px;
         border-radius: 6px;
         margin: 0;
+        color: #0095f6 !important;
+        background: rgba(0, 149, 246, 0.08);
+        border: 1px solid rgba(0, 149, 246, 0.25);
+        transition: all 0.15s ease;
+
+        &:hover {
+          background: rgba(0, 149, 246, 0.16);
+          color: #0074cc !important;
+        }
+
+        &.a_disabled {
+          opacity: 0.5;
+          color: #0095f6 !important;
+        }
       }
 
     }

@@ -19,7 +19,12 @@ const ConversationMedia = ({ media }) => {
     <div className="sli_media">
       <span className="sli_label">Media</span>
       {media && media.length == 0 ? (
-        <Nothing conPage showMssg={false} />
+        <Nothing
+          conPage
+          showImg={false}
+          showMssg
+          mssg="Looks like you have no Media"
+        />
       ) : (
         map_media
       )}

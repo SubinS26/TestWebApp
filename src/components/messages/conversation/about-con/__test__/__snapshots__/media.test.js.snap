@@ -30,13 +30,15 @@ exports[`ConversationMedia Component should match snapshot and show <Nothing/> w
     className="home_last_mssg"
     style={
       Object {
-        "border": "none",
+        "border": "",
       }
     }
   >
-    <img
-      src="/images/elephant-march.png"
-    />
+    <span
+      className="nothingMssg"
+    >
+      Looks like you have no Media
+    </span>
     <span
       className="secondMssg"
     >

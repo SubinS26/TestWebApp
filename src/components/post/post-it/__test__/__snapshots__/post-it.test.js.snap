@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PostIt Component should match snapshot with type group 1`] = `
-<div>
+<div
+  className="post_it_portal_container"
+>
   <div
     className="overlay"
     onClick={null}
@@ -13,17 +15,14 @@ exports[`PostIt Component should match snapshot with type group 1`] = `
     }
   />
   <div
-    className="post"
+    className="post popup-wrapper-class"
     style={
       Object {
-        "bottom": "auto",
         "left": "50%",
-        "margin": 0,
         "position": "fixed",
-        "right": "auto",
         "top": "50%",
         "transform": "translate(-50%, -50%)",
-        "zIndex": 1000,
+        "zIndex": 9999,
       }
     }
   >
@@ -175,7 +174,9 @@ exports[`PostIt Component should match snapshot with type group 1`] = `
 `;
 
 exports[`PostIt Component should match snapshot with type user 1`] = `
-<div>
+<div
+  className="post_it_portal_container"
+>
   <div
     className="overlay"
     onClick={null}
@@ -187,17 +188,14 @@ exports[`PostIt Component should match snapshot with type user 1`] = `
     }
   />
   <div
-    className="post"
+    className="post popup-wrapper-class"
     style={
       Object {
-        "bottom": "auto",
         "left": "50%",
-        "margin": 0,
         "position": "fixed",
-        "right": "auto",
         "top": "50%",
         "transform": "translate(-50%, -50%)",
-        "zIndex": 1000,
+        "zIndex": 9999,
       }
     }
   >

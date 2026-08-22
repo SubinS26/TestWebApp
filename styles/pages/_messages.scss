@@ -216,24 +216,48 @@
       border-bottom: none;
 
       & .m_m_top{
-        background: #f6f7f9;
-        height: 35px;
-        padding: 10px;
+        background: #ffffff;
+        height: 60px;
+        padding: 0 16px;
         position: relative;
         border-bottom: 1px solid #edf0f5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        box-sizing: border-box;
+
+        & > div:first-child {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          flex: 1 1 auto;
+          min-width: 0;
+          height: 100%;
+        }
 
         & img.con_with_avatar {
-          height: 35px;
-          width: 35px;
+          height: 40px;
+          width: 40px;
+          min-width: 40px;
+          min-height: 40px;
           border-radius: 50%;
+          object-fit: cover;
+          display: block;
+          flex-shrink: 0;
         }
 
         & .m_m_t_c{
-          display: inline-block;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-width: 0;
+          flex: 1 1 auto;
           position: relative;
-          top: -3px;
-          margin-left: 5px;
-          width: 82%;
+          top: 0;
+          margin-left: 0;
+          width: auto;
+          line-height: 1.2;
 
           & .con_name{
             position: relative;
@@ -241,8 +265,12 @@
             font-weight: 600;
             color: $dark;
             outline: none;
-            height: 19px;
+            height: auto;
+            line-height: 1.3;
+            white-space: nowrap;
             overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
 
             &:hover {
               text-decoration: underline;
@@ -252,25 +280,33 @@
           & .m_m_t_useless {
             display: block;
             color: $d_light;
+            font-size: 11.5px;
+            line-height: 1.2;
+            margin-top: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
 
         }
 
         & .m_m_exp {
-          display: inline-block;
-          height: 24px;
-          position: absolute;
-          right: 13px;
-          top: 13px;
-          border-radius: 2px;
-          padding: 1px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 32px;
+          width: 32px;
+          position: static;
+          border-radius: 50%;
           cursor: pointer;
           color: $d_light;
-          border: 1px solid #f6f7f9;
+          border: none;
+          background: transparent;
+          flex-shrink: 0;
+          transition: all .15s ease;
 
           &:hover{
             background: #e6f9f9;
-            border: 1px solid $ee;
             color: $dark;
           }
         }

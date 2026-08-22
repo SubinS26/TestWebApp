@@ -10,4 +10,8 @@ module.exports = {
     'jest-watch-typeahead/testname',
   ],
   snapshotSerializers: ['enzyme-to-json/serializer'],
+  moduleNameMapper: {
+    '^node:(.*)$': '$1',
+  },
 }
+

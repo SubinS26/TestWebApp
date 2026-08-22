@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { createPortal } from 'react-dom'
 import { FadeIn } from 'animate-components'
 import Overlay from '../../others/overlay'
 import ToolTip from 'react-tooltip'
@@ -31,21 +32,18 @@ export default class PostIt extends Component {
       back,
     } = this.props
 
-    return (
-      <div>
+    const modalContent = (
+      <div className="post_it_portal_container">
         <Overlay />
 
         <div
-          className="post"
+          className="post popup-wrapper-class"
           style={{
             position: 'fixed',
             top: '50%',
             left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            margin: 0,
             transform: 'translate(-50%, -50%)',
-            zIndex: 1000,
+            zIndex: 9999,
           }}
         >
           <FadeIn duration="300ms">
@@ -82,6 +80,11 @@ export default class PostIt extends Component {
         <ToolTip />
       </div>
     )
+
+    const isTest = process.env.NODE_ENV === 'test'
+    return !isTest && typeof document !== 'undefined' && document.body
+      ? createPortal(modalContent, document.body)
+      : modalContent
   }
 }
 

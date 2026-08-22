@@ -504,9 +504,51 @@ input[type=text].p_cit_input {
    -------------------------------------------------------------------------- */
 .notifications_div {
   width: 100% !important;
-  max-width: 580px !important;
+  max-width: 610px !important;
   margin: 0 auto !important;
   padding: 0 !important;
+}
+
+.notifications_header,
+.notifications_div .notifications_header {
+  width: 610px !important;
+  max-width: 100% !important;
+  height: 39.1px !important;
+  min-height: 39.1px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 8px 12px !important;
+  box-sizing: border-box !important;
+  margin: 0 auto 10px auto !important;
+}
+
+.notifications_header span.noti_count,
+.notifications_div .notifications_header span.noti_count {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--ig-text-primary) !important;
+}
+
+.notifications_header span.clear_noti,
+.notifications_div .notifications_header span.clear_noti {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 28px !important;
+  width: 28px !important;
+  border-radius: 50% !important;
+  color: var(--ig-text-secondary) !important;
+  cursor: pointer !important;
+  border: none !important;
+  background: transparent !important;
+  transition: all 0.15s ease !important;
+}
+
+.notifications_header span.clear_noti:hover,
+.notifications_div .notifications_header span.clear_noti:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: var(--ig-text-primary) !important;
 }
 
 .noti,
@@ -1366,40 +1408,112 @@ input[type="submit"].l_submit:active {
 }
 
 .mssg_right .mssg_messages .m_m_top {
-  height: 52px !important;
+  height: 60px !important;
+  min-height: 60px !important;
   background: #ffffff !important;
   border-bottom: 1px solid var(--ig-border-light) !important;
   display: flex !important;
   align-items: center !important;
+  justify-content: space-between !important;
   padding: 0 16px !important;
-  gap: 10px !important;
+  gap: 12px !important;
   flex-shrink: 0 !important;
   box-sizing: border-box !important;
+  position: relative !important;
+}
+
+.mssg_right .mssg_messages .m_m_top > div:first-child {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  height: 100% !important;
 }
 
 .mssg_right .mssg_messages .m_m_top img.con_with_avatar {
-  width: 34px !important;
-  height: 34px !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
   border-radius: 50% !important;
   object-fit: cover !important;
+  display: block !important;
+  flex-shrink: 0 !important;
 }
 
 .mssg_right .mssg_messages .m_m_top .m_m_t_c {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-width: 0 !important;
   flex: 1 1 auto !important;
   top: 0 !important;
-  margin-left: 0 !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
 }
 
 .mssg_right .mssg_messages .m_m_top .con_name {
-  font-size: 13.5px !important;
+  font-size: 14px !important;
   font-weight: 600 !important;
   color: var(--ig-text-primary) !important;
+  text-decoration: none !important;
+  display: block !important;
+  height: auto !important;
+  line-height: 1.3 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 100% !important;
+}
+
+.mssg_right .mssg_messages .m_m_top .con_name:hover {
+  text-decoration: underline !important;
+}
+
+.mssg_right .mssg_messages .m_m_top .m_m_t_useless {
+  font-size: 11.5px !important;
+  color: var(--ig-text-secondary) !important;
+  display: block !important;
+  line-height: 1.2 !important;
+  margin-top: 2px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.mssg_right .mssg_messages .m_m_top .m_m_exp {
+  position: static !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  color: var(--ig-text-secondary) !important;
+  cursor: pointer !important;
+  border: none !important;
+  background: transparent !important;
+  flex-shrink: 0 !important;
+  transition: all 0.15s ease !important;
+}
+
+.mssg_right .mssg_messages .m_m_top .m_m_exp:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: var(--ig-text-primary) !important;
+}
+
+.mssg_right .mssg_messages .m_m_top .mssg_options {
+  position: absolute !important;
+  right: 16px !important;
+  top: 56px !important;
+  z-index: 10 !important;
 }
 
 .mssg_right .mssg_messages .m_m_wrapper {
   flex: 1 1 auto !important;
   overflow-y: auto !important;
-  height: calc(600px - 110px) !important;
+  height: calc(600px - 118px) !important;
   padding: 0 !important;
   background: #fafafa !important;
 }
@@ -1508,9 +1622,7 @@ input[type="submit"].l_submit:active {
   }
 }
 
-/* --------------------------------------------------------------------------
-   9. CREATE POST POPUP (POST-IT) RESPONSIVE SCALING & POLISH
-   -------------------------------------------------------------------------- */
+.popup-wrapper-class,
 .post {
   position: fixed !important;
   top: 50% !important;
@@ -1526,7 +1638,7 @@ input[type="submit"].l_submit:active {
   border-radius: var(--ig-radius) !important;
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.28) !important;
   border: 1px solid var(--ig-border-light) !important;
-  z-index: 1000 !important;
+  z-index: 9999 !important;
   box-sizing: border-box !important;
   overflow: visible !important;
 }
@@ -1852,9 +1964,25 @@ input[type="submit"].l_submit:active {
 .post .p_bottom .p_act a.p_post {
   padding: 6px 18px !important;
   font-size: 12.5px !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   border-radius: var(--ig-radius-sm) !important;
   margin: 0 !important;
+  color: #0095f6 !important;
+  background: rgba(0, 149, 246, 0.08) !important;
+  border: 1px solid rgba(0, 149, 246, 0.25) !important;
+  box-shadow: none !important;
+  transition: all 0.15s ease !important;
+}
+
+.post .p_bottom .p_act a.pri_btn:hover,
+.post .p_bottom .p_act a.p_post:hover {
+  background: rgba(0, 149, 246, 0.16) !important;
+  color: #0074cc !important;
+}
+
+.post .p_bottom .p_act a.p_post.a_disabled {
+  opacity: 0.5 !important;
+  color: #0095f6 !important;
 }
 
 /* Responsive Popup Scaling for Mobile/Tablets */

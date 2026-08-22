@@ -27,6 +27,7 @@ app.engine(
   'hbs',
   hbs({
     extname: 'hbs',
+    defaultLayout: false,
   })
 )
 app.set('view engine', 'hbs')

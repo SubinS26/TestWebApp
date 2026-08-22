@@ -255,9 +255,6 @@ exports[`Notifications Component should match snapshot when notifications.length
           }
         }
       >
-        <img
-          src="/images/large.jpg"
-        />
         <span
           className="nothingMssg"
         >

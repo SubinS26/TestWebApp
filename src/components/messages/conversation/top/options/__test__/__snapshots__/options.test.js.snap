@@ -17,7 +17,7 @@ exports[`ConversationOptions Component should match snapshot 1`] = `
       href="#"
       onClick={[Function]}
     >
-      Unsend your mssgs
+      Unsend Message
     </a>
   </li>
   <li>

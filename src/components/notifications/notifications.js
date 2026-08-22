@@ -38,7 +38,11 @@ class Notifications extends Component {
         <FadeIn duration="300ms" className={cLoading(loading)}>
           <div className="notifications_div">
             <NotificationsHeader />
-            {len == 0 ? <Nothing mssg="You have no notifications!!" /> : map_n}
+            {len == 0 ? (
+              <Nothing mssg="You have no notifications!!" showImg={false} />
+            ) : (
+              map_n
+            )}
             {len != 0 && <End />}
           </div>
         </FadeIn>

@@ -36,7 +36,7 @@ class UnsendMessages extends Component {
         {messages.length != 0 && (
           <li>
             <a href="#" className="dlt_mssgs" onClick={this.showPrompt}>
-              Unsend your mssgs
+              Unsend Message
             </a>
           </li>
         )}
