@@ -1,5 +1,7 @@
 // RETURNS MYSQL DATABASE
 
+require('dotenv').config()
+
 const mysql = require('mysql'),
   { error } = require('handy-log'),
   { MYSQL_HOST, MYSQL_PORT, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE, MYSQL_SOCKET } = process.env
