@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: videoshare-service
+  namespace: videoshare-prod
+  labels:
+    app.kubernetes.io/name: videoshare
+    environment: production
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 4300
+      protocol: TCP
+      name: http
+  selector:
+    app: videoshare
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: videoshare-loadbalancer
+  namespace: videoshare-prod
+  labels:
+    app.kubernetes.io/name: videoshare
+    environment: production
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 4300
+      protocol: TCP
+      name: http
+    - port: 443
+      targetPort: 4300
+      protocol: TCP
+      name: https
+  selector:
+    app: videoshare

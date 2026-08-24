@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: videoshare-config
+  namespace: videoshare-prod
+  labels:
+    app.kubernetes.io/name: videoshare
+    environment: production
+data:
+  NODE_ENV: "production"
+  PORT: "4300"
+  HOST: "0.0.0.0"
+  MYSQL_HOST: "cw2-videoshare-db.mysql.database.azure.com"
+  MYSQL_DB: "react-instagram-clone"
+  MYSQL_SSL: "true"
+  AZURE_STORAGE_CONTAINER_MEDIA: "media"
+  AZURE_STORAGE_CONTAINER_POSTS: "posts"
+  AZURE_STORAGE_CONTAINER_USERS: "users"
+  AZURE_STORAGE_CONTAINER_COMMENTS: "comments"
+  AZURE_STORAGE_CONTAINER_GROUPS: "groups"

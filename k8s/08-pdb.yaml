@@ -1,0 +1,13 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: videoshare-pdb
+  namespace: videoshare-prod
+  labels:
+    app.kubernetes.io/name: videoshare
+    environment: production
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: videoshare

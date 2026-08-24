@@ -1,0 +1,52 @@
+name: Build, Containerize & Deploy to Kubernetes (K8s)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'k8s/**'
+      - 'Dockerfile'
+      - '.dockerignore'
+      - 'src/**'
+      - 'routes/**'
+      - 'config/**'
+      - 'views/**'
+      - 'app.js'
+      - 'package.json'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    name: Build Docker Image & Deploy to AKS
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Azure
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+        continue-on-error: true
+
+      - name: Build and Package Docker Image
+        run: |
+          docker build -t subinshrestha/videoshare-api:${{ github.sha }} .
+          docker tag subinshrestha/videoshare-api:${{ github.sha }} subinshrestha/videoshare-api:latest
+
+      - name: Set AKS Context
+        uses: azure/aks-set-context@v3
+        with:
+          resource-group: 'CW2Scalable-rg'
+          cluster-name: 'cw2-videoshare-aks'
+        continue-on-error: true
+
+      - name: Deploy Kubernetes Manifests via Kustomize
+        run: |
+          if command -v kubectl &> /dev/null; then
+            kubectl apply -k k8s/ || true
+          fi

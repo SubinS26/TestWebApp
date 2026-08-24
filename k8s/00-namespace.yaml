@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: videoshare-prod
+  labels:
+    app.kubernetes.io/name: videoshare
+    app.kubernetes.io/part-of: scalable-videoshare-platform
+    environment: production
