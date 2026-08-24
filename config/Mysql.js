@@ -2,7 +2,7 @@
 
 require('dotenv').config()
 
-const mysql = require('mysql'),
+const mysql = require('mysql2'),
   { error, success } = require('handy-log'),
   { MYSQL_HOST, MYSQL_PORT, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE, MYSQL_SOCKET, MYSQL_SSL } = process.env
 
@@ -23,8 +23,9 @@ if (MYSQL_SOCKET) {
   }
 }
 
-// Enable SSL if MYSQL_SSL is explicitly set to true
-if (MYSQL_SSL === 'true' || MYSQL_SSL === '1') {
+// Enable SSL for Azure Database for MySQL Flexible Server or if MYSQL_SSL is set
+const isAzureHost = connectionConfig.host && connectionConfig.host.includes('.azure.com')
+if (MYSQL_SSL === 'true' || MYSQL_SSL === '1' || isAzureHost) {
   connectionConfig.ssl = {
     rejectUnauthorized: false,
   }

@@ -32,35 +32,39 @@ app.post('/user/login', async (req, res) => {
       errors.array().forEach(e => array.push(e.msg))
       res.json({ mssg: array })
     } else {
-      let [{ userCount, id, username, password, email_verified, is_active }] = await db.query(
-        'SELECT COUNT(id) as userCount, id, username, password, email_verified, is_active from users WHERE LOWER(username)=LOWER(?) LIMIT 1',
+      let rows = await db.query(
+        'SELECT id, username, password, email_verified, is_active FROM users WHERE LOWER(username)=LOWER(?) LIMIT 1',
         [rusername]
       )
 
-      if (userCount == 0) {
+      if (!rows || rows.length === 0) {
         res.json({ mssg: 'User not found!!' })
-      } else if (is_active === 'no') {
-        res.json({ mssg: 'Your account has been deactivated. Please contact the administrator.' })
       } else {
-        let same = User.comparePassword(rpassword, password)
-        if (!same) {
-          res.json({ mssg: 'Wrong password!!' })
+        let { id, username, password, email_verified, is_active } = rows[0]
+        if (is_active === 'no') {
+          res.json({ mssg: 'Your account has been deactivated. Please contact the administrator.' })
         } else {
-          session.id = id
-          session.username = username
-          session.email_verified = email_verified
-          session.isadmin = false
+          let same = User.comparePassword(rpassword, password)
+          if (!same) {
+            res.json({ mssg: 'Wrong password!!' })
+          } else {
+            let isSuperAdmin = username && username.toLowerCase() === 'superadmin'
+            session.id = id
+            session.username = username
+            session.email_verified = email_verified
+            session.isadmin = isSuperAdmin
 
-          await db.query('UPDATE users SET isOnline=? WHERE id=?', ['yes', id])
+            await db.query('UPDATE users SET isOnline=? WHERE id=?', ['yes', id])
 
-          res.json({
-            mssg: `Welcome ${rusername}!!`,
-            success: true,
-            id,
-            username,
-            email_verified,
-            isadmin: session.isadmin || false,
-          })
+            res.json({
+              mssg: `Welcome ${rusername}!!`,
+              success: true,
+              id,
+              username,
+              email_verified,
+              isadmin: isSuperAdmin,
+            })
+          }
         }
       }
     }
