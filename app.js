@@ -74,23 +74,30 @@ app.use(
   })
 )
 app.use(validator())
-app.use(express.static(join(__dirname, '/dist')))
+app.use((req, res, next) => {
+  if (req.headers['x-forwarded-proto'] === 'https' || req.secure || req.protocol === 'https') {
+    if (req.connection) {
+      req.connection.proxySecure = true
+    }
+  }
+  next()
+})
+
 app.use(
   session({
     cookieName: 'session',
     secret: sessionSecret,
     duration: 24 * 60 * 60 * 1000,
     activeDuration: 5 * 60 * 1000,
-    proxy: true,
     cookie: {
       ephemeral: false,
       httpOnly: true,
-      secure: true,
-      sameSite: 'none',
+      secure: false, // Allows session cookies under Azure TLS termination without socket strictness
     },
   })
 )
 app.use(cookieParser())
+app.use(express.static(join(__dirname, '/dist')))
 
 // Middleware for some local variables to be used in the template
 app.use(variables)
