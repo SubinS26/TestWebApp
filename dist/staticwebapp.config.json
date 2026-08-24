@@ -1,7 +1,7 @@
 {
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/images/*", "/styles/*", "/js/*", "/comments/*", "/groups/*", "/users/*"]
+    "exclude": ["/images/*", "/styles/*", "/js/*", "/comments/*", "/groups/*", "/users/*", "/api/*"]
   },
   "responseOverrides": {
     "404": {

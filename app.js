@@ -81,6 +81,12 @@ app.use(
     secret: sessionSecret,
     duration: 24 * 60 * 60 * 1000,
     activeDuration: 5 * 60 * 1000,
+    cookie: {
+      ephemeral: false,
+      httpOnly: true,
+      secure: true,
+      sameSite: 'none',
+    },
   })
 )
 app.use(cookieParser())

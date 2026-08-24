@@ -12,6 +12,21 @@ import { getGroupDetails, joinedGroup } from '../actions/group'
 import Compress from 'image-compressor.js'
 import d from './API/DOM'
 
+export const API_ORIGIN =
+  typeof window !== 'undefined' &&
+  window.location.hostname !== 'localhost' &&
+  window.location.hostname !== '127.0.0.1' &&
+  !window.location.hostname.includes('azurewebsites.net')
+    ? 'https://cw2-videoshare-api-arbuhrh8ghcgghgz.italynorth-01.azurewebsites.net'
+    : ''
+
+if (typeof window !== 'undefined') {
+  if (API_ORIGIN && !axios.defaults.baseURL) {
+    axios.defaults.baseURL = API_ORIGIN
+  }
+  axios.defaults.withCredentials = true
+}
+
 /**
  *  Shortens what with string length
  * @param {String} what
