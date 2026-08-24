@@ -13,59 +13,91 @@ const app = require('express').Router(),
 // POST [REQ = DESC, FILTER, LOCATION, TYPE, GROUP, IMAGE(FILE) ]
 app.post('/post-it', upload.single('image'), async (req, res) => {
   try {
-    let { id } = req.session,
-      { desc, filter, location, type, group } = req.body
+    let { id } = req.session
+    if (!id) {
+      return res.json({ success: false, mssg: 'You must be logged in to post!' })
+    }
 
-    const isVideo = req.file.mimetype.startsWith('video/')
-    const extension = isVideo ? (req.file.originalname.split('.').pop() || 'mp4') : 'jpg'
+    if (!req.file) {
+      return res.json({ success: false, mssg: 'Please attach an image or video file!' })
+    }
+
+    let { desc = '', filter = 'filter-normal', location = '', type = 'user', group = 0 } = req.body
+    const fs = require('fs')
+    const path = require('path')
+
+    // Ensure posts and temp directories exist
+    const postsDir = path.join(root, 'dist/posts')
+    const tempDir = path.join(root, 'dist/temp')
+    if (!fs.existsSync(postsDir)) fs.mkdirSync(postsDir, { recursive: true })
+    if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true })
+
+    const isVideo = req.file.mimetype && (req.file.mimetype.startsWith('video/') || /\.(mp4|webm|ogg|mov|mkv)$/i.test(req.file.originalname))
+    const extension = isVideo
+      ? (req.file.originalname.split('.').pop() || 'mp4').toLowerCase()
+      : 'jpg'
     const filename = `instagram_${new Date().getTime()}.${extension}`
-    const localDest = `${root}/dist/posts/${filename}`
+    const localDest = path.join(postsDir, filename)
     let finalSrc = filename
 
     if (isVideo) {
-      const fs = require('fs')
       fs.copyFileSync(req.file.path, localDest)
     } else {
-      let obj = {
-        srcFile: req.file.path,
-        destFile: localDest,
+      try {
+        let obj = {
+          srcFile: req.file.path,
+          destFile: localDest,
+        }
+        await ProcessImage(obj)
+      } catch (procErr) {
+        fs.copyFileSync(req.file.path, localDest)
       }
-      await ProcessImage(obj)
     }
 
     // Azure Blob Storage Upload
-    const { uploadToAzureBlob } = require('../../../config/AzureBlob')
-    const blobUrl = await uploadToAzureBlob(localDest, filename, req.file.mimetype)
-    if (blobUrl) {
-      finalSrc = blobUrl
+    try {
+      const { uploadToAzureBlob } = require('../../../config/AzureBlob')
+      const blobUrl = await uploadToAzureBlob(localDest, filename, req.file.mimetype)
+      if (blobUrl) {
+        finalSrc = blobUrl
+      }
+    } catch (blobErr) {
+      console.warn('[Azure Blob] Upload skipped:', blobErr.message)
     }
 
-    DeleteAllOfFolder(`${root}/dist/temp/`)
+    // Safely remove temporary file
+    try {
+      if (fs.existsSync(req.file.path)) {
+        fs.unlinkSync(req.file.path)
+      }
+    } catch (unlinkErr) {}
 
     let insert = {
       user: id,
-      description: desc,
+      description: desc || '',
       imgSrc: finalSrc,
-      filter,
-      location,
-      type,
-      group_id: group,
-      post_time: new Date().getTime(),
+      filter: filter || 'filter-normal',
+      location: location || '',
+      type: type || 'user',
+      group_id: Number(group) || 0,
+      post_time: String(new Date().getTime()),
     }
 
-    let { insertId } = await db.query('INSERT INTO posts SET ?', insert),
-      firstname = await User.getWhat('firstname', id),
-      surname = await User.getWhat('surname', id)
+    let { insertId } = await db.query('INSERT INTO posts SET ?', insert)
+    let firstname = await User.getWhat('firstname', id)
+    let surname = await User.getWhat('surname', id)
 
-    await db.toHashtag(desc, id, insertId)
-    await User.mentionUsers(desc, id, insertId, 'post')
+    try {
+      await db.toHashtag(desc, id, insertId)
+      await User.mentionUsers(desc, id, insertId, 'post')
+    } catch (tagErr) {}
 
     res.json({
       success: true,
       mssg: 'Posted!!',
       post_id: insertId,
-      firstname,
-      surname,
+      firstname: firstname || '',
+      surname: surname || '',
       filename: finalSrc,
     })
   } catch (error) {

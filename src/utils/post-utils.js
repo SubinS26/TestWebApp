@@ -43,12 +43,13 @@ export const addPost = async options => {
   action.start()
   wait()
 
-  form.append('desc', desc)
+  let form = new FormData()
+  form.append('desc', desc || '')
   form.append('image', file)
-  form.append('filter', filter)
-  form.append('location', location)
-  form.append('type', type)
-  form.append('group', group)
+  form.append('filter', filter || 'filter-normal')
+  form.append('location', location || '')
+  form.append('type', type || 'user')
+  form.append('group', group || 0)
 
   let {
     data: { success, mssg, post_id, firstname, surname, filename },
