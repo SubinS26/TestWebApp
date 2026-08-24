@@ -65,28 +65,23 @@ const didIShare = async (post, session, user) => {
  * @returns {Object} Tags Count, Likes Count, ...
  */
 const getCounts = async post_id => {
-  let [{ tags_count }] = await db.query(
-      'SELECT COUNT(post_tag_id) AS tags_count FROM post_tags WHERE post_id=?',
-      [post_id]
-    ),
-    [{ likes_count }] = await db.query(
-      'SELECT COUNT(like_id) AS likes_count FROM likes WHERE post_id=?',
-      [post_id]
-    ),
-    [{ shares_count }] = await db.query(
-      'SELECT COUNT(share_id) AS shares_count FROM shares WHERE post_id=?',
-      [post_id]
-    ),
-    [{ comments_count }] = await db.query(
-      'SELECT COUNT(comment_id) AS comments_count FROM comments WHERE post_id=?',
-      [post_id]
-    )
+  let [
+    [{ tags_count = 0 } = {}],
+    [{ likes_count = 0 } = {}],
+    [{ shares_count = 0 } = {}],
+    [{ comments_count = 0 } = {}],
+  ] = await Promise.all([
+    db.query('SELECT COUNT(post_tag_id) AS tags_count FROM post_tags WHERE post_id=?', [post_id]),
+    db.query('SELECT COUNT(like_id) AS likes_count FROM likes WHERE post_id=?', [post_id]),
+    db.query('SELECT COUNT(share_id) AS shares_count FROM shares WHERE post_id=?', [post_id]),
+    db.query('SELECT COUNT(comment_id) AS comments_count FROM comments WHERE post_id=?', [post_id]),
+  ])
 
   return {
-    tags_count,
-    likes_count,
-    shares_count,
-    comments_count,
+    tags_count: Number(tags_count) || 0,
+    likes_count: Number(likes_count) || 0,
+    shares_count: Number(shares_count) || 0,
+    comments_count: Number(comments_count) || 0,
   }
 }
 

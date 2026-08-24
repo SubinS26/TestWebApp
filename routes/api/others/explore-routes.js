@@ -12,33 +12,34 @@ app.post('/get-users-to-explore', async (req, res) => {
     _users = await db.query(
       'SELECT users.id, users.username, users.firstname, users.surname FROM users WHERE users.id <> ? ORDER BY RAND() DESC LIMIT 12',
       [id]
-    ),
-    users = []
+    )
 
-  for (let u of _users) {
-    let isFollowing = await User.isFollowing(id, u.id),
-      [{ followers_count }] = await db.query(
-        'SELECT COUNT(follow_id) AS followers_count FROM follow_system WHERE follow_to=?',
-        [u.id]
-      ),
-      mutualUsers = await User.mutualUsers(id, u.id)
+  let results = await Promise.all(
+    _users.map(async u => {
+      let [isFollowing, [{ followers_count = 0 } = {}], mutualUsers] = await Promise.all([
+        User.isFollowing(id, u.id),
+        db.query('SELECT COUNT(follow_id) AS followers_count FROM follow_system WHERE follow_to=?', [u.id]),
+        User.mutualUsers(id, u.id),
+      ])
 
-    !isFollowing
-      ? users.push({
+      if (!isFollowing) {
+        return {
           ...u,
-          followers_count,
+          followers_count: Number(followers_count) || 0,
           mutualUsersCount: mutualUsers.length,
-        })
-      : []
-  }
+        }
+      }
+      return null
+    })
+  )
 
+  let users = results.filter(Boolean)
   let orderByMutualUsers = _.orderBy(users, ['mutualUsersCount'], ['desc'])
   res.json(orderByMutualUsers)
 })
 
 // PHOTOS TO EXPLORE
 app.post('/get-photos-to-explore', async (req, res) => {
-  let id = req.session && req.session.id ? req.session.id : 0
   let photos = await db.query(
     'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.imgSrc AS imgsrc, posts.filter, posts.post_time FROM posts JOIN users ON posts.user = users.id WHERE users.account_type = "public" AND posts.imgSrc <> "" ORDER BY posts.post_id DESC LIMIT 40'
   )
@@ -50,28 +51,30 @@ app.post('/get-photos-to-explore', async (req, res) => {
 app.post('/get-groups-to-explore', async (req, res) => {
   let { id } = req.session,
     _groups = await db.query(
-      'SELECT group_id, name, admin, created FROM groups ORDER BY RAND()'
-    ),
-    groups = []
+      'SELECT group_id, name, admin, created FROM groups ORDER BY RAND() LIMIT 20'
+    )
 
-  for (let g of _groups) {
-    let [{ membersCount }] = await db.query(
-        'SELECT COUNT(grp_member_id) AS membersCount FROM group_members WHERE group_id=?',
-        [g.group_id]
-      ),
-      mutualMembers = await Group.mutualGroupMembers(id, g.group_id),
-      joined = await Group.joinedGroup(id, g.group_id)
+  let results = await Promise.all(
+    _groups.map(async g => {
+      let [[{ membersCount = 0 } = {}], mutualMembers, joined] = await Promise.all([
+        db.query('SELECT COUNT(grp_member_id) AS membersCount FROM group_members WHERE group_id=?', [g.group_id]),
+        Group.mutualGroupMembers(id, g.group_id),
+        Group.joinedGroup(id, g.group_id),
+      ])
 
-    !joined
-      ? groups.push({
+      if (!joined) {
+        return {
           ...g,
-          membersCount,
+          membersCount: Number(membersCount) || 0,
           mutualMembersCount: mutualMembers.length,
           joined,
-        })
-      : []
-  }
+        }
+      }
+      return null
+    })
+  )
 
+  let groups = results.filter(Boolean)
   let orderByMutualMembers = _.orderBy(groups, ['mutualMembersCount'], ['desc'])
   res.json(orderByMutualMembers)
 })
@@ -83,21 +86,26 @@ app.post('/get-suggested-users', async (req, res) => {
     _users = await db.query(
       'SELECT users.id, users.username, users.firstname, users.surname FROM users WHERE users.id <> ? ORDER BY RAND() DESC LIMIT 10',
       [id]
-    ),
-    users = []
+    )
 
-  for (let u of _users) {
-    let isFollowing = await User.isFollowing(id, u.id),
-      mutualUsers = await User.mutualUsers(id, u.id)
+  let results = await Promise.all(
+    _users.map(async u => {
+      let [isFollowing, mutualUsers] = await Promise.all([
+        User.isFollowing(id, u.id),
+        User.mutualUsers(id, u.id),
+      ])
 
-    !isFollowing
-      ? users.push({
+      if (!isFollowing) {
+        return {
           ...u,
           mutualUsersCount: mutualUsers.length,
-        })
-      : null
-  }
+        }
+      }
+      return null
+    })
+  )
 
+  let users = results.filter(Boolean)
   let filter = user ? users.filter(u => u.username != user) : users
 
   let orderByMutualUsers = _.orderBy(

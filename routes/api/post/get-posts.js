@@ -10,25 +10,17 @@ app.post('/get-user-posts', async (req, res) => {
     _posts = await db.query(
       'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.post_time FROM posts, users WHERE posts.user=? AND posts.user = users.id AND posts.type=? ORDER BY posts.post_time DESC',
       [id, 'user']
-    ),
-    posts = []
+    )
 
-  for (let p of _posts) {
-    let {
-      tags_count,
-      likes_count,
-      shares_count,
-      comments_count,
-    } = await Post.getCounts(p.post_id)
-
-    posts.push({
-      ...p,
-      tags_count,
-      likes_count,
-      shares_count,
-      comments_count,
+  let posts = await Promise.all(
+    _posts.map(async p => {
+      let counts = await Post.getCounts(p.post_id)
+      return {
+        ...p,
+        ...counts,
+      }
     })
-  }
+  )
 
   res.json(posts)
 })
@@ -38,27 +30,21 @@ app.post('/get-bookmarked-posts', async (req, res) => {
   let _posts = await db.query(
       'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time FROM posts, users, bookmarks WHERE bookmarks.bkmrk_by=? AND posts.user = users.id AND bookmarks.post_id = posts.post_id ORDER BY bookmarks.bkmrk_time DESC',
       [req.body.user]
-    ),
-    posts = []
+    )
 
-  for (let p of _posts) {
-    let {
-        tags_count,
-        likes_count,
-        shares_count,
-        comments_count,
-      } = await Post.getCounts(p.post_id),
-      group_name = await Group.getWhatOfGrp('name', p.group_id)
-
-    posts.push({
-      ...p,
-      tags_count,
-      likes_count,
-      shares_count,
-      comments_count,
-      group_name,
+  let posts = await Promise.all(
+    _posts.map(async p => {
+      let [counts, group_name] = await Promise.all([
+        Post.getCounts(p.post_id),
+        p.group_id ? Group.getWhatOfGrp('name', p.group_id) : Promise.resolve(''),
+      ])
+      return {
+        ...p,
+        ...counts,
+        group_name,
+      }
     })
-  }
+  )
 
   res.json(posts)
 })
@@ -68,27 +54,21 @@ app.post('/get-tagged-posts', async (req, res) => {
   let _posts = await db.query(
       'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time FROM post_tags, posts, users WHERE post_tags.user = ? AND post_tags.post_id = posts.post_id AND posts.user = users.id ORDER BY posts.post_time DESC',
       [req.body.user]
-    ),
-    posts = []
+    )
 
-  for (let p of _posts) {
-    let {
-        tags_count,
-        likes_count,
-        shares_count,
-        comments_count,
-      } = await Post.getCounts(p.post_id),
-      group_name = await Group.getWhatOfGrp('name', p.group_id)
-
-    posts.push({
-      ...p,
-      tags_count,
-      likes_count,
-      shares_count,
-      comments_count,
-      group_name,
+  let posts = await Promise.all(
+    _posts.map(async p => {
+      let [counts, group_name] = await Promise.all([
+        Post.getCounts(p.post_id),
+        p.group_id ? Group.getWhatOfGrp('name', p.group_id) : Promise.resolve(''),
+      ])
+      return {
+        ...p,
+        ...counts,
+        group_name,
+      }
     })
-  }
+  )
 
   res.json(posts)
 })
@@ -98,29 +78,23 @@ app.post('/get-shared-posts', async (req, res) => {
   let _posts = await db.query(
       'SELECT posts.post_id, shares.share_id, posts.user, users.username, users.firstname, users.surname, shares.share_by, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time, shares.share_time FROM shares, posts, users WHERE shares.share_to = ? AND shares.post_id = posts.post_id AND posts.user = users.id ORDER BY shares.share_time DESC',
       [req.body.user]
-    ),
-    posts = []
+    )
 
-  for (let p of _posts) {
-    let share_by_username = await User.getWhat('username', p.share_by),
-      {
-        tags_count,
-        likes_count,
-        shares_count,
-        comments_count,
-      } = await Post.getCounts(p.post_id),
-      group_name = await Group.getWhatOfGrp('name', p.group_id)
-
-    posts.push({
-      ...p,
-      share_by_username,
-      tags_count,
-      likes_count,
-      shares_count,
-      comments_count,
-      group_name,
+  let posts = await Promise.all(
+    _posts.map(async p => {
+      let [share_by_username, counts, group_name] = await Promise.all([
+        User.getWhat('username', p.share_by),
+        Post.getCounts(p.post_id),
+        p.group_id ? Group.getWhatOfGrp('name', p.group_id) : Promise.resolve(''),
+      ])
+      return {
+        ...p,
+        share_by_username,
+        ...counts,
+        group_name,
+      }
     })
-  }
+  )
 
   res.json(posts)
 })
@@ -140,27 +114,21 @@ app.post('/get-feed', async (req, res) => {
   let _posts = await db.query(
       'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time FROM posts, users, follow_system WHERE follow_system.follow_by = ? AND follow_system.follow_to = posts.user AND posts.user = users.id ORDER BY posts.post_time DESC',
       [req.session.id]
-    ),
-    posts = []
+    )
 
-  for (let p of _posts) {
-    let {
-        tags_count,
-        likes_count,
-        shares_count,
-        comments_count,
-      } = await Post.getCounts(p.post_id),
-      group_name = await Group.getWhatOfGrp('name', p.group_id)
-
-    posts.push({
-      ...p,
-      tags_count,
-      likes_count,
-      shares_count,
-      comments_count,
-      group_name,
+  let posts = await Promise.all(
+    _posts.map(async p => {
+      let [counts, group_name] = await Promise.all([
+        Post.getCounts(p.post_id),
+        p.group_id ? Group.getWhatOfGrp('name', p.group_id) : Promise.resolve(''),
+      ])
+      return {
+        ...p,
+        ...counts,
+        group_name,
+      }
     })
-  }
+  )
 
   res.json(posts)
 })
