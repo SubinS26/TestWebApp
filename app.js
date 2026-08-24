@@ -15,7 +15,8 @@ const express = require('express'),
   bodyParser = require('body-parser'),
   validator = require('express-validator'),
   session = require('client-sessions'),
-  cookieParser = require('cookie-parser')
+  cookieParser = require('cookie-parser'),
+  compression = require('compression')
 
 // Project Files
 const { variables } = require('./config/Middlewares')
@@ -23,6 +24,9 @@ const AppRoutes = require('./app-routes')
 
 // Trust proxy for Azure App Service & reverse proxies
 app.set('trust proxy', 1)
+
+// Enable gzip/deflate compression for fast asset and payload delivery
+app.use(compression())
 
 // View engine
 app.engine(
@@ -97,7 +101,14 @@ app.use(
   })
 )
 app.use(cookieParser())
-app.use(express.static(join(__dirname, '/dist'), { index: false }))
+app.use(
+  express.static(join(__dirname, '/dist'), {
+    index: false,
+    maxAge: '7d',
+    etag: true,
+    lastModified: true,
+  })
+)
 
 // Middleware for some local variables to be used in the template
 app.use(variables)

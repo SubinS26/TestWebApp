@@ -7,7 +7,11 @@ const mysql = require('mysql2'),
   { MYSQL_HOST, MYSQL_PORT, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE, MYSQL_SOCKET, MYSQL_SSL } = process.env
 
 const connectionConfig = {
-  connectionLimit: 10,
+  connectionLimit: 20,
+  waitForConnections: true,
+  queueLimit: 0,
+  enableKeepAlive: true,
+  keepAliveInitialDelay: 10000,
   user: MYSQL_USER || 'root',
   password: MYSQL_PASSWORD || '',
   database: MYSQL_DATABASE || 'react-instagram-clone',
