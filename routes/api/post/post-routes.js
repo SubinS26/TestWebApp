@@ -7,6 +7,7 @@ const app = require('express').Router(),
   root = process.cwd(),
   upload = require('multer')({
     dest: `${root}/dist/temp/`,
+    limits: { fileSize: 300 * 1024 * 1024 },
   }),
   { ProcessImage, DeleteAllOfFolder } = require('handy-image-processor')
 
@@ -41,7 +42,7 @@ app.post('/post-it', upload.single('image'), async (req, res) => {
     let finalSrc = filename
 
     if (isVideo) {
-      fs.copyFileSync(req.file.path, localDest)
+      await fs.promises.copyFile(req.file.path, localDest)
     } else {
       try {
         let obj = {
@@ -50,7 +51,7 @@ app.post('/post-it', upload.single('image'), async (req, res) => {
         }
         await ProcessImage(obj)
       } catch (procErr) {
-        fs.copyFileSync(req.file.path, localDest)
+        await fs.promises.copyFile(req.file.path, localDest)
       }
     }
 
@@ -65,7 +66,7 @@ app.post('/post-it', upload.single('image'), async (req, res) => {
     // Safely remove temporary file
     try {
       if (fs.existsSync(req.file.path)) {
-        fs.unlinkSync(req.file.path)
+        await fs.promises.unlink(req.file.path)
       }
     } catch (unlinkErr) {}
 

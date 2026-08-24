@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 /**
- * Uploads a file to Azure Blob Storage if AZURE_STORAGE_CONNECTION_STRING is configured.
+ * Uploads a file to Azure Blob Storage using streaming to prevent OOM/memory pressure.
  * 
  * Environment variables:
  * - AZURE_STORAGE_CONNECTION_STRING: Primary connection string from Azure portal
@@ -17,7 +17,6 @@ async function uploadToAzureBlob(filePath, filename, mimetype) {
   const containerName = process.env.AZURE_STORAGE_CONTAINER || 'posts'
 
   if (!connectionString) {
-    console.log('[Azure Blob] AZURE_STORAGE_CONNECTION_STRING not set. Using local storage.')
     return null
   }
 
@@ -31,15 +30,15 @@ async function uploadToAzureBlob(filePath, filename, mimetype) {
     })
 
     const blockBlobClient = containerClient.getBlockBlobClient(filename)
-    const fileBuffer = fs.readFileSync(filePath)
-
-    await blockBlobClient.uploadData(fileBuffer, {
+    
+    // Stream directly from disk without buffering whole file into RAM
+    await blockBlobClient.uploadFile(filePath, {
       blobHTTPHeaders: {
         blobContentType: mimetype || 'video/mp4',
       },
     })
 
-    console.log(`[Azure Blob] Successfully uploaded ${filename} to container '${containerName}'`)
+    console.log(`[Azure Blob] Successfully streamed ${filename} to container '${containerName}'`)
     return blockBlobClient.url
   } catch (err) {
     console.error('[Azure Blob] Upload error:', err.message)

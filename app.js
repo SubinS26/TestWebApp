@@ -121,6 +121,16 @@ app.use(
 // Middleware for some local variables to be used in the template
 app.use(variables)
 
+// Direct media route with Azure Blob storage fallback
+app.get('/posts/:filename', (req, res) => {
+  const filePath = join(__dirname, 'dist/posts', req.params.filename)
+  if (fs.existsSync(filePath)) {
+    return res.sendFile(filePath)
+  }
+  const blobUrl = `https://cw2videostorage01.blob.core.windows.net/posts/${req.params.filename}`
+  res.redirect(blobUrl)
+})
+
 // App routes
 AppRoutes(app)
 
