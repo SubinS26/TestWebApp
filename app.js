@@ -39,6 +39,32 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'UP', timestamp: new Date().toISOString() })
 })
 
+// CORS support for Azure Static Web Apps and cross-origin frontend
+app.use((req, res, next) => {
+  const allowedOrigins = [
+    'https://ashy-flower-06eb54810.7.azurestaticapps.net',
+    'https://videoshare-frontend.azurestaticapps.net',
+    'http://localhost:3000',
+    'http://localhost:4300',
+    'http://localhost:8080',
+    'http://127.0.0.1:4280', // Azure SWA CLI emulator
+  ]
+  const origin = req.headers.origin
+  if (origin && (allowedOrigins.includes(origin) || origin.endsWith('.azurestaticapps.net') || origin.endsWith('.azurewebsites.net'))) {
+    res.header('Access-Control-Allow-Origin', origin)
+  } else {
+    res.header('Access-Control-Allow-Origin', '*')
+  }
+  res.header('Access-Control-Allow-Credentials', 'true')
+  res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cookie')
+
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(204)
+  }
+  next()
+})
+
 // Middlewares
 app.use(favicon(join(__dirname, '/dist/images/favicon/favicon.png')))
 app.use(bodyParser.json())
