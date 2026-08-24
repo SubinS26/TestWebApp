@@ -111,7 +111,9 @@ app.post('/get-photos', async (req, res) => {
 
 // GET FEED
 app.post('/get-feed', async (req, res) => {
-  const userId = req.session && req.session.id ? req.session.id : 0
+  const userId = req.session && req.session.id ? Number(req.session.id) : 0
+
+  // 1. Query personal feed (user's own posts + posts from creators they follow)
   let _posts = await db.query(
     `SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time 
      FROM posts 
@@ -120,6 +122,17 @@ app.post('/get-feed', async (req, res) => {
      ORDER BY posts.post_id DESC LIMIT 50`,
     [userId, userId]
   )
+
+  // 2. Fallback: if user follows nobody or has no posts yet, show the latest platform video reels and posts so the feed is never blank
+  if (!_posts || _posts.length === 0) {
+    _posts = await db.query(
+      `SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time 
+       FROM posts 
+       JOIN users ON posts.user = users.id 
+       WHERE posts.type = 'user' AND posts.imgSrc <> ''
+       ORDER BY posts.post_id DESC LIMIT 50`
+    )
+  }
 
   let posts = await Promise.all(
     _posts.map(async p => {

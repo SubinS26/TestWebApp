@@ -47,10 +47,14 @@ app.post('/get-photos-to-explore', async (req, res) => {
   if (cached) return res.json(cached)
 
   let photos = await db.query(
-    'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.imgSrc AS imgsrc, posts.filter, posts.post_time FROM posts JOIN users ON posts.user = users.id WHERE users.account_type = "public" AND posts.imgSrc <> "" ORDER BY posts.post_id DESC LIMIT 40'
+    `SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.imgSrc AS imgsrc, posts.filter, posts.post_time 
+     FROM posts 
+     JOIN users ON posts.user = users.id 
+     WHERE (users.account_type = 'public' OR users.account_type IS NULL OR users.account_type = '') AND posts.imgSrc <> '' AND posts.type = 'user' 
+     ORDER BY posts.post_id DESC LIMIT 50`
   )
 
-  cache.set(cacheKey, photos, 20) // 20 second TTL
+  cache.set(cacheKey, photos, 15) // 15 second TTL
   res.json(photos)
 })
 

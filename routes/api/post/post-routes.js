@@ -85,6 +85,11 @@ app.post('/post-it', upload.single('image'), async (req, res) => {
     let surname = await User.getWhat('surname', id)
 
     try {
+      const cache = require('../../../config/cache')
+      cache.del('explore:photos:latest')
+    } catch (cErr) {}
+
+    try {
       await db.toHashtag(desc, id, insertId)
       await User.mentionUsers(desc, id, insertId, 'post')
     } catch (tagErr) {}
