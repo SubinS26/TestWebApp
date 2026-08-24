@@ -15,24 +15,13 @@ import Hashtag from './hashtag/hashtag/hashtag'
 import AdminLogin from './admin/admin-login'
 import IsAdmin from './admin/is-admin'
 import SuperAdminPanel from './admin/superadmin-panel'
-import Welcome from './welcome/welcome'
-import Login from './auth/login'
-import Signup from './auth/signup'
 import Error from './error/error'
-import { uData } from '../utils/utils'
 
-const AppRoutes = () => {
-  let isLoggedIn = uData('loggedin') === 'true'
-
-  return (
-    <div className="badshah">
-      <Switch>
-        <Route path="/" exact component={isLoggedIn ? Home : Welcome} />
-        <Route path="/welcome" component={Welcome} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/profile" exact component={Profile} />
-        <Route path="/profile/:username" component={Profile} />
+const AppRoutes = () => (
+  <div className="badshah">
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/profile/:username" component={Profile} />
       <Route path="/error/:what" component={Error} />
       <Route path="/email-verification/:is" component={EmailVerification} />
       <Route path="/notifications" component={Notifications} />
@@ -49,7 +38,6 @@ const AppRoutes = () => {
       <Route component={Error} />
     </Switch>
   </div>
-  )
-}
+)
 
 export default AppRoutes

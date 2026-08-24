@@ -97,7 +97,7 @@ app.use(
   })
 )
 app.use(cookieParser())
-app.use(express.static(join(__dirname, '/dist')))
+app.use(express.static(join(__dirname, '/dist'), { index: false }))
 
 // Middleware for some local variables to be used in the template
 app.use(variables)
