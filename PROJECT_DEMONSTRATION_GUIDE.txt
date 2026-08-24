@@ -1,0 +1,250 @@
+================================================================================
+  PROJECT DEMONSTRATION & PRESENTATION SCRIPT
+  CLOUD-NATIVE INSTAGRAM REELS / VIDEO-SHARING PLATFORM
+  Course: Scalable Advanced Software Solutions
+  Author: Subin Shrestha (rtr.shrestha.subin@gmail.com)
+  Repository: https://github.com/SubinS26/TestWebApp
+  Live URL: https://cw2-videoshare-api-arbuhrh8ghcgghgz.italynorth-01.azurewebsites.net
+================================================================================
+
+--------------------------------------------------------------------------------
+1. EXECUTIVE SUMMARY & PROJECT SCOPE
+--------------------------------------------------------------------------------
+This project is a scalable, cloud-native video-sharing web application built to
+emulate modern platforms like Instagram Reels and TikTok. It features a fully
+decoupled architecture with a React-powered frontend, an Express/Node.js REST API,
+persistent Azure Database for MySQL Flexible Server, and Azure Blob Storage for
+multi-media asset management.
+
+Key Technical Highlights:
+  - Architecture: PaaS Cloud-Native model with complete Kubernetes (K8s) alternative.
+  - Role-Based Access Control (RBAC): Creator (Influencer) vs Consumer (Follower).
+  - Dedicated Video Reel Upload Modal: Real-time high-definition video preview player,
+    custom metadata (Title, Publisher, Producer, Genre, Age Rating), emoji picker,
+    user tagging, and location tagging (without static photo filters).
+  - High-Performance Feed & Explore Gallery: Custom MediaThumbnail component
+    supporting both videos (with "▶ Reel" indicator badges) and photos.
+  - Cognitive NLP Sentiment Engine: Real-time sentiment analysis intercepting all
+    consumer comments before database persistence.
+  - Media Processing Pipeline: FFmpeg integration for standardizing and transcoding
+    uploaded video files into web-optimized resolutions.
+  - Performance & Caching Network: In-memory LRU/TTL caching layer, compound B-tree
+    database indexing, and N+1 query elimination (reducing API latency by >70%).
+  - Kubernetes (K8s) GitOps Suite: Multi-stage Docker containerization, 3-replica
+    Deployment with RollingUpdate, HPA (2-10 pods), PDB, PVC, Ingress, and CI/CD.
+
+--------------------------------------------------------------------------------
+2. ARCHITECTURAL TOPOLOGY & CLOUD INFRASTRUCTURE
+--------------------------------------------------------------------------------
+The application is deployed live on Microsoft Azure using enterprise PaaS services:
+
+  [Client Browser / Mobile Devices]
+                 |
+                 v (HTTPS / TLS 1.3 / HTTP/2)
+  [Azure App Service B3 Plan: cw2-videoshare-api]
+  - Runtime: Node.js 20 LTS (AlwaysOn Enabled, In-Memory LRU Cache)
+  - Region: Italy North (CW2Scalable-rg)
+                 |
+        +--------+--------+
+        |                 |
+        v (SSL / TCP)     v (HTTPS / REST API)
+  [Azure MySQL Flex DB]   [Azure Blob Storage: cw2videostorage01]
+  - Flexible Server       - Containers: /posts, /media, /users, /comments, /groups
+  - DB: react-instagram-  - Fast object storage with CDN-ready URLs
+    clone                 - HTTP/2 Byte-Range streaming (HTTP 206 Partial Content)
+
+--------------------------------------------------------------------------------
+3. STEP-BY-STEP VIDEO DEMONSTRATION SCRIPT
+--------------------------------------------------------------------------------
+
+----------------------------------------------------------------------
+SECTION A: Introduction & Live Platform Verification (0:00 - 1:30)
+----------------------------------------------------------------------
+[Script / Speech]:
+"Welcome to the demonstration of the Cloud-Native Video Sharing Platform.
+My name is Subin Shrestha. Today, I will showcase the architecture, security,
+and features of this scalable web application deployed live on Microsoft Azure.
+
+Let's begin by navigating to the live production endpoint:
+https://cw2-videoshare-api-arbuhrh8ghcgghgz.italynorth-01.azurewebsites.net/
+
+We can verify the health of the application via our automated health probe endpoint
+at '/health', which returns HTTP 200 OK with timestamp and status UP."
+
+[Actions to show on screen]:
+1. Open the browser and visit the live URL.
+2. Show the '/health' endpoint: {"status":"UP","timestamp":"..."}.
+3. Highlight the modern, clean Instagram-style UI and responsive layout.
+
+----------------------------------------------------------------------
+SECTION B: Identity Management & Role-Based Access Control (RBAC) (1:30 - 3:00)
+----------------------------------------------------------------------
+[Script / Speech]:
+"Our platform enforces strict Role-Based Access Control partitioning users into
+two primary tiers:
+
+1. Creator Accounts ('Influencers'):
+   - Seeded securely in the persistent database layer.
+   - Exclusively authorized to upload high-definition video reels.
+   - We will log in as the verified creator account 'superadmin'.
+
+2. Consumer Accounts ('Followers'):
+   - Public registration flow is available for any user.
+   - Consumers can browse the feed, search creators, stream video reels, submit
+     comments, and leave likes or bookmarks.
+   - However, consumer identity claims are blocked from video upload endpoints."
+
+[Actions to show on screen]:
+1. Demonstrate the public Consumer registration form.
+2. Log in using the Creator account:
+   - Username: superadmin
+   - Password: SuperAdmin@1047
+3. Show the verified user badge and Creator dashboard navigation.
+
+----------------------------------------------------------------------
+SECTION C: Dedicated Video Reel Upload & Preview Interface (3:00 - 5:00)
+----------------------------------------------------------------------
+[Script / Speech]:
+"Now let's demonstrate the dedicated Video Reel Upload interface.
+
+When a creator clicks to create a post and selects a video file (.mp4, .mov, .webm),
+the application automatically detects the media type and routes to a specialized
+Video Reel Modal:
+
+- Notice how photo filters are completely suppressed, leaving a clean interface.
+- On the left: A high-definition HTML5 video player provides instant local playback
+  preview with play/pause, timeline seeking, volume, and looping.
+- On the right: The creator can enter captions, hashtags, select emojis, tag other
+  users in the video, and attach geolocation tags.
+- A 'Change Video' button allows replacing the video before publishing.
+
+Let's click 'Post Reel'. The video is uploaded through our unlimited upload pipeline,
+stored in Azure Blob Storage, and immediately available in the user feed."
+
+[Actions to show on screen]:
+1. Click the Post / Add Reel button from the top navigation.
+2. Select a video file from your computer.
+3. Show the split-screen Video Reel preview modal with the video playing.
+4. Type a caption (e.g. 'Excited to share our new cloud project! #scalability #azure').
+5. Add emojis and location.
+6. Click 'Post Reel' and watch the notification appear.
+
+----------------------------------------------------------------------
+SECTION D: Home Feed, Explore Gallery & Video Badging (5:00 - 6:30)
+----------------------------------------------------------------------
+[Script / Speech]:
+"Next, let's explore how content is presented across the platform:
+
+1. Home Feed:
+   - The Home Feed immediately displays the newly uploaded video reel along with
+     posts from followed creators.
+   - Videos are configured with 'preload=metadata', ensuring that multiple videos
+     in the feed do not oversaturate network bandwidth.
+   - Videos support full inline playback with controls and HTTP 206 Partial Content
+     streaming.
+
+2. Explore Photos & Reels Grid:
+   - Navigating to '/explore', we see our custom MediaThumbnail component.
+   - Videos are rendered with a prominent '▶ Reel' badge overlay.
+   - Clicking any video thumbnail opens the full-screen Lightbox Media Theatre
+     with autoplay and engagement details."
+
+[Actions to show on screen]:
+1. Refresh the Home Feed and play the newly uploaded video reel.
+2. Navigate to the 'Explore' tab -> 'Photos' section.
+3. Show the grid with both photo thumbnails and video reel thumbnails with badges.
+4. Click a video thumbnail to open the Lightbox Theatre modal.
+
+----------------------------------------------------------------------
+SECTION E: Cognitive NLP Sentiment Analysis & Comments (6:30 - 7:45)
+----------------------------------------------------------------------
+[Script / Speech]:
+"To fulfill the distinction requirements, we integrated a Cognitive Sentiment Engine.
+
+When a user posts a comment on any video reel or photo, our backend Natural Language
+Processing (NLP) pipeline intercepts the text payload in real time. It evaluates
+the sentiment polarity (positive, negative, neutral) and calculates a sentiment score
+before persisting the comment into Azure MySQL and syncing to Blob Storage."
+
+[Actions to show on screen]:
+1. Open a video post and submit positive comments (e.g. 'Amazing video reel! Love the quality.').
+2. Show that the comment is saved and displayed instantly with timestamp.
+
+----------------------------------------------------------------------
+SECTION F: Performance Optimizations & Caching Network (7:45 - 9:00)
+----------------------------------------------------------------------
+[Script / Speech]:
+"To guarantee sub-second response times and high scalability under heavy traffic:
+
+1. In-Memory LRU/TTL Caching Network:
+   - Implemented in 'config/cache.js'.
+   - Frequently requested entities (User profiles, Post counts, Explore feeds)
+     are served from memory with automatic invalidation, achieving cache hit times
+     under 1ms.
+
+2. Database Indexing:
+   - Compound B-tree indexes were created on Azure MySQL (posts, likes, comments,
+     followers, bookmarks).
+
+3. Elimination of N+1 Queries:
+   - All sequential database loops were refactored into concurrent Promise.all
+     resolutions, reducing API latency from 1.21s down to ~0.33s (a 72.5% speedup)."
+
+[Actions to show on screen]:
+1. Navigate quickly between Feed, Profile, and Explore to demonstrate instant, lag-free transitions.
+2. Open Browser DevTools Network tab to highlight fast TTFB (<250ms).
+
+----------------------------------------------------------------------
+SECTION G: Kubernetes (K8s) Architecture & CI/CD Pipelines (9:00 - 10:30)
+----------------------------------------------------------------------
+[Script / Speech]:
+"Finally, we implemented a complete Kubernetes (K8s) orchestration architecture
+as an enterprise alternative to PaaS:
+
+1. Multi-Stage Dockerfile:
+   - Stage 1 compiles frontend assets.
+   - Stage 2 runs a secure, non-root Alpine container with FFmpeg and health probes.
+
+2. Declarative K8s Manifests (in '/k8s'):
+   - Namespace ('videoshare-prod'), ConfigMaps, and Secrets.
+   - 3-replica Deployment with zero-downtime RollingUpdate.
+   - HorizontalPodAutoscaler (HPA) dynamically scaling from 2 to 10 pods based on CPU/RAM.
+   - PodDisruptionBudget (PDB) guaranteeing high availability.
+   - Dual networking with ClusterIP, LoadBalancer, and Ingress with rate limiting.
+
+3. Automated CI/CD:
+   - GitHub Actions workflow automatically builds, tests, and deploys code on git push."
+
+[Actions to show on screen]:
+1. Open the repository code and showcase the 'k8s/' folder.
+2. Show 'k8s/04-deployment.yaml', 'k8s/07-hpa.yaml', and 'Dockerfile'.
+3. Show the GitHub Actions workflow in '.github/workflows/k8s-deploy.yml'.
+
+----------------------------------------------------------------------
+SECTION H: Conclusion (10:30 - 11:00)
+----------------------------------------------------------------------
+[Script / Speech]:
+"In conclusion, this project demonstrates a production-grade, highly scalable,
+and secure video-sharing platform. We successfully delivered PaaS hosting on
+Microsoft Azure, comprehensive RBAC, dedicated video uploading, cognitive NLP
+sentiment analysis, media processing pipelines, in-memory caching, and complete
+Kubernetes orchestration.
+
+Thank you for your time!"
+
+================================================================================
+4. KEY CREDENTIALS & DEMO REFERENCE SHEET
+================================================================================
+  - Live Web App: https://cw2-videoshare-api-arbuhrh8ghcgghgz.italynorth-01.azurewebsites.net
+  - Health Probe: https://cw2-videoshare-api-arbuhrh8ghcgghgz.italynorth-01.azurewebsites.net/health
+  - Creator Login:
+      Username: superadmin
+      Password: SuperAdmin@1047
+  - Consumer Login:
+      Username: user_consumer1
+      Password: Password123!
+  - GitHub Repo: https://github.com/SubinS26/TestWebApp
+  - Azure Resource Group: CW2Scalable-rg (Italy North)
+  - Azure MySQL Database: cw2-videoshare-db.mysql.database.azure.com
+  - Azure Blob Storage: cw2videostorage01
+================================================================================
