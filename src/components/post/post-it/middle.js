@@ -11,30 +11,26 @@ const PostItMiddle = ({ postIt, session, dispatch }) => {
 
   let dp = (...args) => dispatch(CPP(...args))
 
-  let isVideo = targetFile && targetFile.type && targetFile.type.startsWith('video/')
+  let isVideo =
+    targetFile &&
+    ((targetFile.type && targetFile.type.startsWith('video/')) ||
+      /\.(mp4|webm|ogg|mov|mkv|avi|m4v)$/i.test(targetFile.name || ''))
 
   let fileChange = e => {
     e.preventDefault()
     let file = e.target.files[0]
     if (!file) return
 
-    if (file.type && file.type.startsWith('video/')) {
-      const video = document.createElement('video')
-      video.preload = 'metadata'
-      video.onloadedmetadata = () => {
-        window.URL.revokeObjectURL(video.src)
-        if (video.duration > 300) {
-          Notify({ value: 'Video duration must be 5 minutes or less!' })
-          return
-        }
-        dp('fileChanged', true)
-        dp('fileInput', e.target.value)
-        dp('targetFile', file)
-        let reader = new FileReader()
-        reader.onload = ev => dp('previewImg', ev.target.result)
-        reader.readAsDataURL(file)
-      }
-      video.src = URL.createObjectURL(file)
+    const isVideoFile =
+      (file.type && file.type.startsWith('video/')) ||
+      /\.(mp4|webm|ogg|mov|mkv|avi|m4v)$/i.test(file.name || '')
+
+    if (isVideoFile) {
+      const blobUrl = URL.createObjectURL(file)
+      dp('fileChanged', true)
+      dp('fileInput', e.target.value)
+      dp('targetFile', file)
+      dp('previewImg', blobUrl)
     } else {
       dp('fileChanged', true)
       dp('fileInput', e.target.value)

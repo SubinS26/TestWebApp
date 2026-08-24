@@ -54,16 +54,13 @@ app.post('/post-it', upload.single('image'), async (req, res) => {
       }
     }
 
-    // Azure Blob Storage Upload
+    // Azure Blob Storage Upload in background for high speed
     try {
       const { uploadToAzureBlob } = require('../../../config/AzureBlob')
-      const blobUrl = await uploadToAzureBlob(localDest, filename, req.file.mimetype)
-      if (blobUrl) {
-        finalSrc = blobUrl
-      }
-    } catch (blobErr) {
-      console.warn('[Azure Blob] Upload skipped:', blobErr.message)
-    }
+      uploadToAzureBlob(localDest, filename, req.file.mimetype).catch(blobErr => {
+        console.warn('[Azure Blob] Background sync warning:', blobErr.message)
+      })
+    } catch (blobErr) {}
 
     // Safely remove temporary file
     try {

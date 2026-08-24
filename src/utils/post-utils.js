@@ -35,9 +35,11 @@ export const addPost = async options => {
     } = options,
     user = Number(uData('session')),
     username = uData('username'),
-    file = targetFile && targetFile.type && targetFile.type.startsWith('video/')
-      ? targetFile
-      : await imageCompressor(targetFile),
+    isVideoFile =
+      targetFile &&
+      ((targetFile.type && targetFile.type.startsWith('video/')) ||
+        /\.(mp4|webm|ogg|mov|mkv|avi|m4v)$/i.test(targetFile.name || '')),
+    file = isVideoFile ? targetFile : await imageCompressor(targetFile),
     action = new Action('.p_post')
 
   action.start()
