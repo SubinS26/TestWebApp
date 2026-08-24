@@ -36,16 +36,25 @@ export const addPost = async options => {
     user = Number(uData('session')),
     username = uData('username'),
     isVideoFile =
-      targetFile &&
-      ((targetFile.type && targetFile.type.startsWith('video/')) ||
-        /\.(mp4|webm|ogg|mov|mkv|avi|m4v)$/i.test(targetFile.name || '')),
+      options.isVideo ||
+      (targetFile &&
+        ((targetFile.type && targetFile.type.startsWith('video/')) ||
+          /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(targetFile.name || ''))),
     action = new Action('.p_post')
 
   action.start()
   wait()
 
   try {
-    let file = isVideoFile ? targetFile : await imageCompressor(targetFile)
+    let file = targetFile
+    if (!isVideoFile && targetFile && targetFile.type && targetFile.type.startsWith('image/')) {
+      try {
+        file = await imageCompressor(targetFile)
+      } catch (compressErr) {
+        file = targetFile
+      }
+    }
+
     let form = new FormData()
     form.append('desc', desc || '')
     form.append('image', file)
@@ -53,6 +62,7 @@ export const addPost = async options => {
     form.append('location', location || '')
     form.append('type', type || 'user')
     form.append('group', group || 0)
+    form.append('isVideo', isVideoFile ? 'true' : 'false')
 
     let res = await post('/api/post-it', form, {
       headers: {

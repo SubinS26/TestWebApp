@@ -50,6 +50,7 @@ export default class VideoPostModal extends Component {
     await addPost({
       dispatch,
       ...rest,
+      isVideo: true,
       filter: 'filter-normal',
       group_name,
     })
