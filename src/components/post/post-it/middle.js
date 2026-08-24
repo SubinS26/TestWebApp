@@ -56,9 +56,21 @@ const PostItMiddle = ({ postIt, session, dispatch }) => {
               className="t_p_ta"
             />
           </div>
-          <div className="i_p_img">
+          <div className="i_p_img" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             {isVideo ? (
-              <video src={previewImg} className={filter} controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <video
+                src={previewImg}
+                controls
+                autoPlay
+                playsInline
+                style={{
+                  width: '100%',
+                  maxHeight: '260px',
+                  objectFit: 'contain',
+                  backgroundColor: '#000',
+                  borderRadius: '4px',
+                }}
+              />
             ) : (
               <img src={previewImg} className={filter} />
             )}

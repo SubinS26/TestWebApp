@@ -7,9 +7,6 @@ const app = require('express').Router(),
   root = process.cwd(),
   upload = require('multer')({
     dest: `${root}/dist/temp/`,
-    limits: {
-      fileSize: 150 * 1024 * 1024,
-    },
   }),
   { ProcessImage, DeleteAllOfFolder } = require('handy-image-processor')
 
@@ -35,7 +32,7 @@ app.post('/post-it', upload.single('image'), async (req, res) => {
     if (!fs.existsSync(postsDir)) fs.mkdirSync(postsDir, { recursive: true })
     if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true })
 
-    const isVideo = req.file.mimetype && (req.file.mimetype.startsWith('video/') || /\.(mp4|webm|ogg|mov|mkv)$/i.test(req.file.originalname))
+    const isVideo = req.file.mimetype && (req.file.mimetype.startsWith('video/') || /\.(mp4|webm|ogg|mov|mkv|flv|wmv|m4v|3gp|ogv|avi)$/i.test(req.file.originalname))
     const extension = isVideo
       ? (req.file.originalname.split('.').pop() || 'mp4').toLowerCase()
       : 'jpg'

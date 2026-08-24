@@ -27,10 +27,15 @@ export default class PostIt extends Component {
 
   render() {
     let {
-      postIt: { fileChanged, showOverlay },
+      postIt: { fileChanged, showOverlay, targetFile },
       dispatch,
       back,
     } = this.props
+
+    const isVideo =
+      targetFile &&
+      ((targetFile.type && targetFile.type.startsWith('video/')) ||
+        /\.(mp4|webm|ogg|mov|mkv|avi|m4v)$/i.test(targetFile.name || ''))
 
     const modalContent = (
       <div className="post_it_portal_container">
@@ -47,7 +52,7 @@ export default class PostIt extends Component {
           }}
         >
           <FadeIn duration="300ms">
-            {fileChanged && <Filters />}
+            {fileChanged && !isVideo && <Filters />}
 
             <PostItHeader />
             <Middle />
