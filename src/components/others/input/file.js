@@ -1,21 +1,28 @@
-import React, { Fragment } from 'react'
+import React, { Component, Fragment } from 'react'
 import { string, func, oneOfType } from 'prop-types'
 
-const FileInput = ({ label, value, fileChange, labelClass, id = 'file_input', ...props }) => {
-  return (
-    <Fragment>
-      <input
-        type="file"
-        id={id}
-        accept="image/*,video/*"
-        onChange={fileChange}
-        {...props}
-      />
-      <label htmlFor={id} className={labelClass}>
-        {typeof label == 'function' ? label() : label}
-      </label>
-    </Fragment>
-  )
+export default class FileInput extends Component {
+  uniqueId = 'file_input_' + Math.random().toString(36).substring(2, 9)
+
+  render() {
+    const { label, value, fileChange, labelClass, id, accept = 'image/*,video/*', ...props } = this.props
+    const targetId = id || this.uniqueId
+
+    return (
+      <Fragment>
+        <input
+          type="file"
+          id={targetId}
+          accept={accept}
+          onChange={fileChange}
+          {...props}
+        />
+        <label htmlFor={targetId} className={labelClass}>
+          {typeof label === 'function' ? label() : label}
+        </label>
+      </Fragment>
+    )
+  }
 }
 
 FileInput.defaultProps = {
@@ -25,10 +32,10 @@ FileInput.defaultProps = {
 }
 
 FileInput.propTypes = {
-  value: string.isRequired,
+  value: string,
   fileChange: func.isRequired,
   label: oneOfType([string, func]).isRequired,
   labelClass: string,
+  id: string,
+  accept: string,
 }
-
-export default FileInput

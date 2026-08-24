@@ -81,6 +81,14 @@ const PostItMiddle = ({ postIt, session, dispatch }) => {
               <img src={previewImg} className={filter} />
             )}
           </div>
+          <div style={{ marginTop: '8px', textAlign: 'center' }}>
+            <FileInput
+              id="change_post_file_input"
+              fileChange={fileChange}
+              label={isVideo ? 'Change Video' : 'Change Photo'}
+              labelClass="sec_btn"
+            />
+          </div>
         </div>
       ) : (
         // If not show button to select
@@ -90,6 +98,7 @@ const PostItMiddle = ({ postIt, session, dispatch }) => {
           encType="multipart/formdata"
         >
           <FileInput
+            id="post_it_file_input"
             value={fileInput}
             fileChange={fileChange}
             label="Choose photo or video"
