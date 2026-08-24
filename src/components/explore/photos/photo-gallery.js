@@ -3,6 +3,7 @@ import Nothing from '../../others/nothing'
 import Gallery from 'react-photo-gallery'
 import { connect } from 'react-redux'
 import ImageTheatre from '../../others/imageTheatre/imageTheatre'
+import MediaThumbnail from '../../others/gallery/media-thumbnail'
 
 class ExplorePhotoGallery extends Component {
   state = {
@@ -33,12 +34,14 @@ class ExplorePhotoGallery extends Component {
     let PHOTO_SET = []
 
     for (let f of photos) {
+      let photoSrc = f.imgsrc || f.imgSrc || ''
+      let resolvedSrc = photoSrc.startsWith('http') ? photoSrc : `/posts/${photoSrc}`
       PHOTO_SET.push({
         ...f,
-        src: `/posts/${f.imgsrc}`,
+        src: resolvedSrc,
         width: 1,
         height: 1,
-        className: `${f.filter}`,
+        className: `${f.filter || ''}`,
       })
     }
 
@@ -52,6 +55,7 @@ class ExplorePhotoGallery extends Component {
               photos={PHOTO_SET}
               columns={5}
               margin={5}
+              ImageComponent={MediaThumbnail}
               onClick={this.selectPhoto}
             />
           )}

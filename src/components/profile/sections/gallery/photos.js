@@ -4,6 +4,7 @@ import { Me } from '../../../../utils/utils'
 import Nothing from '../../../others/nothing'
 import PhotoGallery from 'react-photo-gallery'
 import ImageTheatre from '../../../others/imageTheatre/imageTheatre'
+import MediaThumbnail from '../../../others/gallery/media-thumbnail'
 
 class UserPhotos extends Component {
   state = {
@@ -68,6 +69,7 @@ class UserPhotos extends Component {
             photos={PHOTO_SET}
             columns={4}
             margin={7}
+            ImageComponent={MediaThumbnail}
             onClick={this.selectPhoto}
           />
         )}

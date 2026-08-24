@@ -3,6 +3,7 @@ import Nothing from '../../../others/nothing'
 import PhotoGallery from 'react-photo-gallery'
 import ImageTheatre from '../../../others/imageTheatre/imageTheatre'
 import { connect } from 'react-redux'
+import MediaThumbnail from '../../../others/gallery/media-thumbnail'
 
 class GroupPhotos extends Component {
   state = {
@@ -36,12 +37,14 @@ class GroupPhotos extends Component {
     let PHOTO_SET = []
 
     for (let f of photos) {
+      let photoSrc = f.imgsrc || f.imgSrc || ''
+      let resolvedSrc = photoSrc.startsWith('http') ? photoSrc : `/posts/${photoSrc}`
       PHOTO_SET.push({
         ...f,
-        src: `/posts/${f.imgsrc}`,
+        src: resolvedSrc,
         width: 15,
         height: 15,
-        className: `g_photo ${f.filter}`,
+        className: `g_photo ${f.filter || ''}`,
       })
     }
 
@@ -54,6 +57,7 @@ class GroupPhotos extends Component {
             photos={PHOTO_SET}
             columns={4}
             margin={7}
+            ImageComponent={MediaThumbnail}
             onClick={this.selectPhoto}
           />
         )}

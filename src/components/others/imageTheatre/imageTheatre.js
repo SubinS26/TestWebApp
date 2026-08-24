@@ -15,8 +15,15 @@ const ImageTheatre = props => {
       <div className="image_show">
         <FadeIn duration="300ms">
           <div className="img_s_img">
-            {/\.(mp4|webm|ogg|mov|mkv)$/i.test(imgSrc) || (imgSrc.startsWith('http') && /\.(mp4|webm|ogg|mov|mkv)/i.test(imgSrc)) ? (
-              <video src={imgSrc} className={filter} controls playsInline style={{ maxWidth: '100%', maxHeight: '80vh' }} />
+            {/\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(imgSrc) || (imgSrc.startsWith('http') && /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)/i.test(imgSrc)) ? (
+              <video
+                src={imgSrc}
+                className={filter}
+                controls
+                autoPlay
+                playsInline
+                style={{ maxWidth: '100%', maxHeight: '80vh', backgroundColor: '#000', borderRadius: '6px' }}
+              />
             ) : (
               <img src={imgSrc} className={filter} />
             )}
