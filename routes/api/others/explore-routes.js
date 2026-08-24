@@ -38,12 +38,19 @@ app.post('/get-users-to-explore', async (req, res) => {
   res.json(orderByMutualUsers)
 })
 
+const cache = require('../../../config/cache')
+
 // PHOTOS TO EXPLORE
 app.post('/get-photos-to-explore', async (req, res) => {
+  const cacheKey = 'explore:photos:latest'
+  const cached = cache.get(cacheKey)
+  if (cached) return res.json(cached)
+
   let photos = await db.query(
     'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.imgSrc AS imgsrc, posts.filter, posts.post_time FROM posts JOIN users ON posts.user = users.id WHERE users.account_type = "public" AND posts.imgSrc <> "" ORDER BY posts.post_id DESC LIMIT 40'
   )
 
+  cache.set(cacheKey, photos, 20) // 20 second TTL
   res.json(photos)
 })
 

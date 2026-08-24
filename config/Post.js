@@ -59,12 +59,19 @@ const didIShare = async (post, session, user) => {
   return db.tf(s[0].post_share)
 }
 
+const cache = require('./cache')
+
 /**
  * Returns tags count, likes count, ...
  * @param {Number} post_id Post ID
  * @returns {Object} Tags Count, Likes Count, ...
  */
 const getCounts = async post_id => {
+  if (!post_id) return { tags_count: 0, likes_count: 0, shares_count: 0, comments_count: 0 }
+  const cacheKey = `post:counts:${post_id}`
+  const cached = cache.get(cacheKey)
+  if (cached !== null) return cached
+
   let [
     [{ tags_count = 0 } = {}],
     [{ likes_count = 0 } = {}],
@@ -77,12 +84,14 @@ const getCounts = async post_id => {
     db.query('SELECT COUNT(comment_id) AS comments_count FROM comments WHERE post_id=?', [post_id]),
   ])
 
-  return {
+  const counts = {
     tags_count: Number(tags_count) || 0,
     likes_count: Number(likes_count) || 0,
     shares_count: Number(shares_count) || 0,
     comments_count: Number(comments_count) || 0,
   }
+  cache.set(cacheKey, counts, 15) // 15 second TTL for post metrics
+  return counts
 }
 
 /** Deletes a post */

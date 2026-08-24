@@ -39,18 +39,20 @@ export default class PostImage extends Component {
               </p>
             </div>
 
-            {/\.(mp4|webm|ogg|mov|mkv)$/i.test(imgSrc) || (imgSrc.startsWith('http') && /\.(mp4|webm|ogg|mov|mkv)/i.test(imgSrc)) ? (
+            {/\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(imgSrc) || (imgSrc.startsWith('http') && /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)/i.test(imgSrc)) ? (
               <video
                 src={imgSrc.startsWith('http') ? imgSrc : `/posts/${imgSrc}`}
                 className={classNames('p_img', filter)}
                 controls
                 playsInline
+                preload="metadata"
                 style={{ width: '100%', maxHeight: '500px', backgroundColor: 'black' }}
               />
             ) : (
               <img
                 src={imgSrc.startsWith('http') ? imgSrc : `/posts/${imgSrc}`}
                 className={classNames('p_img', filter)}
+                loading="lazy"
                 onClick={() => this._toggle('showImage')}
               />
             )}

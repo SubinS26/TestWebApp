@@ -12,16 +12,20 @@ const db = require('./db'),
   { intersectionBy } = require('lodash'),
   catchify = require('catchify')
 
-/**
- * Returns ID of a user
- * @param {String} username Username
- */
+const cache = require('./cache')
 
 const getId = async username => {
+  if (!username) return null
+  const cacheKey = `user:id:${username.toLowerCase()}`
+  const cached = cache.get(cacheKey)
+  if (cached !== null) return cached
+
   let s = await db.query('SELECT id FROM users WHERE LOWER(username)=LOWER(?) LIMIT 1', [
     username,
   ])
-  return s && s.length > 0 ? s[0].id : null
+  const id = s && s.length > 0 ? s[0].id : null
+  if (id) cache.set(cacheKey, id, 60)
+  return id
 }
 
 /**
@@ -33,8 +37,15 @@ const getId = async username => {
  * @param {String} id ID to be used to return [what]
  */
 const getWhat = async (what, id) => {
+  if (!id) return null
+  const cacheKey = `user:${id}:${what}`
+  const cached = cache.get(cacheKey)
+  if (cached !== null) return cached
+
   let s = await db.query(`SELECT ${what} FROM users WHERE id=? LIMIT 1`, [id])
-  return s && s.length > 0 ? s[0][what] : null
+  const val = s && s.length > 0 ? s[0][what] : null
+  if (val !== null) cache.set(cacheKey, val, 60)
+  return val
 }
 
 /**
