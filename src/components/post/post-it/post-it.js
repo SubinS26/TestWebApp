@@ -15,6 +15,8 @@ import AddEmojis from '../../others/emojis/add-emojis'
 import { CPP } from '../../../actions/post'
 import { connect } from 'react-redux'
 
+import VideoPostModal from './video-post-modal'
+
 @connect(store => ({
   postIt: store.Post.postIt,
 }))
@@ -35,7 +37,16 @@ export default class PostIt extends Component {
     const isVideo =
       targetFile &&
       ((targetFile.type && targetFile.type.startsWith('video/')) ||
-        /\.(mp4|webm|ogg|mov|mkv|avi|m4v)$/i.test(targetFile.name || ''))
+        /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(targetFile.name || ''))
+
+    const isTest = process.env.NODE_ENV === 'test'
+
+    if (fileChanged && isVideo) {
+      const videoModalContent = <VideoPostModal back={back} />
+      return !isTest && typeof document !== 'undefined' && document.body
+        ? createPortal(videoModalContent, document.body)
+        : videoModalContent
+    }
 
     const modalContent = (
       <div className="post_it_portal_container">
@@ -86,7 +97,6 @@ export default class PostIt extends Component {
       </div>
     )
 
-    const isTest = process.env.NODE_ENV === 'test'
     return !isTest && typeof document !== 'undefined' && document.body
       ? createPortal(modalContent, document.body)
       : modalContent
