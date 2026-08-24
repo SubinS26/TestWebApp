@@ -100,4 +100,16 @@ app.post('/search-instagram', async (req, res) => {
   res.json({ users, groups, hashtags })
 })
 
+// COGNITIVE SENTIMENT ANALYSIS ENDPOINT
+app.post('/analyze-sentiment', async (req, res) => {
+  try {
+    const { text } = req.body
+    const { analyzeSentiment } = require('../../config/SentimentService')
+    const result = await analyzeSentiment(text)
+    res.json({ success: true, result })
+  } catch (error) {
+    db.catchError(error, res)
+  }
+})
+
 module.exports = app

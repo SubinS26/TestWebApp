@@ -7,9 +7,11 @@ import Notify from 'handy-notification'
 
 const PostItMiddle = ({ postIt, session, dispatch }) => {
   let { username } = session
-  let { fileChanged, desc, previewImg, filter, fileInput } = postIt
+  let { fileChanged, desc, previewImg, filter, fileInput, targetFile } = postIt
 
   let dp = (...args) => dispatch(CPP(...args))
+
+  let isVideo = targetFile && targetFile.type && targetFile.type.startsWith('video/')
 
   let fileChange = e => {
     e.preventDefault()
@@ -46,7 +48,7 @@ const PostItMiddle = ({ postIt, session, dispatch }) => {
   let valueChange = e => dp('desc', e.target.value)
 
   return (
-    <div className="i_p_main p_main" style={{ height: 296 }}>
+    <div className="i_p_main p_main" style={{ minHeight: 296, maxHeight: 380, overflowY: 'auto' }}>
       {// Show if image/file is selected
       fileChanged ? (
         <div>
@@ -59,7 +61,7 @@ const PostItMiddle = ({ postIt, session, dispatch }) => {
             />
           </div>
           <div className="i_p_img">
-            {postIt.targetFile && postIt.targetFile.type && postIt.targetFile.type.startsWith('video/') ? (
+            {isVideo ? (
               <video src={previewImg} className={filter} controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             ) : (
               <img src={previewImg} className={filter} />

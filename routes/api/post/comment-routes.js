@@ -10,7 +10,7 @@ const app = require('express').Router(),
   { ProcessImage, DeleteAllOfFolder } = require('handy-image-processor'),
   { unlinkSync, createReadStream, createWriteStream } = require('fs')
 
-// COMMENT TEXT [REQ = POST, TEST]
+// COMMENT TEXT [REQ = POST, TEXT]
 app.post('/comment-text', async (req, res) => {
   try {
     let { post_id, text } = req.body,
@@ -21,14 +21,19 @@ app.post('/comment-text', async (req, res) => {
         comment_by: id,
         post_id,
         comment_time: new Date().getTime(),
-      },
-      { insertId } = await db.query('INSERT INTO comments SET ?', comment)
+      }
+    
+    let { analyzeSentiment } = require('../../../config/SentimentService')
+    let sentiment = await analyzeSentiment(text)
+
+    let { insertId } = await db.query('INSERT INTO comments SET ?', comment)
     await User.mentionUsers(text, id, post_id, 'comment')
 
     res.json({
       success: true,
       mssg: 'Commented!!',
       comment_id: insertId,
+      sentiment,
     })
   } catch (error) {
     db.catchError(error, res)
