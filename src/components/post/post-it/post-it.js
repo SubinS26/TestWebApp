@@ -41,13 +41,6 @@ export default class PostIt extends Component {
 
     const isTest = process.env.NODE_ENV === 'test'
 
-    if (fileChanged && isVideo) {
-      const videoModalContent = <VideoPostModal back={back} />
-      return !isTest && typeof document !== 'undefined' && document.body
-        ? createPortal(videoModalContent, document.body)
-        : videoModalContent
-    }
-
     const modalContent = (
       <div className="post_it_portal_container">
         <Overlay />
