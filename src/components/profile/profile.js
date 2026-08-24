@@ -25,12 +25,8 @@ class Profile extends Component {
   inv_user = () => this.props.history.push('/error/user')
 
   componentDidMount = async () => {
-    let {
-      match: {
-        params: { username },
-      },
-      dispatch,
-    } = this.props
+    let { match, dispatch } = this.props
+    let username = (match && match.params && match.params.username) || uData('username') || 'steve_jobs'
     await forProfile({ username, dispatch, invalidUser: this.inv_user })
     this.setState({ loading: false })
     dispatch(getUnreadNotifications())
@@ -40,9 +36,10 @@ class Profile extends Component {
   componentWillReceiveProps = async ({ dispatch, match }) => {
     if (this.props.match.url != match.url) {
       this.setState({ loading: true })
+      let username = (match && match.params && match.params.username) || uData('username') || 'steve_jobs'
       await forProfile({
         dispatch,
-        username: match.params.username,
+        username,
         invalidUser: this.inv_user,
       })
       this.setState({ loading: false })
@@ -54,14 +51,13 @@ class Profile extends Component {
   render() {
     let { loading } = this.state
     let {
-      match: {
-        url,
-        params: { username },
-      },
+      match = {},
       isFollowing,
       ud = {},
       mutuals = [],
     } = this.props
+    let url = (match && match.url) || '/profile'
+    let username = (match && match.params && match.params.username) || (ud && ud.username) || uData('username') || 'steve_jobs'
     let { id, firstname = '', surname = '', account_type = '' } = ud || {}
     let notPrivate = !isPrivate(id, isFollowing, account_type)
 
