@@ -29,15 +29,17 @@ export default class PostIt extends Component {
 
   render() {
     let {
-      postIt: { fileChanged, showOverlay, targetFile },
+      postIt: { fileChanged, showOverlay, targetFile, isVideo: isVideoPost },
       dispatch,
       back,
     } = this.props
 
-    const isVideo =
-      targetFile &&
-      ((targetFile.type && targetFile.type.startsWith('video/')) ||
-        /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(targetFile.name || ''))
+    const isVideo = Boolean(
+      isVideoPost ||
+        (targetFile &&
+          (((targetFile.type || '').toLowerCase().startsWith('video/')) ||
+            /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(targetFile.name || '')))
+    )
 
     const isTest = process.env.NODE_ENV === 'test'
 

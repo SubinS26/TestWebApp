@@ -12,26 +12,32 @@ const PostItMiddle = ({ postIt, session, dispatch }) => {
   let dp = (...args) => dispatch(CPP(...args))
 
   let isVideo =
-    targetFile &&
-    ((targetFile.type && targetFile.type.startsWith('video/')) ||
-      /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(targetFile.name || ''))
+    Boolean(
+      postIt.isVideo ||
+        (targetFile &&
+          (((targetFile.type || '').toLowerCase().startsWith('video/')) ||
+            /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(targetFile.name || ''))) ||
+        (previewImg && typeof previewImg === 'string' && (previewImg.startsWith('blob:') || previewImg.startsWith('data:video/')))
+    )
 
   let fileChange = e => {
     let file = e.target.files && e.target.files[0]
     if (!file) return
 
+    const fileName = (file.name || '').toLowerCase()
+    const fileType = (file.type || '').toLowerCase()
     const isVideoFile =
-      (file.type && file.type.startsWith('video/')) ||
-      /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(file.name || '')
+      fileType.startsWith('video/') ||
+      /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(fileName)
+
+    dp('targetFile', file)
+    dp('fileChanged', true)
+    dp('isVideo', isVideoFile)
 
     if (isVideoFile) {
       const blobUrl = URL.createObjectURL(file)
-      dp('targetFile', file)
       dp('previewImg', blobUrl)
-      dp('fileChanged', true)
     } else {
-      dp('targetFile', file)
-      dp('fileChanged', true)
       let reader = new FileReader()
       reader.onload = ev => dp('previewImg', ev.target.result)
       reader.readAsDataURL(file)
@@ -56,16 +62,19 @@ const PostItMiddle = ({ postIt, session, dispatch }) => {
           <div className="i_p_img" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             {isVideo ? (
               <video
+                key={previewImg}
                 src={previewImg}
                 controls
                 autoPlay
+                muted
                 playsInline
+                loop
                 style={{
                   width: '100%',
                   maxHeight: '260px',
                   objectFit: 'contain',
                   backgroundColor: '#000',
-                  borderRadius: '4px',
+                  borderRadius: '6px',
                 }}
               />
             ) : (
