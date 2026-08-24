@@ -1,6 +1,6 @@
 /**
- * @author Faiyaz Shaikh <www.shtakkar@gmail.com>
- * GitHub repo: https://github.com/yTakkar/React-Instagram-Clone-2.0
+ * @author Subin Shrestha <rtr.shrestha.subin@gmail.com>
+ * GitHub repo: https://github.com/SubinS26/TestWebApp
  *
  * Suppose, we're posting an image, and don't want user to post again, or perform any different action until response comes back from the server either sucess or failure, this library enables to do exactly the same.
  */

@@ -6,9 +6,8 @@ require('dotenv').config()
 // Require Dependencies
 const express = require('express'),
   app = express(),
-  {
-    env: { PORT, SESSION_SECRET_LETTER },
-  } = process,
+  port = process.env.PORT || 4300,
+  sessionSecret = process.env.SESSION_SECRET_LETTER || 'azure-app-default-session-secret-key-1234',
   { success } = require('handy-log'),
   favicon = require('serve-favicon'),
   { join } = require('path'),
@@ -22,6 +21,9 @@ const express = require('express'),
 const { variables } = require('./config/Middlewares')
 const AppRoutes = require('./app-routes')
 
+// Trust proxy for Azure App Service & reverse proxies
+app.set('trust proxy', 1)
+
 // View engine
 app.engine(
   'hbs',
@@ -31,6 +33,11 @@ app.engine(
   })
 )
 app.set('view engine', 'hbs')
+
+// Azure health probe endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'UP', timestamp: new Date().toISOString() })
+})
 
 // Middlewares
 app.use(favicon(join(__dirname, '/dist/images/favicon/favicon.png')))
@@ -45,7 +52,7 @@ app.use(express.static(join(__dirname, '/dist')))
 app.use(
   session({
     cookieName: 'session',
-    secret: SESSION_SECRET_LETTER,
+    secret: sessionSecret,
     duration: 24 * 60 * 60 * 1000,
     activeDuration: 5 * 60 * 1000,
   })
@@ -59,4 +66,4 @@ app.use(variables)
 AppRoutes(app)
 
 // Listening to PORT
-app.listen(PORT, () => success('App running..'))
+app.listen(port, () => success(`App running on port ${port}..`))

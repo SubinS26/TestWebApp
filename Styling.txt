@@ -4,7 +4,7 @@
   • **instagram-theme.css**: The custom Instagram UI theme stylesheet
   containing desktop scaling rules, FontAwesome icon alignments, brand color
   variables, and compact component layout overrides.
-  file:///home/haku/Documents/University/CourseDocuments/ScalableAdvancedSoftwareSolution/Assessment&Feedback/React-Instagram-Clone-2.0/dist/styles/instagram-theme.css
+  file:///home/haku/Documents/University/CourseDocuments/ScalableAdvancedSoftwareSolution/Assessment&Feedback/TestWebApp-main/dist/styles/instagram-theme.css
   • **styles.css**: The base compiled CSS bundle served to the client web
   browser.
   ──────
@@ -13,16 +13,16 @@
   ──────
 
   • **styles.scss**: Root SCSS entry point importing modular SCSS partials.
-  file:///home/haku/Documents/University/CourseDocuments/ScalableAdvancedSoftwareSolution/Assessment&Feedback/React-Instagram-Clone-2.0/dist/styles/styles.css
+  file:///home/haku/Documents/University/CourseDocuments/ScalableAdvancedSoftwareSolution/Assessment&Feedback/TestWebApp-main/dist/styles/styles.css
   • **variables**: SCSS color palettes, spacing tokens, and typography
   variables.
   • **defaults**: Reset styles and base HTML element definitions.
-    file:///home/haku/Documents/University/CourseDocuments/ScalableAdvancedSoftwareSolution/Assessment&Feedback/React-Instagram-Clone-2.0/styles/defaults
+    file:///home/haku/Documents/University/CourseDocuments/ScalableAdvancedSoftwareSolution/Assessment&Feedback/TestWebApp-main/styles/defaults
   • **components**: Component styles (header, navigation bar, modals,
   overlays, buttons).
   • **pages**: Page-specific styles (profile, notifications, messages,
   settings, explore, login/signup).
-  file:///home/haku/Documents/University/CourseDocuments/ScalableAdvancedSoftwareSolution/Assessment&Feedback/React-Instagram-Clone-2.0/styles/post
+  file:///home/haku/Documents/University/CourseDocuments/ScalableAdvancedSoftwareSolution/Assessment&Feedback/TestWebApp-main/styles/post
   • **post**: Post feed card styles, comments, likes, and post action buttons.
 
   ──────
@@ -30,5 +30,5 @@
 
   • **topHeader.hbs**: The Handlebars header partial linking both
   /styles/styles.css and /styles/instagram-theme.css.
-  file:///home/haku/Documents/University/CourseDocuments/ScalableAdvancedSoftwareSolution/Assessment&Feedback/React-Instagram-Clone-2.0/views/partials/topHeader.hbs#L14
+  file:///home/haku/Documents/University/CourseDocuments/ScalableAdvancedSoftwareSolution/Assessment&Feedback/TestWebApp-main/views/partials/topHeader.hbs#L14
 

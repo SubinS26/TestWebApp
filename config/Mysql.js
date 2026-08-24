@@ -1,12 +1,13 @@
-// RETURNS MYSQL DATABASE
+// RETURNS MYSQL DATABASE POOL
 
 require('dotenv').config()
 
 const mysql = require('mysql'),
-  { error } = require('handy-log'),
-  { MYSQL_HOST, MYSQL_PORT, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE, MYSQL_SOCKET } = process.env
+  { error, success } = require('handy-log'),
+  { MYSQL_HOST, MYSQL_PORT, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE, MYSQL_SOCKET, MYSQL_SSL } = process.env
 
 const connectionConfig = {
+  connectionLimit: 10,
   user: MYSQL_USER || 'root',
   password: MYSQL_PASSWORD || '',
   database: MYSQL_DATABASE || 'react-instagram-clone',
@@ -22,13 +23,24 @@ if (MYSQL_SOCKET) {
   }
 }
 
-// CREATES A DB CONNECTION
-const db = mysql.createConnection(connectionConfig)
+// Enable SSL for Azure Database for MySQL Flexible Server or if MYSQL_SSL is set
+const isAzureHost = connectionConfig.host && connectionConfig.host.includes('.azure.com')
+if (MYSQL_SSL === 'true' || MYSQL_SSL === '1' || isAzureHost) {
+  connectionConfig.ssl = {
+    rejectUnauthorized: false,
+  }
+}
 
-// CONNECTS DB
-db.connect(err => {
+// CREATES A DB CONNECTION POOL
+const db = mysql.createPool(connectionConfig)
+
+// TEST DB CONNECTION
+db.getConnection((err, connection) => {
   if (err) {
-    error(err.message)
+    error(`[MySQL] Initial connection warning: ${err.message}`)
+  } else {
+    success(`[MySQL] Connection established to ${connectionConfig.host || 'local socket'}/${connectionConfig.database}`)
+    connection.release()
   }
 })
 

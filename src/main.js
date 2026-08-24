@@ -1,6 +1,6 @@
 /**
- * @author Faiyaz Shaikh <www.shtakkar@gmail.com>
- * GitHub repo: https://github.com/yTakkar/React-Instagram-Clone-2.0
+ * @author Subin Shrestha <rtr.shrestha.subin@gmail.com>
+ * GitHub repo: https://github.com/SubinS26/TestWebApp
  */
 
 // FOR LOGGEDIN USER
