@@ -71,10 +71,11 @@ app.use((req, res, next) => {
 
 // Middlewares
 app.use(favicon(join(__dirname, '/dist/images/favicon/favicon.png')))
-app.use(bodyParser.json())
+app.use(bodyParser.json({ limit: '150mb' }))
 app.use(
   bodyParser.urlencoded({
-    extended: false,
+    extended: true,
+    limit: '150mb',
   })
 )
 app.use(validator())

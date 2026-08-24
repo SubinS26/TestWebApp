@@ -7,6 +7,9 @@ const app = require('express').Router(),
   root = process.cwd(),
   upload = require('multer')({
     dest: `${root}/dist/temp/`,
+    limits: {
+      fileSize: 150 * 1024 * 1024,
+    },
   }),
   { ProcessImage, DeleteAllOfFolder } = require('handy-image-processor')
 

@@ -31,7 +31,7 @@ export const addPost = async options => {
       type,
       group,
       group_name,
-      tags,
+      tags = [],
     } = options,
     user = Number(uData('session')),
     username = uData('username'),
@@ -39,75 +39,89 @@ export const addPost = async options => {
       targetFile &&
       ((targetFile.type && targetFile.type.startsWith('video/')) ||
         /\.(mp4|webm|ogg|mov|mkv|avi|m4v)$/i.test(targetFile.name || '')),
-    file = isVideoFile ? targetFile : await imageCompressor(targetFile),
     action = new Action('.p_post')
 
   action.start()
   wait()
 
-  let form = new FormData()
-  form.append('desc', desc || '')
-  form.append('image', file)
-  form.append('filter', filter || 'filter-normal')
-  form.append('location', location || '')
-  form.append('type', type || 'user')
-  form.append('group', group || 0)
+  try {
+    let file = isVideoFile ? targetFile : await imageCompressor(targetFile)
+    let form = new FormData()
+    form.append('desc', desc || '')
+    form.append('image', file)
+    form.append('filter', filter || 'filter-normal')
+    form.append('location', location || '')
+    form.append('type', type || 'user')
+    form.append('group', group || 0)
 
-  let {
-    data: { success, mssg, post_id, firstname, surname, filename },
-  } = await post('/api/post-it', form)
-  await post('/api/tag-post', { tags, post_id })
-
-  tags.forEach(async t => {
-    await insta_notify({
-      to: t.user,
-      type: 'tag',
-      post_id: post_id,
+    let res = await post('/api/post-it', form, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
     })
-  })
+    let { success, mssg, post_id, firstname, surname, filename } = res.data
 
-  if (success) {
-    let newPost = {
-      key: post_id,
-      comments_count: 0,
-      likes_count: 0,
-      shares_count: 0,
-      tags_count: tags.length,
-      user,
-      username,
-      firstname,
-      surname,
-      description: desc,
-      filter,
-      imgSrc: filename,
-      location,
-      post_time: `${new Date().getTime()}`,
-      post_id,
-      group_id: 0,
-      group_name: '',
-      type: 'user',
+    if (tags && Array.isArray(tags) && tags.length > 0 && post_id) {
+      await post('/api/tag-post', { tags, post_id })
+      tags.forEach(async t => {
+        await insta_notify({
+          to: t.user,
+          type: 'tag',
+          post_id: post_id,
+        })
+      })
     }
 
-    type == 'user'
-      ? dispatch(
-          addUserPost({
-            ...newPost,
-            when: 'feed',
-          })
-        )
-      : dispatch(
-          addGroupPost({
-            ...newPost,
-            group_id: group,
-            group_name,
-            type: 'group',
-            when: 'groupPosts',
-          })
-        )
-  }
+    if (success) {
+      let newPost = {
+        key: post_id,
+        comments_count: 0,
+        likes_count: 0,
+        shares_count: 0,
+        tags_count: tags ? tags.length : 0,
+        user,
+        username,
+        firstname,
+        surname,
+        description: desc || '',
+        filter: filter || 'filter-normal',
+        imgSrc: filename,
+        location: location || '',
+        post_time: `${new Date().getTime()}`,
+        post_id,
+        group_id: Number(group) || 0,
+        group_name: group_name || '',
+        type: type || 'user',
+      }
 
-  action.end()
-  Notify({ value: mssg })
+      type == 'user'
+        ? dispatch(
+            addUserPost({
+              ...newPost,
+              when: 'feed',
+            })
+          )
+        : dispatch(
+            addGroupPost({
+              ...newPost,
+              group_id: group,
+              group_name,
+              type: 'group',
+              when: 'groupPosts',
+            })
+          )
+    }
+
+    Notify({ value: mssg || (success ? 'Posted!!' : 'An error occured!!') })
+  } catch (err) {
+    console.error('Error posting:', err)
+    let errorMssg =
+      (err.response && err.response.data && err.response.data.mssg) ||
+      'Error creating post!!'
+    Notify({ value: errorMssg })
+  } finally {
+    action.end()
+  }
 }
 
 /**
