@@ -2,15 +2,31 @@ const { join } = require('path')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const chalk = require('chalk')
 
+const isProd = process.env.NODE_ENV === 'production' || process.argv.includes('--mode=production')
+
+const plugins = [
+  'react-html-attrs',
+  'transform-class-properties',
+  'transform-decorators-legacy',
+]
+
+if (!isProd) {
+  plugins.push('transform-react-jsx-source')
+}
+
 module.exports = {
   entry: './src/main.js',
   output: {
     path: join(__dirname, '/dist/js/'),
     filename: 'bundle.js',
   },
-  mode: 'development',
+  mode: isProd ? 'production' : 'development',
   performance: {
     hints: false,
+  },
+  optimization: {
+    minimize: isProd,
+    nodeEnv: isProd ? 'production' : 'development',
   },
   module: {
     rules: [
@@ -19,13 +35,12 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['env', 'react', 'stage-0'],
-          plugins: [
-            'react-html-attrs',
-            'transform-class-properties',
-            'transform-decorators-legacy',
-            'transform-react-jsx-source',
+          presets: [
+            ['env', { targets: { browsers: ['> 1%', 'last 2 versions'] }, modules: false }],
+            'react',
+            'stage-0',
           ],
+          plugins: plugins,
         },
       },
       {

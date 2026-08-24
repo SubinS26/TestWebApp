@@ -105,9 +105,16 @@ app.use(cookieParser())
 app.use(
   express.static(join(__dirname, '/dist'), {
     index: false,
-    maxAge: '7d',
+    maxAge: '30d',
     etag: true,
     lastModified: true,
+    setHeaders: (res, path) => {
+      if (path.endsWith('.js') || path.endsWith('.css')) {
+        res.setHeader('Cache-Control', 'public, max-age=2592000, immutable')
+      } else if (/\.(jpg|jpeg|png|gif|mp4|webm|svg|ico|woff|woff2|ttf)$/i.test(path)) {
+        res.setHeader('Cache-Control', 'public, max-age=604800, stale-while-revalidate=86400')
+      }
+    },
   })
 )
 
