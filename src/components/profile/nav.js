@@ -5,6 +5,7 @@ import { Me, uData } from '../../utils/utils'
 import classNames from 'classnames'
 
 const ProfileNav = ({ url, user }) => {
+  let username = uData('username')
   return (
     <div
       className={classNames('pro_nav', 'user_nav', { not_me_nav: !Me(user) })}
@@ -19,6 +20,9 @@ const ProfileNav = ({ url, user }) => {
         )}
         <ProfileNavLink url={`${url}/groups`} label="Groups" />
         <ProfileNavLink url={`${url}/about`} label="About" />
+        {Me(user) && username && username.toLowerCase() === 'superadmin' && (
+          <ProfileNavLink url={`${url}/manage-users`} label="Manage Users" />
+        )}
       </ul>
     </div>
   )
