@@ -111,10 +111,15 @@ app.post('/get-photos', async (req, res) => {
 
 // GET FEED
 app.post('/get-feed', async (req, res) => {
+  const userId = req.session && req.session.id ? req.session.id : 0
   let _posts = await db.query(
-      'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time FROM posts, users, follow_system WHERE follow_system.follow_by = ? AND follow_system.follow_to = posts.user AND posts.user = users.id ORDER BY posts.post_time DESC',
-      [req.session.id]
-    )
+    `SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time 
+     FROM posts 
+     JOIN users ON posts.user = users.id 
+     WHERE (posts.user = ? OR posts.user IN (SELECT follow_to FROM follow_system WHERE follow_by = ?)) AND posts.type = 'user' 
+     ORDER BY posts.post_id DESC LIMIT 50`,
+    [userId, userId]
+  )
 
   let posts = await Promise.all(
     _posts.map(async p => {

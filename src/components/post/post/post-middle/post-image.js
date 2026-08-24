@@ -26,6 +26,19 @@ export default class PostImage extends Component {
     } = this.props
     let { showImage } = this.state
 
+    const isVideo =
+      imgSrc &&
+      (/\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(imgSrc) ||
+        (typeof imgSrc === 'string' &&
+          imgSrc.startsWith('http') &&
+          /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)/i.test(imgSrc)))
+
+    const mediaSrc = imgSrc
+      ? imgSrc.startsWith('http')
+        ? imgSrc
+        : `/posts/${imgSrc}`
+      : ''
+
     return (
       <div>
         <div className="p_o">
@@ -35,35 +48,35 @@ export default class PostImage extends Component {
               style={{ marginBottom: description ? '10px' : null }}
             >
               <p>
-                <ToTags str={`${description}`} />
+                <ToTags str={`${description || ''}`} />
               </p>
             </div>
 
-            {/\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(imgSrc) || (imgSrc.startsWith('http') && /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)/i.test(imgSrc)) ? (
+            {isVideo ? (
               <video
-                src={imgSrc.startsWith('http') ? imgSrc : `/posts/${imgSrc}`}
+                src={mediaSrc}
                 className={classNames('p_img', filter)}
                 controls
                 playsInline
                 preload="metadata"
                 style={{ width: '100%', maxHeight: '500px', backgroundColor: 'black' }}
               />
-            ) : (
+            ) : mediaSrc ? (
               <img
-                src={imgSrc.startsWith('http') ? imgSrc : `/posts/${imgSrc}`}
+                src={mediaSrc}
                 className={classNames('p_img', filter)}
                 loading="lazy"
                 onClick={() => this._toggle('showImage')}
               />
-            )}
+            ) : null}
 
             <PostTags post_id={post_id} tags_count={tags_count} />
           </div>
         </div>
 
-        {showImage && (
+        {showImage && mediaSrc && (
           <ImageTheatre
-            imgSrc={imgSrc.startsWith('http') ? imgSrc : `/posts/${imgSrc}`}
+            imgSrc={mediaSrc}
             filter={filter}
             username={username}
             time={post_time}
@@ -83,7 +96,7 @@ PostImage.propTypes = {
     description: PropTypes.string.isRequired,
     imgSrc: PropTypes.string.isRequired,
     filter: PropTypes.string.isRequired,
-    tags_count: PropTypes.number.isRequired,
     username: PropTypes.string.isRequired,
+    tags_count: PropTypes.number.isRequired,
   }).isRequired,
 }
