@@ -7,12 +7,18 @@ const app = require('express').Router(),
 
 // FOR CHECKING IF IT'S A VALID USER [REQ = USERNAME]
 app.post('/is-user-valid', async (req, res) => {
-  let { username } = req.body,
-    [{ userCount }] = await db.query(
+  try {
+    let { username } = req.body
+    if (!username) return res.json(false)
+    let rows = await db.query(
       'SELECT COUNT(id) AS userCount FROM users WHERE LOWER(username)=LOWER(?) LIMIT 1',
       [username]
     )
-  res.json(db.tf(userCount))
+    let userCount = rows && rows[0] ? rows[0].userCount : 0
+    res.json(db.tf(userCount))
+  } catch (error) {
+    res.json(false)
+  }
 })
 
 // GETTING USER DETAILS [REQ = USERNAME]
