@@ -37589,6 +37589,9 @@
 │   │   │           └── is-admin.test.js.snap
 │   │   ├── App.js
 │   │   ├── App-routes.js
+│   │   ├── auth
+│   │   │   ├── login.js
+│   │   │   └── signup.js
 │   │   ├── edit-profile
 │   │   │   ├── bio-input.js
 │   │   │   ├── edit-profile.js
@@ -38657,8 +38660,6 @@
 │   │   │   │       │   │   └── top-options.test.js.snap
 │   │   │   │       │   └── top-options.test.js
 │   │   │   │       └── top-options.js
-│   │   │   ├── create-profile
-│   │   │   │   └── create-profile.js
 │   │   │   ├── mutual-users
 │   │   │   │   ├── mutual-users.js
 │   │   │   │   └── __test__
@@ -38857,10 +38858,12 @@
 │   │   │       └── __snapshots__
 │   │   │           ├── settings-nav.test.js.snap
 │   │   │           └── settings.test.js.snap
-│   │   └── __test__
-│   │       ├── App.test.js
-│   │       └── __snapshots__
-│   │           └── App.test.js.snap
+│   │   ├── __test__
+│   │   │   ├── App.test.js
+│   │   │   └── __snapshots__
+│   │   │       └── App.test.js.snap
+│   │   └── welcome
+│   │       └── welcome.js
 │   ├── main.js
 │   ├── main.test.js
 │   ├── store
@@ -39229,4 +39232,4 @@
 ├── webpack.config.js
 └── yarn.lock
 
-4744 directories, 34486 files
+4745 directories, 34488 files

@@ -9,6 +9,15 @@ export default class SidebarBottom extends Component {
 
   toggleOptions = () => this.setState({ showOptions: !this.state.showOptions })
 
+  handleLogout = () => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      window.localStorage.removeItem('session_loggedin')
+      window.localStorage.removeItem('session_username')
+      window.localStorage.removeItem('session_session')
+      window.localStorage.removeItem('session_isadmin')
+    }
+  }
+
   render() {
     let { showOptions } = this.state
 
@@ -17,7 +26,7 @@ export default class SidebarBottom extends Component {
         <div className="m_n_bottom">
           <ul>
             <li>
-              <a href="/logout">Logout</a>
+              <a href="/logout" onClick={this.handleLogout}>Logout</a>
             </li>
             <li>
               <a href="/help">Help</a>

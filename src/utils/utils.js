@@ -46,10 +46,22 @@ export const shortener = (what, length) => {
 }
 
 /**
- * Returns data stored in dataset
+ * Returns data stored in dataset or localStorage
  * @param {String} what Which data
  */
-export const uData = what => new d('.data').data(what)
+export const uData = what => {
+  let val = new d('.data').data(what)
+  if (val !== undefined && val !== null && val !== '' && val !== 'null' && val !== 'undefined') {
+    return val
+  }
+  if (typeof window !== 'undefined' && window.localStorage) {
+    let localVal = window.localStorage.getItem(`session_${what}`)
+    if (localVal !== undefined && localVal !== null && localVal !== '' && localVal !== 'null' && localVal !== 'undefined') {
+      return localVal
+    }
+  }
+  return val || ''
+}
 
 /**
  * Returns unique string, useful for key

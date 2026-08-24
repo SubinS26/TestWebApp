@@ -56,6 +56,10 @@ app.post('/user/login', async (req, res) => {
           res.json({
             mssg: `Welcome ${rusername}!!`,
             success: true,
+            id,
+            username,
+            email_verified,
+            isadmin: session.isadmin || false,
           })
         }
       }

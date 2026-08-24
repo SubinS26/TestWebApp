@@ -44,11 +44,17 @@ export default class Login extends Component {
       })
 
       if (data.success) {
-        // Update DOM dataset for SPA persistence
+        if (typeof window !== 'undefined' && window.localStorage) {
+          window.localStorage.setItem('session_loggedin', 'true')
+          window.localStorage.setItem('session_username', username.trim())
+          if (data.id) window.localStorage.setItem('session_session', String(data.id))
+          if (data.isadmin) window.localStorage.setItem('session_isadmin', 'true')
+        }
         let dataEl = document.getElementById('data')
         if (dataEl) {
           dataEl.dataset.loggedin = 'true'
           dataEl.dataset.username = username.trim()
+          if (data.id) dataEl.dataset.session = String(data.id)
         }
         Notify({
           value: `Welcome back, @${username}!`,
