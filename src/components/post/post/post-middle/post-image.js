@@ -68,7 +68,7 @@ export default class PostImage extends Component {
             >
               {isVideo ? (
                 <video
-                  src={mediaSrc}
+                  key={mediaSrc}
                   className={classNames('p_img', filter)}
                   controls
                   playsInline
@@ -81,7 +81,13 @@ export default class PostImage extends Component {
                     backgroundColor: '#000',
                     display: 'block',
                   }}
-                />
+                >
+                  <source src={mediaSrc} type="video/mp4" />
+                  <source src={mediaSrc} type="video/webm" />
+                  <source src={mediaSrc} type="video/ogg" />
+                  <source src={mediaSrc} type="video/quicktime" />
+                  Your browser does not support HTML5 video playback.
+                </video>
               ) : mediaSrc ? (
                 <img
                   src={mediaSrc}
