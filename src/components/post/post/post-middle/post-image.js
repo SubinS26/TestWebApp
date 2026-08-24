@@ -52,23 +52,53 @@ export default class PostImage extends Component {
               </p>
             </div>
 
-            {isVideo ? (
-              <video
-                src={mediaSrc}
-                className={classNames('p_img', filter)}
-                controls
-                playsInline
-                preload="metadata"
-                style={{ width: '100%', maxHeight: '500px', backgroundColor: 'black' }}
-              />
-            ) : mediaSrc ? (
-              <img
-                src={mediaSrc}
-                className={classNames('p_img', filter)}
-                loading="lazy"
-                onClick={() => this._toggle('showImage')}
-              />
-            ) : null}
+            <div
+              className="p_media_holder"
+              style={{
+                position: 'relative',
+                width: '100%',
+                backgroundColor: '#0a0a0a',
+                borderRadius: '6px',
+                overflow: 'hidden',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minHeight: '240px',
+              }}
+            >
+              {isVideo ? (
+                <video
+                  src={mediaSrc}
+                  className={classNames('p_img', filter)}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  controlsList="nodownload"
+                  style={{
+                    width: '100%',
+                    maxHeight: '520px',
+                    objectFit: 'contain',
+                    backgroundColor: '#000',
+                    display: 'block',
+                  }}
+                />
+              ) : mediaSrc ? (
+                <img
+                  src={mediaSrc}
+                  className={classNames('p_img', filter)}
+                  loading="lazy"
+                  decoding="async"
+                  style={{
+                    width: '100%',
+                    maxHeight: '520px',
+                    objectFit: 'contain',
+                    display: 'block',
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => this._toggle('showImage')}
+                />
+              ) : null}
+            </div>
 
             <PostTags post_id={post_id} tags_count={tags_count} />
           </div>
