@@ -6,6 +6,7 @@ const getSidebarIcon = (label) => {
   if (!label) return 'far fa-circle'
   const lower = label.toLowerCase().trim()
   if (lower.startsWith('@')) return 'far fa-user-circle'
+  if (lower.includes('setup') || lower.includes('wizard') || lower.includes('create profile')) return 'fas fa-magic'
   if (lower.includes('edit')) return 'far fa-edit'
   if (lower.includes('manage') || lower.includes('users')) return 'fas fa-user-shield'
   if (lower.includes('home')) return 'fas fa-home'

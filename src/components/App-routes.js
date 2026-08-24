@@ -15,12 +15,15 @@ import Hashtag from './hashtag/hashtag/hashtag'
 import AdminLogin from './admin/admin-login'
 import IsAdmin from './admin/is-admin'
 import SuperAdminPanel from './admin/superadmin-panel'
+import CreateProfileWizard from './profile/create-profile/create-profile'
 import Error from './error/error'
 
 const AppRoutes = () => (
   <div className="badshah">
     <Switch>
       <Route path="/" exact component={Home} />
+      <Route path="/create-profile" component={CreateProfileWizard} />
+      <Route path="/onboarding" component={CreateProfileWizard} />
       <Route path="/profile/:username" component={Profile} />
       <Route path="/error/:what" component={Error} />
       <Route path="/email-verification/:is" component={EmailVerification} />

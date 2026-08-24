@@ -48,6 +48,7 @@ const SideBar = ({ uc, un }) => {
             link={`${profile}/recommendations`}
             label="Recommendations"
           />
+          <SidebarLink link="/create-profile" label="Setup Profile" />
           <SidebarLink link="/edit-profile" label="Edit profile" />
           {username && username.toLowerCase() === 'superadmin' && (
             <SidebarLink link="/superadmin" label="Manage Users" />
