@@ -14,27 +14,24 @@ const PostItMiddle = ({ postIt, session, dispatch }) => {
   let isVideo =
     targetFile &&
     ((targetFile.type && targetFile.type.startsWith('video/')) ||
-      /\.(mp4|webm|ogg|mov|mkv|avi|m4v)$/i.test(targetFile.name || ''))
+      /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(targetFile.name || ''))
 
   let fileChange = e => {
-    e.preventDefault()
-    let file = e.target.files[0]
+    let file = e.target.files && e.target.files[0]
     if (!file) return
 
     const isVideoFile =
       (file.type && file.type.startsWith('video/')) ||
-      /\.(mp4|webm|ogg|mov|mkv|avi|m4v)$/i.test(file.name || '')
+      /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(file.name || '')
 
     if (isVideoFile) {
       const blobUrl = URL.createObjectURL(file)
-      dp('fileChanged', true)
-      dp('fileInput', e.target.value)
       dp('targetFile', file)
       dp('previewImg', blobUrl)
-    } else {
       dp('fileChanged', true)
-      dp('fileInput', e.target.value)
+    } else {
       dp('targetFile', file)
+      dp('fileChanged', true)
       let reader = new FileReader()
       reader.onload = ev => dp('previewImg', ev.target.result)
       reader.readAsDataURL(file)

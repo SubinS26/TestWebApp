@@ -1,18 +1,17 @@
 import React, { Fragment } from 'react'
 import { string, func, oneOfType } from 'prop-types'
 
-const FileInput = ({ label, value, fileChange, labelClass, ...props }) => {
+const FileInput = ({ label, value, fileChange, labelClass, id = 'file_input', ...props }) => {
   return (
     <Fragment>
       <input
         type="file"
-        id="file_input"
+        id={id}
         accept="image/*,video/*"
-        value={value}
         onChange={fileChange}
         {...props}
       />
-      <label for="file_input" className={labelClass}>
+      <label htmlFor={id} className={labelClass}>
         {typeof label == 'function' ? label() : label}
       </label>
     </Fragment>
