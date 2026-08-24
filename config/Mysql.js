@@ -23,9 +23,8 @@ if (MYSQL_SOCKET) {
   }
 }
 
-// Enable SSL for Azure Database for MySQL Flexible Server or if MYSQL_SSL is set
-const isAzureHost = connectionConfig.host && connectionConfig.host.includes('.azure.com')
-if (MYSQL_SSL === 'true' || MYSQL_SSL === '1' || isAzureHost) {
+// Enable SSL if MYSQL_SSL is explicitly set to true
+if (MYSQL_SSL === 'true' || MYSQL_SSL === '1') {
   connectionConfig.ssl = {
     rejectUnauthorized: false,
   }
