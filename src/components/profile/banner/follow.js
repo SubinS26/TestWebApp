@@ -6,8 +6,8 @@ import Unfollow from '../../others/follow/unfollow'
 import Follow from '../../others/follow/follow'
 import AppLink from '../../others/link/link'
 
-const BannerFollow = ({ ud, isFollowing, dispatch }) => {
-  let { id, username } = ud
+const BannerFollow = ({ ud = {}, isFollowing, dispatch }) => {
+  let { id, username } = ud || {}
   let user = id ? id : 0
 
   let toggle = what => dispatch(toggleFollow(what))

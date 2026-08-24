@@ -3,8 +3,8 @@ import { Me } from '../../../utils/utils'
 import TimeAgo from 'handy-timeago'
 import { connect } from 'react-redux'
 
-const IsOnline = ({ ud }) => {
-  let { id, isOnline, lastOnline } = ud
+const IsOnline = ({ ud = {} }) => {
+  let { id, isOnline, lastOnline } = ud || {}
 
   return (
     <Fragment>

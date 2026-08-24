@@ -30,13 +30,13 @@ const BannerStats = props => {
 }
 
 const mapStateToProps = state => ({
-  id: state.User.user_details.id,
-  posts: state.Post.posts.length,
-  followers: state.Follow.followers.length,
-  followings: state.Follow.followings.length,
-  recommendations: state.Follow.recommendations.length,
-  favourites: state.Follow.favourites.length,
-  profile_views: state.Follow.profile_views,
+  id: state.User && state.User.user_details ? state.User.user_details.id : null,
+  posts: state.Post && state.Post.posts ? state.Post.posts.length : 0,
+  followers: state.Follow && state.Follow.followers ? state.Follow.followers.length : 0,
+  followings: state.Follow && state.Follow.followings ? state.Follow.followings.length : 0,
+  recommendations: state.Follow && state.Follow.recommendations ? state.Follow.recommendations.length : 0,
+  favourites: state.Follow && state.Follow.favourites ? state.Follow.favourites.length : 0,
+  profile_views: state.Follow ? state.Follow.profile_views : 0,
 })
 
 export default connect(mapStateToProps)(BannerStats)

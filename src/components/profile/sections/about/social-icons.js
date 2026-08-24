@@ -2,8 +2,8 @@ import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 import SocialIconLink from './social-icon-link'
 
-const SocialIcons = ({ ud }) => {
-  let { instagram, facebook, github, twitter, website } = ud
+const SocialIcons = ({ ud = {} }) => {
+  let { instagram, facebook, github, twitter, website } = ud || {}
 
   return (
     <Fragment>

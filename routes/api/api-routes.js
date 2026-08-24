@@ -17,21 +17,29 @@ app.post('/is-user-valid', async (req, res) => {
 
 // GETTING USER DETAILS [REQ = USERNAME]
 app.post('/get-user-details', async (req, res) => {
-  let { username } = req.body,
-    id = await User.getId(username),
-    details = await db.query(
-      'SELECT id, username, firstname, surname, email, bio, joined, email_verified, account_type, instagram, twitter, facebook, github, website, phone, lastOnline FROM users WHERE LOWER(username)=LOWER(?)',
-      [username]
-    ),
-    tags = await db.query('SELECT user, tag FROM tags WHERE user=?', [id])
+  try {
+    let { username } = req.body,
+      id = await User.getId(username),
+      details = await db.query(
+        'SELECT id, username, firstname, surname, email, bio, joined, email_verified, account_type, instagram, twitter, facebook, github, website, phone, lastOnline FROM users WHERE LOWER(username)=LOWER(?)',
+        [username]
+      ),
+      tags = id ? await db.query('SELECT user, tag FROM tags WHERE user=?', [id]) : []
 
-  res.json({
-    details: {
-      ...details[0],
-      isOnline: (await User.getWhat('isOnline', id)) == 'yes' ? true : false,
-    },
-    tags,
-  })
+    if (!details || details.length === 0) {
+      return res.json({ details: {}, tags: [] })
+    }
+
+    res.json({
+      details: {
+        ...details[0],
+        isOnline: (await User.getWhat('isOnline', id)) == 'yes' ? true : false,
+      },
+      tags,
+    })
+  } catch (error) {
+    db.catchError(error, res)
+  }
 })
 
 // GETTING MUTUAL USERS [REQ = USERNAME]

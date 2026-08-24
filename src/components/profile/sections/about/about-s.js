@@ -18,7 +18,7 @@ export default class About extends Component {
   componentDidMount = () => bottomScroll()
 
   render() {
-    let { username, firstname, surname } = this.props.ud
+    let { username = '', firstname = '', surname = '' } = this.props.ud || {}
 
     return (
       <div>

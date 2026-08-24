@@ -28,7 +28,14 @@ class BannerAvatar extends Component {
           onMouseOver={this.toggleAvatarOptions}
           onMouseOut={this.toggleAvatarOptions}
         >
-          <img src={imgSrc} alt="avatar" />
+          <img
+            src={imgSrc}
+            alt="avatar"
+            onError={e => {
+              e.target.onerror = null
+              e.target.src = '/images/spacecraft.jpg'
+            }}
+          />
 
           <div className="pro_avatar_ch_teaser" style={{ display: 'none' }}>
             <span
