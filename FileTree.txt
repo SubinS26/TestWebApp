@@ -2,6 +2,7 @@
 ├── AGENTS.md
 ├── app.js
 ├── app-routes.js
+├── COM769 (79672) - S3 QAHE.pdf
 ├── config
 │   ├── AzureBlob.js
 │   ├── db.js
@@ -11,6 +12,7 @@
 │   ├── Middlewares.js
 │   ├── Mysql.js
 │   ├── Post.js
+│   ├── SentimentService.js
 │   ├── __test__
 │   │   ├── db.test.js
 │   │   ├── group.test.js
@@ -21,7 +23,10 @@
 │   │   ├── test.config.js
 │   │   └── user.test.js
 │   └── User.js
+├── COURSEWORK2_SLIDEDECK_AND_REPORT.md
 ├── db.sql
+├── deploy-package.zip
+├── deploy-to-azure.sh
 ├── dist
 │   ├── comments
 │   │   ├── instagram_comment_1518972840143.jpg
@@ -558,6 +563,7 @@
 │       │   └── avatar.jpg
 │       └── 53
 │           └── avatar.jpg
+├── Dockerfile
 ├── env.js
 ├── FileTree.txt
 ├── jest.config.js
@@ -31435,6 +31441,60 @@
 │   │   ├── package.json
 │   │   ├── README.md
 │   │   └── SECURITY.md
+│   ├── sentiment
+│   │   ├── build
+│   │   │   ├── build.js
+│   │   │   ├── emoji.json
+│   │   │   └── Emoji_Sentiment_Data_v1.0.csv
+│   │   ├── CONTRIBUTING.md
+│   │   ├── languages
+│   │   │   └── en
+│   │   │       ├── index.js
+│   │   │       ├── labels.json
+│   │   │       ├── negators.json
+│   │   │       └── scoring-strategy.js
+│   │   ├── lib
+│   │   │   ├── index.js
+│   │   │   ├── language-processor.js
+│   │   │   └── tokenize.js
+│   │   ├── LICENSE.md
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── test
+│   │       ├── benchmark
+│   │       │   ├── performance.js
+│   │       │   └── validate.js
+│   │       ├── fixtures
+│   │       │   ├── amazon.json
+│   │       │   ├── corpus.js
+│   │       │   ├── fuzz.js
+│   │       │   ├── imdb.json
+│   │       │   └── yelp.json
+│   │       ├── integration
+│   │       │   ├── add_lang.js
+│   │       │   ├── async_inject.js
+│   │       │   ├── async_negative.js
+│   │       │   ├── async_negative_text_and_emoji.js
+│   │       │   ├── async_positive.js
+│   │       │   ├── async_positive_text_and_emoji.js
+│   │       │   ├── custom_lang.js
+│   │       │   ├── gh_12.js
+│   │       │   ├── gh_13.js
+│   │       │   ├── gh_85.js
+│   │       │   ├── supported_lang.js
+│   │       │   ├── sync_corpus.js
+│   │       │   ├── sync_fuzz.js
+│   │       │   ├── sync_inject.js
+│   │       │   ├── sync_negation.js
+│   │       │   ├── sync_negative.js
+│   │       │   ├── sync_negative_text_and_emoji.js
+│   │       │   ├── sync_positive.js
+│   │       │   ├── sync_positive_text_and_emoji.js
+│   │       │   └── sync_undefined.js
+│   │       └── unit
+│   │           ├── language-processor.js
+│   │           ├── spec.js
+│   │           └── tokenize.js
 │   ├── serialize-javascript
 │   │   ├── index.js
 │   │   ├── LICENSE
@@ -37503,6 +37563,8 @@
 │       ├── quick-login-routes.js
 │       ├── signup-routes.js
 │       └── user-routes.js
+├── scripts
+│   └── init-azure-db.js
 ├── src
 │   ├── actions
 │   │   ├── explore.js
@@ -38595,6 +38657,8 @@
 │   │   │   │       │   │   └── top-options.test.js.snap
 │   │   │   │       │   └── top-options.test.js
 │   │   │   │       └── top-options.js
+│   │   │   ├── create-profile
+│   │   │   │   └── create-profile.js
 │   │   │   ├── mutual-users
 │   │   │   │   ├── mutual-users.js
 │   │   │   │   └── __test__
@@ -38944,7 +39008,225 @@
 │   ├── registered.hbs
 │   ├── signup.hbs
 │   └── welcome.hbs
+├── webapp-logs
+│   ├── deployments
+│   │   ├── 234dbb81-d809-4082-ac60-9d115b496773
+│   │   │   ├── log.log
+│   │   │   ├── manifest
+│   │   │   └── status.xml
+│   │   ├── 4b3ccfe7-2426-4ad4-ba83-18e4cfc270e8
+│   │   │   ├── log.log
+│   │   │   ├── manifest
+│   │   │   └── status.xml
+│   │   ├── 6e2f87e6-548b-4f29-ac9c-33e49a576a29
+│   │   │   ├── log.log
+│   │   │   ├── manifest
+│   │   │   └── status.xml
+│   │   ├── 79f370db-3259-4c4a-b25a-05be68087fc6
+│   │   │   ├── log.log
+│   │   │   ├── manifest
+│   │   │   └── status.xml
+│   │   ├── 7b5da8ec-b551-4aef-8e89-3d7f60c9cccf
+│   │   │   ├── log.log
+│   │   │   ├── manifest
+│   │   │   └── status.xml
+│   │   ├── 8739abb5-33ab-4b05-87c5-c4c603c8cae2
+│   │   │   ├── log.log
+│   │   │   ├── manifest
+│   │   │   └── status.xml
+│   │   ├── 95637758-6427-496e-b4b7-64d6704cc7f6
+│   │   │   ├── log.log
+│   │   │   ├── manifest
+│   │   │   └── status.xml
+│   │   ├── active
+│   │   ├── dee4e9a9-f3e6-426c-8dea-b45c87689a24
+│   │   │   ├── log.log
+│   │   │   ├── manifest
+│   │   │   └── status.xml
+│   │   ├── f30e3526-ef11-4e17-af3a-dd123a8da90d
+│   │   │   ├── log.log
+│   │   │   ├── manifest
+│   │   │   └── status.xml
+│   │   ├── pending
+│   │   └── tools
+│   └── LogFiles
+│       ├── 2026_08_24_10-30-0-100_docker.log
+│       ├── 2026_08_24_lw0sdlwk0002L1_docker.log
+│       ├── kudu
+│       │   ├── deployment
+│       │   │   └── 93a13dba7483-9b775ff8-594d-4175-b623-86fdc408c996.txt
+│       │   └── trace
+│       │       ├── 15b16b51020a-7f242daf-54ea-4517-84dc-fe66d328fe21.txt
+│       │       ├── 2026-08-23T07-51-13_2c550d_001_Startup_GET_api-deployments_0s.xml
+│       │       ├── 2026-08-23T08-01-37_940659_001_Startup_GET_api-deployments_0s.xml
+│       │       ├── 2026-08-23T23-31-14_12160a_001_Startup_GET_api-deployments_0s.xml
+│       │       ├── 2026-08-23T23-46-14_12160a_001_Startup_GET_api-deployments_0s.xml
+│       │       ├── 2026-08-23T23-46-39_12160a_003_POST_api-publish_202_4s.xml
+│       │       ├── 2026-08-23T23-46-42_12160a_004_Background_POST_api-publish_pending.xml
+│       │       ├── 2026-08-23T23-46-42_12160a_005_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-23T23-46-49_12160a_006_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-23T23-46-55_12160a_007_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-23T23-47-01_12160a_008_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-23T23-47-07_12160a_009_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-23T23-47-13_12160a_010_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-23T23-47-20_12160a_011_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-23T23-47-27_12160a_012_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-23T23-47-34_12160a_013_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-23T23-47-39_12160a_014_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-23T23-47-45_12160a_015_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-23T23-47-51_12160a_016_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-23T23-47-56_12160a_017_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-23T23-48-03_12160a_018_GET_api-deployments-latest_202_4s.xml
+│       │       ├── 2026-08-23T23-48-14_12160a_019_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-23T23-48-21_12160a_020_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-23T23-48-27_12160a_021_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-23T23-48-32_12160a_022_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-23T23-48-39_12160a_023_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-23T23-48-45_12160a_024_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-23T23-48-51_12160a_025_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-23T23-48-57_12160a_026_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-23T23-49-05_12160a_028_GET_api-deployments-f30e3526-ef11-4e17-af3a-dd123a8da90d_200_0s.xml
+│       │       ├── 2026-08-24T00-07-25_12160a_001_Startup_GET_api-deployments_0s.xml
+│       │       ├── 2026-08-24T00-19-15_3161b1_001_Startup_GET_api-deployments_0s.xml
+│       │       ├── 2026-08-24T00-31-32_3161b1_003_POST_api-publish_pending.xml
+│       │       ├── 2026-08-24T00-31-35_3161b1_004_Background_POST_api-publish_pending.xml
+│       │       ├── 2026-08-24T00-31-35_3161b1_005_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T00-31-41_3161b1_006_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T00-31-47_3161b1_007_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T00-31-53_3161b1_008_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T00-31-59_3161b1_009_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T00-32-05_3161b1_010_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T00-32-11_3161b1_011_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T00-32-18_3161b1_012_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T00-32-24_3161b1_013_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T00-32-31_3161b1_014_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T00-32-37_3161b1_015_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T00-32-43_3161b1_016_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T00-32-49_3161b1_017_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T00-32-55_3161b1_018_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T00-33-01_3161b1_019_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T00-33-07_3161b1_021_GET_api-deployments-8739abb5-33ab-4b05-87c5-c4c603c8cae2_200_0s.xml
+│       │       ├── 2026-08-24T01-12-47_3161b1_001_Startup_GET_api-deployments_0s.xml
+│       │       ├── 2026-08-24T01-13-16_3161b1_003_POST_api-publish_202_5s.xml
+│       │       ├── 2026-08-24T01-13-20_3161b1_004_Background_POST_api-publish_pending.xml
+│       │       ├── 2026-08-24T01-13-21_3161b1_005_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-13-27_3161b1_006_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-13-33_3161b1_007_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-13-40_3161b1_008_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-13-46_3161b1_009_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-13-52_3161b1_010_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-13-58_3161b1_011_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-14-04_3161b1_012_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-14-10_3161b1_013_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-14-17_3161b1_014_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-14-23_3161b1_015_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-14-29_3161b1_016_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-14-35_3161b1_017_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-14-41_3161b1_018_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-14-48_3161b1_020_GET_api-deployments-95637758-6427-496e-b4b7-64d6704cc7f6_200_0s.xml
+│       │       ├── 2026-08-24T01-30-01_3161b1_022_POST_api-publish_202_6s.xml
+│       │       ├── 2026-08-24T01-30-07_3161b1_023_Background_POST_api-publish_pending.xml
+│       │       ├── 2026-08-24T01-30-08_3161b1_024_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-30-14_3161b1_025_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-30-20_3161b1_026_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-30-27_3161b1_027_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-30-33_3161b1_028_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-30-39_3161b1_029_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-30-46_3161b1_030_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-30-52_3161b1_031_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-30-58_3161b1_032_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-31-05_3161b1_033_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-31-12_3161b1_034_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-31-18_3161b1_035_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-31-24_3161b1_036_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-31-31_3161b1_038_GET_api-deployments-6e2f87e6-548b-4f29-ac9c-33e49a576a29_200_0s.xml
+│       │       ├── 2026-08-24T01-43-19_3161b1_040_POST_api-publish_202_3s.xml
+│       │       ├── 2026-08-24T01-43-21_3161b1_041_Background_POST_api-publish_pending.xml
+│       │       ├── 2026-08-24T01-43-23_3161b1_042_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-43-29_3161b1_043_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-43-35_3161b1_044_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-43-41_3161b1_045_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-43-47_3161b1_046_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-43-52_3161b1_047_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-43-58_3161b1_048_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-44-05_3161b1_049_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-44-11_3161b1_050_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-44-17_3161b1_051_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-44-23_3161b1_052_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-44-29_3161b1_053_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-44-35_3161b1_054_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-44-42_3161b1_056_GET_api-deployments-4b3ccfe7-2426-4ad4-ba83-18e4cfc270e8_200_0s.xml
+│       │       ├── 2026-08-24T01-48-15_3161b1_058_POST_api-publish_202_5s.xml
+│       │       ├── 2026-08-24T01-48-20_3161b1_059_Background_POST_api-publish_pending.xml
+│       │       ├── 2026-08-24T01-48-22_3161b1_060_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-48-28_3161b1_061_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-48-34_3161b1_062_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-48-40_3161b1_063_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-48-47_3161b1_064_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-48-53_3161b1_065_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-49-00_3161b1_066_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-49-06_3161b1_067_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-49-13_3161b1_068_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-49-20_3161b1_069_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-49-26_3161b1_070_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-49-34_3161b1_071_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-49-41_3161b1_073_GET_api-deployments-7b5da8ec-b551-4aef-8e89-3d7f60c9cccf_200_0s.xml
+│       │       ├── 2026-08-24T01-57-38_3161b1_075_POST_api-publish_pending.xml
+│       │       ├── 2026-08-24T01-57-43_3161b1_076_Background_POST_api-publish_pending.xml
+│       │       ├── 2026-08-24T01-57-43_3161b1_077_GET_api-deployments-latest_202_0s.xml
+│       │       ├── 2026-08-24T01-57-50_3161b1_078_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-57-56_3161b1_079_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-58-03_3161b1_080_GET_api-deployments-latest_202_2s.xml
+│       │       ├── 2026-08-24T01-58-11_3161b1_081_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-58-17_3161b1_082_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-58-24_3161b1_083_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-58-30_3161b1_084_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-58-38_3161b1_085_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-58-44_3161b1_086_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-58-51_3161b1_087_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-58-58_3161b1_088_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-59-04_3161b1_089_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-59-11_3161b1_090_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-59-17_3161b1_091_GET_api-deployments-latest_202_2s.xml
+│       │       ├── 2026-08-24T01-59-25_3161b1_092_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-59-32_3161b1_093_GET_api-deployments-latest_202_2s.xml
+│       │       ├── 2026-08-24T01-59-40_3161b1_094_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-59-46_3161b1_095_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T01-59-53_3161b1_096_GET_api-deployments-latest_202_2s.xml
+│       │       ├── 2026-08-24T02-00-00_3161b1_097_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-00-07_3161b1_099_GET_api-deployments-234dbb81-d809-4082-ac60-9d115b496773_200_0s.xml
+│       │       ├── 2026-08-24T02-07-16_3161b1_101_POST_api-publish_pending.xml
+│       │       ├── 2026-08-24T02-07-47_3161b1_103_GET_api-deployments-79f370db-3259-4c4a-b25a-05be68087fc6_200_0s.xml
+│       │       ├── 2026-08-24T02-08-28_3161b1_105_POST_api-publish_202_6s.xml
+│       │       ├── 2026-08-24T02-08-33_3161b1_106_Background_POST_api-publish_pending.xml
+│       │       ├── 2026-08-24T02-08-35_3161b1_107_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-08-42_3161b1_108_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-08-48_3161b1_109_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-08-55_3161b1_110_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-09-01_3161b1_111_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-09-08_3161b1_112_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-09-14_3161b1_113_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-09-20_3161b1_114_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-09-27_3161b1_115_GET_api-deployments-latest_202_2s.xml
+│       │       ├── 2026-08-24T02-09-34_3161b1_116_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-09-41_3161b1_117_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-09-48_3161b1_118_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-09-54_3161b1_119_GET_api-deployments-latest_202_1s.xml
+│       │       ├── 2026-08-24T02-10-01_3161b1_121_GET_api-deployments-dee4e9a9-f3e6-426c-8dea-b45c87689a24_200_0s.xml
+│       │       ├── 2026-08-24T02-10-23_3161b1_122_GET_dump_pending.xml
+│       │       ├── 3d3761263562-4ec3fe57-3047-4574-97b7-70a7f817071e.txt
+│       │       ├── 6cd82eca85b0-7c5e1850-83b7-45a6-9ad5-ec2151ec0f5e.txt
+│       │       ├── 93a13dba7483-e95d6c56-7fad-43c3-8dc7-f5c4b2cd00c2.txt
+│       │       ├── 9ba00fb30243-5f77eaa2-0d68-47e9-8360-f7b7ceb506dd.txt
+│       │       ├── d8e0526ecbcd-9face948-b122-40e4-ade0-60dab8e0ab2b.txt
+│       │       └── ebb940b89259-d1a86bfc-0c84-446e-a29c-47d72c63101c.txt
+│       ├── StartupLogs
+│       │   ├── 2026_08_24_10-30-0-100_failure.log
+│       │   ├── 2026_08_24_lw0sdlwk0002L1_failure.log
+│       │   └── README.txt
+│       └── webssh
+├── webapp-logs.zip
 ├── webpack.config.js
 └── yarn.lock
 
-4714 directories, 34234 files
+4744 directories, 34486 files
