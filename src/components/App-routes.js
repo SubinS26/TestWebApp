@@ -15,7 +15,6 @@ import Hashtag from './hashtag/hashtag/hashtag'
 import AdminLogin from './admin/admin-login'
 import IsAdmin from './admin/is-admin'
 import SuperAdminPanel from './admin/superadmin-panel'
-import CreateProfileWizard from './profile/create-profile/create-profile'
 import Welcome from './welcome/welcome'
 import Login from './auth/login'
 import Signup from './auth/signup'
@@ -32,8 +31,6 @@ const AppRoutes = () => {
         <Route path="/welcome" component={Welcome} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        <Route path="/create-profile" component={CreateProfileWizard} />
-        <Route path="/onboarding" component={CreateProfileWizard} />
         <Route path="/profile" exact component={Profile} />
         <Route path="/profile/:username" component={Profile} />
       <Route path="/error/:what" component={Error} />

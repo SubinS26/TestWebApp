@@ -35,8 +35,6 @@ class Home extends Component {
 
   render() {
     let { loading } = this.state
-    let { ud } = this.props
-    let isNewUser = ud && ud.id && (!ud.bio || ud.bio.trim() === '')
 
     return (
       <div>
@@ -45,37 +43,6 @@ class Home extends Component {
         <FadeIn duration="300ms">
           <div className="senapati home_senapati">
             <div className="prajkumar">
-              {isNewUser && (
-                <div
-                  style={{
-                    background: 'linear-gradient(135deg, #e7f3ff 0%, #ffffff 100%)',
-                    border: '1px solid #1877f2',
-                    borderRadius: 8,
-                    padding: '16px 20px',
-                    marginBottom: 16,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <div>
-                    <div style={{ fontWeight: 700, fontSize: 15, color: '#1877f2' }}>
-                      👋 Complete Your Profile Setup
-                    </div>
-                    <div style={{ fontSize: 13, color: '#65676b', marginTop: 4 }}>
-                      Add your bio, avatar, and video interests to personalize your experience.
-                    </div>
-                  </div>
-                  <NavLink
-                    to="/create-profile"
-                    className="pri_btn"
-                    style={{ padding: '8px 18px', fontSize: 13, textDecoration: 'none', whiteSpace: 'nowrap' }}
-                  >
-                    Set Up Profile &rarr;
-                  </NavLink>
-                </div>
-              )}
-
               <PostItTeaser type="user" disabled={loading} />
 
               {loading && (
