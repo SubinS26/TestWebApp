@@ -1,0 +1,18 @@
+<step title="Incoming Request" date="2026-08-24T00:31:32.728" instance="3161b1" url="/api/publish?async=true&amp;deployer=GITHUB_ONE_DEPLOY&amp;type=zip&amp;message=%7B%22type%22%3A%22deployment%22%2C%22sha%22%3A%22561ee5945f079f431f94e1f536f1d9dc01a8064f%22%2C%22repoName%22%3A%22SubinS26%2FTestWebApp%22%2C%22actor%22%3A%22SubinS26%22%2C%22slotName%22%3A%22Production%22%2C%22commitMessage%22%3A%22Update%20package.json%22%7D" method="POST" type="request" pid="850,1,21" Host="cw2-videoshare-api-arbuhrh8ghcgghgz.scm.italynorth-01.azurewebsites.net" User-Agent="GITHUBACTIONS_DeployWebAppToAzure_2bcf23efb62c70943827e46a6c731a996542bd546c4c75b1a3782ef303f37b22_v3.0.8" Authorization="Bea..." Content-Type="application/octet-stream" Cookie="ARRAffinity=3161b1ae9ca0a5f9e11e0146671e855c259b1ac7397ab581598a95aa31f15f3f; ARRAffinitySameSite=3161b1ae9ca0a5f9e11e0146671e855c259b1ac7397ab581598a95aa31f15f3f" Transfer-Encoding="chunked" X-ARR-LOG-ID="fa743ab7-4e5a-4251-84d3-5a7643e744ed" CLIENT-IP="74.235.133.210:1056" X-SITE-DEPLOYMENT-ID="cw2-videoshare-api" WAS-DEFAULT-HOSTNAME="cw2-videoshare-api-arbuhrh8ghcgghgz.scm.italynorth-01.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/publish?async=true&amp;deployer=GITHUB_ONE_DEPLOY&amp;type=zip&amp;message=%7B%22type%22%3A%22deployment%22%2C%22sha%22%3A%22561ee5945f079f431f94e1f536f1d9dc01a8064f%22%2C%22repoName%22%3A%22SubinS26%2FTestWebApp%22%2C%22actor%22%3A%22SubinS26%22%2C%22slotName%22%3A%22Production%22%2C%22commitMessage%22%3A%22Update%20package.json%22%7D" X-Client-IP="74.235.133.210" X-Client-Port="1056" >
+  <step title="OneDeploy" date="2026-08-24T00:31:32.804" >
+    <step title="None repository commit" date="2026-08-24T00:31:32.822" >
+      <step title="Commit id: 8739abb5-33ab-4b05-87c5-c4c603c8cae2" date="2026-08-24T00:31:32.825" Message="N/A" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 2ms -->
+    </step><!-- duration: 7ms -->
+    <step title="Starting PushDeployAsync" date="2026-08-24T00:31:32.831" /><!-- duration: 2ms -->
+    <step title="Removing _del_node_modules symlink" date="2026-08-24T00:31:32.870" >
+      <step title="Writing artifact to /tmp/zipdeploy/6a461611-ddd9-496e-ab8b-7999a54d7b6a.zip" date="2026-08-24T00:31:32.963" >
+        <step title="Writing multipart request body to /tmp/zipdeploy/6a461611-ddd9-496e-ab8b-7999a54d7b6a.zip" date="2026-08-24T00:31:32.972" /><!-- duration: 11ms -->
+        <step title="Writing zip file to /tmp/zipdeploy/6a461611-ddd9-496e-ab8b-7999a54d7b6a.zip" date="2026-08-24T00:31:32.985" /><!-- duration: 2417ms -->
+      </step><!-- duration: 2467ms -->
+      <step title="Start deployment in the background" date="2026-08-24T00:31:35.441" >
+        <step title="Acquiring Deployment Lock" date="2026-08-24T00:31:35.461" /><!-- duration: 9ms -->
+        <step title="Acquired Deployment Lock" date="2026-08-24T00:31:35.539" /><!-- duration: 2ms -->
+      </step><!-- duration: 195ms -->
+    </step><!-- duration: 2784ms -->
+    <step title="Outgoing response" date="2026-08-24T00:31:35.663" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 2ms -->
+  </step><!-- duration: 2870ms -->

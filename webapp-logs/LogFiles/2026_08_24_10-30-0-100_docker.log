@@ -1,0 +1,281 @@
+2026-08-24T00:07:30.1580490Z State: Starting, Action: EstablishingSiteNetworks, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-08-24T00:07:32.4186706Z State: Starting, Action: StartingSiteContainers, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-08-24T00:07:32.4291540Z Container start method called.
+2026-08-24T00:07:32.4385162Z State: Starting, Action: PullingImage, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pulling image 10.1.0.4:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T00:07:32.4387019Z Establishing network.
+2026-08-24T00:07:32.4388268Z Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T00:07:51.0249860Z Image appsvc/node:24-lts_20260504.4.tuxprod is pulled from registry 10.1.0.4:13209
+2026-08-24T00:07:51.0262540Z Container is starting.
+2026-08-24T00:07:51.0544836Z State: Starting, Action: MountingVolumes, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T00:07:51.0546774Z Establishing user namespace if not established already.
+2026-08-24T00:07:51.0548098Z Establishing network if not established already.
+2026-08-24T00:07:51.0549334Z Mounting volumes.
+2026-08-24T00:07:51.0550729Z Nested mountpoint 
+2026-08-24T00:07:51.0596212Z Nested mountpoint volatile/logs
+2026-08-24T00:07:51.0630157Z Nested mountpoint 
+2026-08-24T00:07:51.1237752Z Nested mountpoint 
+2026-08-24T00:07:51.1304045Z Nested mountpoint 
+2026-08-24T00:07:51.1386577Z Nested mountpoint 
+2026-08-24T00:07:52.0140461Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T00:07:52.0141292Z Creating container.
+2026-08-24T00:07:52.0141825Z Creating pipes for streaming container io.
+2026-08-24T00:07:52.0142357Z Creating stdout named pipe at /podr/container/pipe/97766838618e_cw2-videoshare-api/stdout_7c0b0d8befe14f4e94efaeff50918758.
+2026-08-24T00:07:52.0181369Z Successfully created stdout named pipe at: /podr/container/pipe/97766838618e_cw2-videoshare-api/stdout_7c0b0d8befe14f4e94efaeff50918758.
+2026-08-24T00:07:52.0182021Z Opening named pipe /podr/container/pipe/97766838618e_cw2-videoshare-api/stdout_7c0b0d8befe14f4e94efaeff50918758 for reading in non-blocking mode.
+2026-08-24T00:07:52.0182631Z Successfully opened named pipe: /podr/container/pipe/97766838618e_cw2-videoshare-api/stdout_7c0b0d8befe14f4e94efaeff50918758.
+2026-08-24T00:07:52.0183198Z Successfully removed non-blocking flag from /podr/container/pipe/97766838618e_cw2-videoshare-api/stdout_7c0b0d8befe14f4e94efaeff50918758.
+2026-08-24T00:07:52.0184108Z Creating stderr named pipe at /podr/container/pipe/97766838618e_cw2-videoshare-api/stderr_d7abb52cefdb4fa38b79fddb9f27c586.
+2026-08-24T00:07:52.0185157Z Successfully created stderr named pipe at: /podr/container/pipe/97766838618e_cw2-videoshare-api/stderr_d7abb52cefdb4fa38b79fddb9f27c586.
+2026-08-24T00:07:52.0185788Z Opening named pipe /podr/container/pipe/97766838618e_cw2-videoshare-api/stderr_d7abb52cefdb4fa38b79fddb9f27c586 for reading in non-blocking mode.
+2026-08-24T00:07:52.0186409Z Successfully opened named pipe: /podr/container/pipe/97766838618e_cw2-videoshare-api/stderr_d7abb52cefdb4fa38b79fddb9f27c586.
+2026-08-24T00:07:52.0186997Z Successfully removed non-blocking flag from /podr/container/pipe/97766838618e_cw2-videoshare-api/stderr_d7abb52cefdb4fa38b79fddb9f27c586.
+2026-08-24T00:07:52.0187707Z Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T00:07:52.9373084Z Starting container: 97766838618e_cw2-videoshare-api.
+2026-08-24T00:07:52.9638061Z Starting watchers and probes.
+2026-08-24T00:07:52.9642826Z Starting metrics collection.
+2026-08-24T00:07:52.9656385Z Container is running.
+2026-08-24T00:07:52.9658099Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T00:07:53.0053504Z Container start method finished after 20576 ms.
+2026-08-24T00:07:53.0065834Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T00:07:53.0369309Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T00:08:12.6532362Z Container has finished running with exit code: 127.
+2026-08-24T00:08:12.6533495Z Container is terminating. Grace period: 5 seconds.
+2026-08-24T00:08:12.6565180Z Stop and delete container. Retry count = 0
+2026-08-24T00:08:12.6565962Z Stopping container: 97766838618e_cw2-videoshare-api.
+2026-08-24T00:08:12.8051328Z Deleting container: 97766838618e_cw2-videoshare-api. Retry count = 0
+2026-08-24T00:08:15.5760440Z Container spec TerminationMessagePolicy  path 
+2026-08-24T00:08:15.5777686Z Container is terminated. Total time elapsed: 2922 ms.
+2026-08-24T00:08:15.5778957Z Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T00:08:15.6170252Z State: Stopping, Action: CancellingStartup, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:08:15.7348214Z Site startup probe failed after 22.644639 seconds.
+2026-08-24T00:08:15.9086275Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:08:15.9251692Z Failed to start site. Revert by stopping site.
+2026-08-24T00:08:15.9280336Z State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:08:15.9350099Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:08:15.9351570Z Site: cw2-videoshare-api stopped.
+2026-08-24T00:08:15.9396358Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:08:16.3848928Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:08:16.6059187Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 00:08:16 (UTC), DetailsLevel: ERR
+2026-08-24T00:08:17.0297333Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 00:08:16 (UTC), DetailsLevel: ERR
+2026-08-24T00:08:18.6972977Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 00:08:16 (UTC), DetailsLevel: ERR
+2026-08-24T00:08:19.2824450Z State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 00:08:16 (UTC), DetailsLevel: ERR
+2026-08-24T00:08:19.2825171Z Container start method called.
+2026-08-24T00:08:19.2825618Z State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T00:08:19.2826270Z Establishing network.
+2026-08-24T00:08:19.2827078Z Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T00:08:19.4576500Z Container is starting.
+2026-08-24T00:08:19.4577440Z State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T00:08:19.4580044Z Establishing user namespace if not established already.
+2026-08-24T00:08:19.4580900Z Establishing network if not established already.
+2026-08-24T00:08:19.4581718Z Mounting volumes.
+2026-08-24T00:08:19.4594164Z Nested mountpoint 
+2026-08-24T00:08:19.4678230Z Nested mountpoint volatile/logs
+2026-08-24T00:08:19.4773417Z Nested mountpoint 
+2026-08-24T00:08:19.4785726Z Nested mountpoint 
+2026-08-24T00:08:19.4848077Z Nested mountpoint 
+2026-08-24T00:08:19.4863135Z Nested mountpoint 
+2026-08-24T00:08:19.6168277Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T00:08:19.6171272Z Creating container.
+2026-08-24T00:08:19.6172315Z Creating pipes for streaming container io.
+2026-08-24T00:08:19.6173045Z Creating stdout named pipe at /podr/container/pipe/57303f982df1_cw2-videoshare-api/stdout_ff17a08fe9ac41ff95cc0153ae0d8a12.
+2026-08-24T00:08:19.6196855Z Successfully created stdout named pipe at: /podr/container/pipe/57303f982df1_cw2-videoshare-api/stdout_ff17a08fe9ac41ff95cc0153ae0d8a12.
+2026-08-24T00:08:19.6197652Z Opening named pipe /podr/container/pipe/57303f982df1_cw2-videoshare-api/stdout_ff17a08fe9ac41ff95cc0153ae0d8a12 for reading in non-blocking mode.
+2026-08-24T00:08:19.6198556Z Successfully opened named pipe: /podr/container/pipe/57303f982df1_cw2-videoshare-api/stdout_ff17a08fe9ac41ff95cc0153ae0d8a12.
+2026-08-24T00:08:19.6199211Z Successfully removed non-blocking flag from /podr/container/pipe/57303f982df1_cw2-videoshare-api/stdout_ff17a08fe9ac41ff95cc0153ae0d8a12.
+2026-08-24T00:08:19.6200679Z Creating stderr named pipe at /podr/container/pipe/57303f982df1_cw2-videoshare-api/stderr_64417f52206e49a1beb081086987f0ea.
+2026-08-24T00:08:19.6202716Z Successfully created stderr named pipe at: /podr/container/pipe/57303f982df1_cw2-videoshare-api/stderr_64417f52206e49a1beb081086987f0ea.
+2026-08-24T00:08:19.6203306Z Opening named pipe /podr/container/pipe/57303f982df1_cw2-videoshare-api/stderr_64417f52206e49a1beb081086987f0ea for reading in non-blocking mode.
+2026-08-24T00:08:19.6204716Z Successfully opened named pipe: /podr/container/pipe/57303f982df1_cw2-videoshare-api/stderr_64417f52206e49a1beb081086987f0ea.
+2026-08-24T00:08:19.6205280Z Successfully removed non-blocking flag from /podr/container/pipe/57303f982df1_cw2-videoshare-api/stderr_64417f52206e49a1beb081086987f0ea.
+2026-08-24T00:08:19.6206260Z Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T00:08:19.8565156Z Starting container: 57303f982df1_cw2-videoshare-api.
+2026-08-24T00:08:19.8948080Z Starting watchers and probes.
+2026-08-24T00:08:19.8949804Z Starting metrics collection.
+2026-08-24T00:08:19.8950725Z Container is running.
+2026-08-24T00:08:19.8951827Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T00:08:19.9276352Z Container start method finished after 644 ms.
+2026-08-24T00:08:19.9277739Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T00:08:19.9390374Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T00:08:36.7573620Z Container has finished running with exit code: 127.
+2026-08-24T00:08:36.7582732Z Container is terminating. Grace period: 5 seconds.
+2026-08-24T00:08:36.7591059Z Stop and delete container. Retry count = 0
+2026-08-24T00:08:36.7593784Z Stopping container: 57303f982df1_cw2-videoshare-api.
+2026-08-24T00:08:36.8053820Z Deleting container: 57303f982df1_cw2-videoshare-api. Retry count = 0
+2026-08-24T00:08:39.0466309Z Container spec TerminationMessagePolicy  path 
+2026-08-24T00:08:39.0468014Z Container is terminated. Total time elapsed: 2288 ms.
+2026-08-24T00:08:39.0468913Z Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T00:08:39.0477554Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:15, LastErrorDetails: Container exited with exit code 127 during startup after 22.6s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:08:39.0510911Z Site startup probe failed after 19.1010242 seconds.
+2026-08-24T00:08:39.1222014Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:08:39.1275783Z Failed to start site. Revert by stopping site.
+2026-08-24T00:08:39.1292594Z State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:08:39.1307936Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:08:39.1308220Z Site: cw2-videoshare-api stopped.
+2026-08-24T00:08:39.1341414Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:08:39.5233233Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:08:39.6585745Z Site: cw2-videoshare-api will be blocked for 1 minutes till 08/24/2026 00:09:39
+2026-08-24T00:08:39.6586997Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site: cw2-videoshare-api will be blocked for 1 minutes till 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:08:39.6681993Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 00:08:39 (UTC), DetailsLevel: WARN
+2026-08-24T00:08:39.7935979Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 00:08:39 (UTC), DetailsLevel: WARN
+2026-08-24T00:08:44.8626885Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:08:44.8627199Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:08:49.9585382Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:08:49.9585688Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:08:55.0420178Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:08:55.0421087Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:09:00.1217383Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:09:00.1217865Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:09:07.1355774Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:09:07.1356116Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:09:09.7645061Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:09:09.7645309Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:09:12.2311098Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:09:12.2311427Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:09:17.3178424Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:09:17.3178690Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:09:22.3593401Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:09:22.3593679Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:09:27.4303686Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:09:27.4303981Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:09:32.5252785Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:09:32.5253095Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:09:38.1899124Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:09:38.1899426Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:09:39.6629521Z Site: cw2-videoshare-api is unblocked.
+2026-08-24T00:09:43.2542025Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:09:43.7576450Z State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:09:39, DetailsLevel: WARN
+2026-08-24T00:09:43.7577296Z Container start method called.
+2026-08-24T00:09:43.7577801Z State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T00:09:43.7578419Z Establishing network.
+2026-08-24T00:09:43.7581017Z Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T00:09:44.0067973Z Container is starting.
+2026-08-24T00:09:44.0068808Z State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T00:09:44.0069453Z Establishing user namespace if not established already.
+2026-08-24T00:09:44.0070160Z Establishing network if not established already.
+2026-08-24T00:09:44.0078818Z Mounting volumes.
+2026-08-24T00:09:44.0080048Z Nested mountpoint 
+2026-08-24T00:09:44.0169380Z Nested mountpoint volatile/logs
+2026-08-24T00:09:44.0210136Z Nested mountpoint 
+2026-08-24T00:09:44.0214001Z Nested mountpoint 
+2026-08-24T00:09:44.0218611Z Nested mountpoint 
+2026-08-24T00:09:44.0328542Z Nested mountpoint 
+2026-08-24T00:09:44.2076245Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T00:09:44.2077260Z Creating container.
+2026-08-24T00:09:44.2078077Z Creating pipes for streaming container io.
+2026-08-24T00:09:44.2078827Z Creating stdout named pipe at /podr/container/pipe/074d765bdec0_cw2-videoshare-api/stdout_e6e8b1c8ca5d41e3a71af654a87ef356.
+2026-08-24T00:09:44.2081005Z Successfully created stdout named pipe at: /podr/container/pipe/074d765bdec0_cw2-videoshare-api/stdout_e6e8b1c8ca5d41e3a71af654a87ef356.
+2026-08-24T00:09:44.2081702Z Opening named pipe /podr/container/pipe/074d765bdec0_cw2-videoshare-api/stdout_e6e8b1c8ca5d41e3a71af654a87ef356 for reading in non-blocking mode.
+2026-08-24T00:09:44.2082582Z Successfully opened named pipe: /podr/container/pipe/074d765bdec0_cw2-videoshare-api/stdout_e6e8b1c8ca5d41e3a71af654a87ef356.
+2026-08-24T00:09:44.2083205Z Successfully removed non-blocking flag from /podr/container/pipe/074d765bdec0_cw2-videoshare-api/stdout_e6e8b1c8ca5d41e3a71af654a87ef356.
+2026-08-24T00:09:44.2091399Z Creating stderr named pipe at /podr/container/pipe/074d765bdec0_cw2-videoshare-api/stderr_45c3f83d35be4432a99396f8881efc2b.
+2026-08-24T00:09:44.2095407Z Successfully created stderr named pipe at: /podr/container/pipe/074d765bdec0_cw2-videoshare-api/stderr_45c3f83d35be4432a99396f8881efc2b.
+2026-08-24T00:09:44.2096077Z Opening named pipe /podr/container/pipe/074d765bdec0_cw2-videoshare-api/stderr_45c3f83d35be4432a99396f8881efc2b for reading in non-blocking mode.
+2026-08-24T00:09:44.2096864Z Successfully opened named pipe: /podr/container/pipe/074d765bdec0_cw2-videoshare-api/stderr_45c3f83d35be4432a99396f8881efc2b.
+2026-08-24T00:09:44.2097362Z Successfully removed non-blocking flag from /podr/container/pipe/074d765bdec0_cw2-videoshare-api/stderr_45c3f83d35be4432a99396f8881efc2b.
+2026-08-24T00:09:44.2098745Z Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T00:09:44.3916457Z Starting container: 074d765bdec0_cw2-videoshare-api.
+2026-08-24T00:09:44.4251541Z Starting watchers and probes.
+2026-08-24T00:09:44.4253564Z Starting metrics collection.
+2026-08-24T00:09:44.4254696Z Container is running.
+2026-08-24T00:09:44.4255469Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T00:09:44.4522444Z Container start method finished after 694 ms.
+2026-08-24T00:09:44.4527589Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T00:09:44.4527913Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T00:10:05.4351958Z Container has finished running with exit code: 127.
+2026-08-24T00:10:05.4352842Z Container is terminating. Grace period: 5 seconds.
+2026-08-24T00:10:05.4399993Z Stop and delete container. Retry count = 0
+2026-08-24T00:10:05.4400797Z Stopping container: 074d765bdec0_cw2-videoshare-api.
+2026-08-24T00:10:05.4590724Z Deleting container: 074d765bdec0_cw2-videoshare-api. Retry count = 0
+2026-08-24T00:10:07.0897206Z Container spec TerminationMessagePolicy  path 
+2026-08-24T00:10:07.0905787Z Container is terminated. Total time elapsed: 1650 ms.
+2026-08-24T00:10:07.0906647Z Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T00:10:07.0907958Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:08:39, LastErrorDetails: Container exited with exit code 127 during startup after 19.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:10:07.1109384Z Site startup probe failed after 22.656958 seconds.
+2026-08-24T00:10:07.2130071Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:10:07.2258560Z Failed to start site. Revert by stopping site.
+2026-08-24T00:10:07.2263666Z State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:10:07.2282052Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:10:07.2282465Z Site: cw2-videoshare-api stopped.
+2026-08-24T00:10:07.2383972Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:10:07.6239255Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:10:07.7325051Z Site: cw2-videoshare-api will be blocked for 1 minutes till 08/24/2026 00:11:07
+2026-08-24T00:10:07.7326780Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site: cw2-videoshare-api will be blocked for 1 minutes till 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:10:07.7331732Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 00:10:07 (UTC), DetailsLevel: WARN
+2026-08-24T00:10:07.8910452Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 00:10:07 (UTC), DetailsLevel: WARN
+2026-08-24T00:10:12.9572259Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:10:12.9572506Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:10:18.0655210Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:10:18.0655557Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:10:23.1145950Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:10:23.1146543Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:10:28.1559527Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:10:28.1559793Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:10:33.2226073Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:10:33.2226330Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:10:38.3036771Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:10:38.3037012Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:10:43.3627108Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:10:43.3642871Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:10:48.4382056Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:10:48.4382920Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:10:53.4980543Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:10:53.4980922Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:10:58.5460303Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:10:58.5460588Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:11:03.5967851Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:11:03.5968134Z Start site prohibitted because the site is being blocked.
+2026-08-24T00:11:07.7298757Z Site: cw2-videoshare-api is unblocked.
+2026-08-24T00:11:08.6665182Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:11:09.1257831Z State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 00:11:07, DetailsLevel: WARN
+2026-08-24T00:11:09.1258856Z Container start method called.
+2026-08-24T00:11:09.1259314Z State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T00:11:09.1260018Z Establishing network.
+2026-08-24T00:11:09.1261029Z Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T00:11:09.2746337Z Container is starting.
+2026-08-24T00:11:09.2747040Z State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T00:11:09.2747763Z Establishing user namespace if not established already.
+2026-08-24T00:11:09.2760429Z Establishing network if not established already.
+2026-08-24T00:11:09.2761670Z Mounting volumes.
+2026-08-24T00:11:09.2763251Z Nested mountpoint 
+2026-08-24T00:11:09.2791395Z Nested mountpoint volatile/logs
+2026-08-24T00:11:09.2841477Z Nested mountpoint 
+2026-08-24T00:11:09.2851547Z Nested mountpoint 
+2026-08-24T00:11:09.2856459Z Nested mountpoint 
+2026-08-24T00:11:09.2869004Z Nested mountpoint 
+2026-08-24T00:11:09.3956312Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T00:11:09.3965590Z Creating container.
+2026-08-24T00:11:09.3970846Z Creating pipes for streaming container io.
+2026-08-24T00:11:09.3972011Z Creating stdout named pipe at /podr/container/pipe/a3258cb6522f_cw2-videoshare-api/stdout_588e12ad0edc4455a2c487d8d037f554.
+2026-08-24T00:11:09.3974027Z Successfully created stdout named pipe at: /podr/container/pipe/a3258cb6522f_cw2-videoshare-api/stdout_588e12ad0edc4455a2c487d8d037f554.
+2026-08-24T00:11:09.3974710Z Opening named pipe /podr/container/pipe/a3258cb6522f_cw2-videoshare-api/stdout_588e12ad0edc4455a2c487d8d037f554 for reading in non-blocking mode.
+2026-08-24T00:11:09.3975487Z Successfully opened named pipe: /podr/container/pipe/a3258cb6522f_cw2-videoshare-api/stdout_588e12ad0edc4455a2c487d8d037f554.
+2026-08-24T00:11:09.3976050Z Successfully removed non-blocking flag from /podr/container/pipe/a3258cb6522f_cw2-videoshare-api/stdout_588e12ad0edc4455a2c487d8d037f554.
+2026-08-24T00:11:09.3977199Z Creating stderr named pipe at /podr/container/pipe/a3258cb6522f_cw2-videoshare-api/stderr_43d84933890e431d8f52bcd5a8ea9e06.
+2026-08-24T00:11:09.3978325Z Successfully created stderr named pipe at: /podr/container/pipe/a3258cb6522f_cw2-videoshare-api/stderr_43d84933890e431d8f52bcd5a8ea9e06.
+2026-08-24T00:11:09.3978938Z Opening named pipe /podr/container/pipe/a3258cb6522f_cw2-videoshare-api/stderr_43d84933890e431d8f52bcd5a8ea9e06 for reading in non-blocking mode.
+2026-08-24T00:11:09.3979725Z Successfully opened named pipe: /podr/container/pipe/a3258cb6522f_cw2-videoshare-api/stderr_43d84933890e431d8f52bcd5a8ea9e06.
+2026-08-24T00:11:09.3980420Z Successfully removed non-blocking flag from /podr/container/pipe/a3258cb6522f_cw2-videoshare-api/stderr_43d84933890e431d8f52bcd5a8ea9e06.
+2026-08-24T00:11:09.3981532Z Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T00:11:09.6428749Z Starting container: a3258cb6522f_cw2-videoshare-api.
+2026-08-24T00:11:09.6818968Z Starting watchers and probes.
+2026-08-24T00:11:09.6821227Z Starting metrics collection.
+2026-08-24T00:11:09.6835145Z Container is running.
+2026-08-24T00:11:09.6835917Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T00:11:09.7612390Z Container start method finished after 635 ms.
+2026-08-24T00:11:09.7623522Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T00:11:09.7686654Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T00:11:25.5896174Z Container has finished running with exit code: 127.
+2026-08-24T00:11:25.5905851Z Container is terminating. Grace period: 5 seconds.
+2026-08-24T00:11:25.5913815Z Stop and delete container. Retry count = 0
+2026-08-24T00:11:25.5917601Z Stopping container: a3258cb6522f_cw2-videoshare-api.
+2026-08-24T00:11:25.6689585Z Deleting container: a3258cb6522f_cw2-videoshare-api. Retry count = 0
+2026-08-24T00:11:26.9733877Z Container spec TerminationMessagePolicy  path 
+2026-08-24T00:11:26.9746329Z Container is terminated. Total time elapsed: 1383 ms.
+2026-08-24T00:11:26.9747312Z Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T00:11:26.9783203Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:10:07, LastErrorDetails: Container exited with exit code 127 during startup after 22.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:11:26.9824247Z Site startup probe failed after 17.2131802 seconds.
+2026-08-24T00:11:27.0557640Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:11:27, LastErrorDetails: Container exited with exit code 127 during startup after 17.3s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:11:27.0580755Z Failed to start site. Revert by stopping site.
+2026-08-24T00:11:27.0581571Z State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:11:27, LastErrorDetails: Container exited with exit code 127 during startup after 17.3s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:11:27.0595899Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 00:11:27, LastErrorDetails: Container exited with exit code 127 during startup after 17.3s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T00:11:27.0596100Z Site: cw2-videoshare-api stopped.

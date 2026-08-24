@@ -57,7 +57,8 @@ if [ "$TARGET" = "all" ] || [ "$TARGET" = "backend" ]; then
     dist \
     styles \
     scripts \
-    -x "dist/posts/*" "dist/temp/*" "dist/users/*" "dist/groups/*"
+    node_modules \
+    -x "node_modules/.cache/*" "dist/posts/*" "dist/temp/*" "dist/users/*" "dist/groups/*"
 
   az webapp deploy \
     --resource-group "${RESOURCE_GROUP}" \

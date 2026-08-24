@@ -1,0 +1,518 @@
+2026-08-24T01:50:13.5803219Z State: Starting, Action: EstablishingSiteNetworks, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-08-24T01:50:15.6779896Z State: Starting, Action: StartingSiteContainers, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-08-24T01:50:15.6783166Z Container start method called.
+2026-08-24T01:50:15.6844480Z State: Starting, Action: PullingImage, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pulling image 10.1.0.4:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:50:15.6847347Z Establishing network.
+2026-08-24T01:50:15.6856532Z Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T01:50:51.5004325Z Image appsvc/node:24-lts_20260504.4.tuxprod is pulled from registry 10.1.0.6:13209
+2026-08-24T01:50:51.5016670Z Container is starting.
+2026-08-24T01:50:51.5228739Z State: Starting, Action: MountingVolumes, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:50:51.5233823Z Establishing user namespace if not established already.
+2026-08-24T01:50:51.5237408Z Establishing network if not established already.
+2026-08-24T01:50:51.5246870Z Mounting volumes.
+2026-08-24T01:50:51.5283267Z Nested mountpoint 
+2026-08-24T01:50:51.5510268Z Nested mountpoint volatile/logs
+2026-08-24T01:50:51.5809830Z Nested mountpoint 
+2026-08-24T01:50:51.6701802Z Nested mountpoint 
+2026-08-24T01:50:51.6807088Z Nested mountpoint 
+2026-08-24T01:50:51.7093942Z Nested mountpoint 
+2026-08-24T01:50:51.9568340Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T01:50:51.9569371Z Creating container.
+2026-08-24T01:50:51.9569891Z Creating pipes for streaming container io.
+2026-08-24T01:50:51.9570622Z Creating stdout named pipe at /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stdout_5cb1c89c8a654e06ac364629ad009a5e.
+2026-08-24T01:50:51.9579826Z Successfully created stdout named pipe at: /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stdout_5cb1c89c8a654e06ac364629ad009a5e.
+2026-08-24T01:50:51.9582783Z Opening named pipe /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stdout_5cb1c89c8a654e06ac364629ad009a5e for reading in non-blocking mode.
+2026-08-24T01:50:51.9583497Z Successfully opened named pipe: /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stdout_5cb1c89c8a654e06ac364629ad009a5e.
+2026-08-24T01:50:51.9583994Z Successfully removed non-blocking flag from /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stdout_5cb1c89c8a654e06ac364629ad009a5e.
+2026-08-24T01:50:51.9682070Z Creating stderr named pipe at /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stderr_e711d7203d7e4e5889f7b5a896ec7442.
+2026-08-24T01:50:51.9685247Z Successfully created stderr named pipe at: /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stderr_e711d7203d7e4e5889f7b5a896ec7442.
+2026-08-24T01:50:51.9685739Z Opening named pipe /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stderr_e711d7203d7e4e5889f7b5a896ec7442 for reading in non-blocking mode.
+2026-08-24T01:50:51.9686109Z Successfully opened named pipe: /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stderr_e711d7203d7e4e5889f7b5a896ec7442.
+2026-08-24T01:50:51.9686360Z Successfully removed non-blocking flag from /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stderr_e711d7203d7e4e5889f7b5a896ec7442.
+2026-08-24T01:50:51.9764775Z Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T01:50:52.3291648Z Starting container: cdc4d8f342fe_cw2-videoshare-api.
+2026-08-24T01:50:52.4704138Z Starting watchers and probes.
+2026-08-24T01:50:52.4777421Z Starting metrics collection.
+2026-08-24T01:50:52.5031150Z Container is running.
+2026-08-24T01:50:52.5034113Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:50:52.7720214Z Container start method finished after 37093 ms.
+2026-08-24T01:50:52.7813197Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:50:52.7813645Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T01:51:27.2455524Z Container has finished running with exit code: 1.
+2026-08-24T01:51:27.2466015Z Container is terminating. Grace period: 5 seconds.
+2026-08-24T01:51:27.2577645Z Stop and delete container. Retry count = 0
+2026-08-24T01:51:27.2631201Z Stopping container: cdc4d8f342fe_cw2-videoshare-api.
+2026-08-24T01:51:27.4124181Z Deleting container: cdc4d8f342fe_cw2-videoshare-api. Retry count = 0
+2026-08-24T01:51:29.2795931Z Container spec TerminationMessagePolicy  path 
+2026-08-24T01:51:29.2812149Z Container is terminated. Total time elapsed: 2026 ms.
+2026-08-24T01:51:29.2819080Z Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T01:51:29.3099994Z State: Stopping, Action: CancellingStartup, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:51:29.3595385Z Site startup probe failed after 36.5438076 seconds.
+2026-08-24T01:51:29.5378963Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:51:29.5600183Z Failed to start site. Revert by stopping site.
+2026-08-24T01:51:29.5668559Z State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:51:29.5808303Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:51:29.5809272Z Site: cw2-videoshare-api stopped.
+2026-08-24T01:51:29.6067273Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:51:30.0551003Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:51:30.2814707Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:51:30 (UTC), DetailsLevel: ERR
+2026-08-24T01:51:30.7715733Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:51:30 (UTC), DetailsLevel: ERR
+2026-08-24T01:51:36.0139560Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:51:30 (UTC), DetailsLevel: ERR
+2026-08-24T01:51:37.6535825Z State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:51:30 (UTC), DetailsLevel: ERR
+2026-08-24T01:51:37.6536978Z Container start method called.
+2026-08-24T01:51:37.6537436Z State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:51:37.6537713Z Establishing network.
+2026-08-24T01:51:37.6538096Z Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T01:51:55.4940172Z Container is starting.
+2026-08-24T01:51:55.4941494Z State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:51:55.4944124Z Establishing user namespace if not established already.
+2026-08-24T01:51:55.4946299Z Establishing network if not established already.
+2026-08-24T01:51:55.4953360Z Mounting volumes.
+2026-08-24T01:51:55.4956638Z Nested mountpoint 
+2026-08-24T01:51:55.5044201Z Nested mountpoint volatile/logs
+2026-08-24T01:51:55.5062254Z Nested mountpoint 
+2026-08-24T01:51:55.5655004Z Nested mountpoint 
+2026-08-24T01:51:55.5658691Z Nested mountpoint 
+2026-08-24T01:51:55.5748293Z Nested mountpoint 
+2026-08-24T01:51:55.8855768Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T01:51:55.8858157Z Creating container.
+2026-08-24T01:51:55.8860720Z Creating pipes for streaming container io.
+2026-08-24T01:51:55.8864039Z Creating stdout named pipe at /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stdout_c160d2004eb348df82e3e030913a2f34.
+2026-08-24T01:51:55.9035707Z Successfully created stdout named pipe at: /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stdout_c160d2004eb348df82e3e030913a2f34.
+2026-08-24T01:51:55.9040750Z Opening named pipe /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stdout_c160d2004eb348df82e3e030913a2f34 for reading in non-blocking mode.
+2026-08-24T01:51:55.9041561Z Successfully opened named pipe: /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stdout_c160d2004eb348df82e3e030913a2f34.
+2026-08-24T01:51:55.9042054Z Successfully removed non-blocking flag from /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stdout_c160d2004eb348df82e3e030913a2f34.
+2026-08-24T01:51:55.9043079Z Creating stderr named pipe at /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stderr_db5956ab30f948abaae0d27a0f5bb64d.
+2026-08-24T01:51:55.9055080Z Successfully created stderr named pipe at: /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stderr_db5956ab30f948abaae0d27a0f5bb64d.
+2026-08-24T01:51:55.9055800Z Opening named pipe /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stderr_db5956ab30f948abaae0d27a0f5bb64d for reading in non-blocking mode.
+2026-08-24T01:51:55.9056632Z Successfully opened named pipe: /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stderr_db5956ab30f948abaae0d27a0f5bb64d.
+2026-08-24T01:51:55.9057913Z Successfully removed non-blocking flag from /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stderr_db5956ab30f948abaae0d27a0f5bb64d.
+2026-08-24T01:51:55.9059032Z Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T01:51:56.3150561Z Starting container: 0d4bf869905a_cw2-videoshare-api.
+2026-08-24T01:51:56.3738367Z Starting watchers and probes.
+2026-08-24T01:51:56.3739955Z Starting metrics collection.
+2026-08-24T01:51:56.3740394Z Container is running.
+2026-08-24T01:51:56.3831334Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:51:56.4739737Z Container start method finished after 18820 ms.
+2026-08-24T01:51:56.4740650Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:51:56.4740764Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T01:52:37.9746332Z Container has finished running with exit code: 1.
+2026-08-24T01:52:37.9749304Z Container is terminating. Grace period: 5 seconds.
+2026-08-24T01:52:37.9949994Z Stop and delete container. Retry count = 0
+2026-08-24T01:52:37.9950491Z Stopping container: 0d4bf869905a_cw2-videoshare-api.
+2026-08-24T01:52:38.0865093Z Deleting container: 0d4bf869905a_cw2-videoshare-api. Retry count = 0
+2026-08-24T01:52:40.1234389Z Container spec TerminationMessagePolicy  path 
+2026-08-24T01:52:40.1311356Z Container is terminated. Total time elapsed: 2147 ms.
+2026-08-24T01:52:40.1312451Z Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T01:52:40.1403537Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:52:40.1509551Z Site startup probe failed after 43.676384 seconds.
+2026-08-24T01:52:40.3107669Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:52:40.3123985Z Failed to start site. Revert by stopping site.
+2026-08-24T01:52:40.3127525Z State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:52:40.3129345Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:52:40.3129504Z Site: cw2-videoshare-api stopped.
+2026-08-24T01:52:40.3505343Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:52:40.8857370Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:52:41.1468912Z Site: cw2-videoshare-api will be blocked for 1 minutes till 08/24/2026 01:53:41
+2026-08-24T01:52:41.1549524Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site: cw2-videoshare-api will be blocked for 1 minutes till 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:52:41.2201657Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:52:41 (UTC), DetailsLevel: WARN
+2026-08-24T01:52:41.6141555Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:52:41 (UTC), DetailsLevel: WARN
+2026-08-24T01:52:46.7838698Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:52:46.8008825Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:52:52.0464169Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:52:52.0464955Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:52:57.1958339Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:52:57.1958528Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:02.3685412Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:02.3685829Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:07.5676191Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:07.5679717Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:12.7282304Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:12.7282665Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:17.9772545Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:17.9772875Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:23.0966360Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:23.0966697Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:28.2484572Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:28.2484897Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:33.3906387Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:33.4102707Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:38.5036023Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:38.5047231Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:41.1456719Z Site: cw2-videoshare-api is unblocked.
+2026-08-24T01:53:43.5678716Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:45.1612286Z State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:45.1613120Z Container start method called.
+2026-08-24T01:53:45.1613598Z State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:53:45.1614066Z Establishing network.
+2026-08-24T01:53:45.1614611Z Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T01:54:03.3610048Z Container is starting.
+2026-08-24T01:54:03.3610976Z State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:54:03.3611249Z Establishing user namespace if not established already.
+2026-08-24T01:54:03.3611537Z Establishing network if not established already.
+2026-08-24T01:54:03.3611853Z Mounting volumes.
+2026-08-24T01:54:03.3612811Z Nested mountpoint 
+2026-08-24T01:54:03.3998782Z Nested mountpoint volatile/logs
+2026-08-24T01:54:03.4386282Z Nested mountpoint 
+2026-08-24T01:54:03.4589060Z Nested mountpoint 
+2026-08-24T01:54:03.5383734Z Nested mountpoint 
+2026-08-24T01:54:03.5882184Z Nested mountpoint 
+2026-08-24T01:54:03.8179332Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T01:54:03.8179719Z Creating container.
+2026-08-24T01:54:03.8179960Z Creating pipes for streaming container io.
+2026-08-24T01:54:03.8180272Z Creating stdout named pipe at /podr/container/pipe/b9906728c783_cw2-videoshare-api/stdout_f04cf5db00144f008c532b36239d225f.
+2026-08-24T01:54:03.8181050Z Successfully created stdout named pipe at: /podr/container/pipe/b9906728c783_cw2-videoshare-api/stdout_f04cf5db00144f008c532b36239d225f.
+2026-08-24T01:54:03.8181262Z Opening named pipe /podr/container/pipe/b9906728c783_cw2-videoshare-api/stdout_f04cf5db00144f008c532b36239d225f for reading in non-blocking mode.
+2026-08-24T01:54:03.8274092Z Successfully opened named pipe: /podr/container/pipe/b9906728c783_cw2-videoshare-api/stdout_f04cf5db00144f008c532b36239d225f.
+2026-08-24T01:54:03.8284706Z Successfully removed non-blocking flag from /podr/container/pipe/b9906728c783_cw2-videoshare-api/stdout_f04cf5db00144f008c532b36239d225f.
+2026-08-24T01:54:03.8360692Z Creating stderr named pipe at /podr/container/pipe/b9906728c783_cw2-videoshare-api/stderr_8aa63cf33fd54a60920fe2e246671e21.
+2026-08-24T01:54:03.8361846Z Successfully created stderr named pipe at: /podr/container/pipe/b9906728c783_cw2-videoshare-api/stderr_8aa63cf33fd54a60920fe2e246671e21.
+2026-08-24T01:54:03.8362364Z Opening named pipe /podr/container/pipe/b9906728c783_cw2-videoshare-api/stderr_8aa63cf33fd54a60920fe2e246671e21 for reading in non-blocking mode.
+2026-08-24T01:54:03.8363086Z Successfully opened named pipe: /podr/container/pipe/b9906728c783_cw2-videoshare-api/stderr_8aa63cf33fd54a60920fe2e246671e21.
+2026-08-24T01:54:03.8363515Z Successfully removed non-blocking flag from /podr/container/pipe/b9906728c783_cw2-videoshare-api/stderr_8aa63cf33fd54a60920fe2e246671e21.
+2026-08-24T01:54:03.8365993Z Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T01:54:04.1297267Z Starting container: b9906728c783_cw2-videoshare-api.
+2026-08-24T01:54:04.1832325Z Starting watchers and probes.
+2026-08-24T01:54:04.1843462Z Starting metrics collection.
+2026-08-24T01:54:04.1844768Z Container is running.
+2026-08-24T01:54:04.2017970Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:54:04.3008929Z Container start method finished after 19139 ms.
+2026-08-24T01:54:04.3009916Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:54:04.3010042Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T01:54:35.2774497Z Container has finished running with exit code: 1.
+2026-08-24T01:54:35.2775056Z Container is terminating. Grace period: 5 seconds.
+2026-08-24T01:54:35.2965608Z Stop and delete container. Retry count = 0
+2026-08-24T01:54:35.2969673Z Stopping container: b9906728c783_cw2-videoshare-api.
+2026-08-24T01:54:35.3978186Z Deleting container: b9906728c783_cw2-videoshare-api. Retry count = 0
+2026-08-24T01:54:37.1877542Z Container spec TerminationMessagePolicy  path 
+2026-08-24T01:54:37.1976768Z Container is terminated. Total time elapsed: 1903 ms.
+2026-08-24T01:54:37.1977469Z Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T01:54:37.2171258Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:54:37.2354385Z Site startup probe failed after 32.9265526 seconds.
+2026-08-24T01:54:37.3870240Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:54:37.4455231Z Failed to start site. Revert by stopping site.
+2026-08-24T01:54:37.4456510Z State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:54:37.4457885Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:54:37.4458023Z Site: cw2-videoshare-api stopped.
+2026-08-24T01:54:37.4680973Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:54:37.8787366Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:54:38.1375174Z Site: cw2-videoshare-api will be blocked for 1 minutes till 08/24/2026 01:55:38
+2026-08-24T01:54:38.1375692Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site: cw2-videoshare-api will be blocked for 1 minutes till 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:54:38.1379496Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:54:38 (UTC), DetailsLevel: WARN
+2026-08-24T01:54:38.5382518Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:54:38 (UTC), DetailsLevel: WARN
+2026-08-24T01:54:43.5322523Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:54:43.5322935Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:54:48.6850828Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:54:48.6851026Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:54:53.8829502Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:54:53.8831044Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:54:58.9886327Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:54:58.9889169Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:04.0922130Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:04.0922324Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:09.1843156Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:09.1921199Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:14.3212769Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:14.3215865Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:19.4620423Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:19.4623820Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:24.5632062Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:24.5633365Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:29.6313410Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:29.6313749Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:34.7146071Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:34.7146271Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:38.1377161Z Site: cw2-videoshare-api is unblocked.
+2026-08-24T01:55:39.7691222Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:41.7126924Z State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:41.7127386Z Container start method called.
+2026-08-24T01:55:41.7127642Z State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:55:41.7127902Z Establishing network.
+2026-08-24T01:55:41.7128231Z Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T01:55:58.8053775Z Container is starting.
+2026-08-24T01:55:58.8056893Z State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:55:58.8058968Z Establishing user namespace if not established already.
+2026-08-24T01:55:58.8061169Z Establishing network if not established already.
+2026-08-24T01:55:58.8062993Z Mounting volumes.
+2026-08-24T01:55:58.8115893Z Nested mountpoint 
+2026-08-24T01:55:58.8515578Z Nested mountpoint volatile/logs
+2026-08-24T01:55:58.8613908Z Nested mountpoint 
+2026-08-24T01:55:58.8621690Z Nested mountpoint 
+2026-08-24T01:55:58.8819902Z Nested mountpoint 
+2026-08-24T01:55:58.8836303Z Nested mountpoint 
+2026-08-24T01:55:59.2806692Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T01:55:59.2808054Z Creating container.
+2026-08-24T01:55:59.2810524Z Creating pipes for streaming container io.
+2026-08-24T01:55:59.2811106Z Creating stdout named pipe at /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stdout_ed41547643b94180b8ac5e353a3165cf.
+2026-08-24T01:55:59.2812382Z Successfully created stdout named pipe at: /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stdout_ed41547643b94180b8ac5e353a3165cf.
+2026-08-24T01:55:59.2812819Z Opening named pipe /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stdout_ed41547643b94180b8ac5e353a3165cf for reading in non-blocking mode.
+2026-08-24T01:55:59.2813392Z Successfully opened named pipe: /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stdout_ed41547643b94180b8ac5e353a3165cf.
+2026-08-24T01:55:59.2985514Z Successfully removed non-blocking flag from /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stdout_ed41547643b94180b8ac5e353a3165cf.
+2026-08-24T01:55:59.3000754Z Creating stderr named pipe at /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stderr_89c49429aa0b46e98ad9917fde0c25e8.
+2026-08-24T01:55:59.3003551Z Successfully created stderr named pipe at: /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stderr_89c49429aa0b46e98ad9917fde0c25e8.
+2026-08-24T01:55:59.3005576Z Opening named pipe /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stderr_89c49429aa0b46e98ad9917fde0c25e8 for reading in non-blocking mode.
+2026-08-24T01:55:59.3008502Z Successfully opened named pipe: /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stderr_89c49429aa0b46e98ad9917fde0c25e8.
+2026-08-24T01:55:59.3010724Z Successfully removed non-blocking flag from /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stderr_89c49429aa0b46e98ad9917fde0c25e8.
+2026-08-24T01:55:59.3085549Z Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T01:55:59.6408226Z Starting container: e8c3c6c30331_cw2-videoshare-api.
+2026-08-24T01:55:59.6983433Z Starting watchers and probes.
+2026-08-24T01:55:59.6987672Z Starting metrics collection.
+2026-08-24T01:55:59.7070718Z Container is running.
+2026-08-24T01:55:59.7071274Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:55:59.7662705Z Container start method finished after 18053 ms.
+2026-08-24T01:55:59.7667445Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:55:59.7669685Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T01:56:32.6581232Z Container has finished running with exit code: 1.
+2026-08-24T01:56:32.6605048Z Container is terminating. Grace period: 5 seconds.
+2026-08-24T01:56:32.6794276Z Stop and delete container. Retry count = 0
+2026-08-24T01:56:32.6798680Z Stopping container: e8c3c6c30331_cw2-videoshare-api.
+2026-08-24T01:56:32.9472726Z Deleting container: e8c3c6c30331_cw2-videoshare-api. Retry count = 0
+2026-08-24T01:56:34.9450274Z Container spec TerminationMessagePolicy  path 
+2026-08-24T01:56:34.9484853Z Container is terminated. Total time elapsed: 2270 ms.
+2026-08-24T01:56:34.9490959Z Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T01:56:34.9661777Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:56:34.9785598Z Site startup probe failed after 35.2111415 seconds.
+2026-08-24T01:56:35.1344335Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:56:35.1471538Z Failed to start site. Revert by stopping site.
+2026-08-24T01:56:35.1475271Z State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:56:35.1478769Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:56:35.1478956Z Site: cw2-videoshare-api stopped.
+2026-08-24T01:56:35.1558735Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:56:35.5517645Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:56:35.7752805Z Site: cw2-videoshare-api will be blocked for 2 minutes till 08/24/2026 01:58:35
+2026-08-24T01:56:35.7757461Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site: cw2-videoshare-api will be blocked for 2 minutes till 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:56:35.7936707Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:56:35 (UTC), DetailsLevel: WARN
+2026-08-24T01:56:36.0547515Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:56:35 (UTC), DetailsLevel: WARN
+2026-08-24T01:56:41.3745619Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:56:41.3745964Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:56:46.5311217Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:56:46.5311638Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:56:51.6460155Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:56:51.6460560Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:56:56.7370734Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:56:56.7371236Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:01.9086286Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:01.9086683Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:07.2697901Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:07.2698335Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:12.5471024Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:12.5485087Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:17.8304350Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:17.8304864Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:22.8924577Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:22.8924927Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:27.9248302Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:27.9248702Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:33.0412499Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:33.0413370Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:38.1390086Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:38.1390459Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:43.2281215Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:43.2281435Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:48.3460368Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:48.3484963Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:53.4745313Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:53.4745741Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:58.6267406Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:58.6268557Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:04.0915644Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:04.0917156Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:09.2387677Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:09.2388180Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:14.4766648Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:14.4767194Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:19.6567018Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:19.6567414Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:25.1469116Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:25.1469414Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:30.2752892Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:30.2753182Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:35.3694348Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:35.3694732Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:35.7960348Z Site: cw2-videoshare-api is unblocked.
+2026-08-24T01:58:40.5945540Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:43.7313964Z State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:43.7314592Z Container start method called.
+2026-08-24T01:58:43.7314904Z State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:58:43.7315232Z Establishing network.
+2026-08-24T01:58:43.7331123Z Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T01:59:05.5907197Z Container is starting.
+2026-08-24T01:59:05.6001647Z State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:59:05.6005767Z Establishing user namespace if not established already.
+2026-08-24T01:59:05.6006778Z Establishing network if not established already.
+2026-08-24T01:59:05.6007497Z Mounting volumes.
+2026-08-24T01:59:05.6092020Z Nested mountpoint 
+2026-08-24T01:59:05.6611103Z Nested mountpoint volatile/logs
+2026-08-24T01:59:05.7084824Z Nested mountpoint 
+2026-08-24T01:59:05.7685507Z Nested mountpoint 
+2026-08-24T01:59:05.8487582Z Nested mountpoint 
+2026-08-24T01:59:05.8676437Z Nested mountpoint 
+2026-08-24T01:59:06.4626519Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T01:59:06.4630392Z Creating container.
+2026-08-24T01:59:06.4632682Z Creating pipes for streaming container io.
+2026-08-24T01:59:06.4720222Z Creating stdout named pipe at /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stdout_2d6c1ccb0f5d4dd094e4ff5bce62c588.
+2026-08-24T01:59:06.4814655Z Successfully created stdout named pipe at: /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stdout_2d6c1ccb0f5d4dd094e4ff5bce62c588.
+2026-08-24T01:59:06.4818789Z Opening named pipe /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stdout_2d6c1ccb0f5d4dd094e4ff5bce62c588 for reading in non-blocking mode.
+2026-08-24T01:59:06.4822895Z Successfully opened named pipe: /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stdout_2d6c1ccb0f5d4dd094e4ff5bce62c588.
+2026-08-24T01:59:06.4826689Z Successfully removed non-blocking flag from /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stdout_2d6c1ccb0f5d4dd094e4ff5bce62c588.
+2026-08-24T01:59:06.4836671Z Creating stderr named pipe at /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stderr_05d203ad35324d01b60ce59fb831efb1.
+2026-08-24T01:59:06.4837591Z Successfully created stderr named pipe at: /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stderr_05d203ad35324d01b60ce59fb831efb1.
+2026-08-24T01:59:06.4838032Z Opening named pipe /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stderr_05d203ad35324d01b60ce59fb831efb1 for reading in non-blocking mode.
+2026-08-24T01:59:06.4838602Z Successfully opened named pipe: /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stderr_05d203ad35324d01b60ce59fb831efb1.
+2026-08-24T01:59:06.4839611Z Successfully removed non-blocking flag from /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stderr_05d203ad35324d01b60ce59fb831efb1.
+2026-08-24T01:59:06.4936515Z Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T01:59:07.5789653Z Starting container: 9b4c0e841ba3_cw2-videoshare-api.
+2026-08-24T01:59:07.6394029Z Starting watchers and probes.
+2026-08-24T01:59:07.6477250Z Starting metrics collection.
+2026-08-24T01:59:07.6478346Z Container is running.
+2026-08-24T01:59:07.6478846Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:59:07.7661701Z Container start method finished after 24034 ms.
+2026-08-24T01:59:07.7771111Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:59:07.7774736Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T01:59:41.9742209Z Container has finished running with exit code: 1.
+2026-08-24T01:59:41.9744539Z Container is terminating. Grace period: 5 seconds.
+2026-08-24T01:59:41.9833533Z Stop and delete container. Retry count = 0
+2026-08-24T01:59:41.9856390Z Stopping container: 9b4c0e841ba3_cw2-videoshare-api.
+2026-08-24T01:59:42.0994564Z Deleting container: 9b4c0e841ba3_cw2-videoshare-api. Retry count = 0
+2026-08-24T01:59:42.5429781Z Container spec TerminationMessagePolicy  path 
+2026-08-24T01:59:42.5514439Z Container is terminated. Total time elapsed: 566 ms.
+2026-08-24T01:59:42.5516929Z Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T01:59:42.5545704Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:59:42.6113953Z Site startup probe failed after 34.757987 seconds.
+2026-08-24T01:59:42.7824055Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:59:42.8398789Z Failed to start site. Revert by stopping site.
+2026-08-24T01:59:42.8403746Z State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:59:42.8409600Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:59:42.8409767Z Site: cw2-videoshare-api stopped.
+2026-08-24T01:59:42.8722184Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:59:43.2134194Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:59:43.6599463Z Site: cw2-videoshare-api will be blocked for 2 minutes till 08/24/2026 02:01:43
+2026-08-24T01:59:43.6600507Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site: cw2-videoshare-api will be blocked for 2 minutes till 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T01:59:43.6615202Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:59:43 (UTC), DetailsLevel: WARN
+2026-08-24T01:59:44.0423249Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:59:43 (UTC), DetailsLevel: WARN
+2026-08-24T01:59:48.9790976Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T01:59:48.9791402Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:59:54.0602103Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T01:59:54.0602531Z Start site prohibitted because the site is being blocked.
+2026-08-24T01:59:59.1823902Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T01:59:59.1824707Z Start site prohibitted because the site is being blocked.
+2026-08-24T02:00:04.3499020Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T02:00:04.3499387Z Start site prohibitted because the site is being blocked.
+2026-08-24T02:00:09.5242541Z State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T02:00:09.5245198Z Start site prohibitted because the site is being blocked.
+2026-08-24T02:01:43.6631961Z Site: cw2-videoshare-api is unblocked.
+2026-08-24T02:01:50.5066215Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T02:01:53.3688607Z State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T02:01:53.3689220Z Container start method called.
+2026-08-24T02:01:53.3689541Z State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T02:01:53.3689874Z Establishing network.
+2026-08-24T02:01:53.3690216Z Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T02:02:17.3726113Z Container is starting.
+2026-08-24T02:02:17.3937316Z State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T02:02:17.3950860Z Establishing user namespace if not established already.
+2026-08-24T02:02:17.4150999Z Establishing network if not established already.
+2026-08-24T02:02:17.4152604Z Mounting volumes.
+2026-08-24T02:02:17.4241736Z Nested mountpoint 
+2026-08-24T02:02:17.4844082Z Nested mountpoint volatile/logs
+2026-08-24T02:02:17.5129573Z Nested mountpoint 
+2026-08-24T02:02:17.5236796Z Nested mountpoint 
+2026-08-24T02:02:17.5326022Z Nested mountpoint 
+2026-08-24T02:02:17.5349692Z Nested mountpoint 
+2026-08-24T02:02:18.6704888Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T02:02:18.6705378Z Creating container.
+2026-08-24T02:02:18.6705663Z Creating pipes for streaming container io.
+2026-08-24T02:02:18.6705952Z Creating stdout named pipe at /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stdout_d1ac81aac3154569be418263ff0edaaf.
+2026-08-24T02:02:18.7117912Z Successfully created stdout named pipe at: /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stdout_d1ac81aac3154569be418263ff0edaaf.
+2026-08-24T02:02:18.7118376Z Opening named pipe /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stdout_d1ac81aac3154569be418263ff0edaaf for reading in non-blocking mode.
+2026-08-24T02:02:18.7118807Z Successfully opened named pipe: /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stdout_d1ac81aac3154569be418263ff0edaaf.
+2026-08-24T02:02:18.7119039Z Successfully removed non-blocking flag from /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stdout_d1ac81aac3154569be418263ff0edaaf.
+2026-08-24T02:02:18.7119627Z Creating stderr named pipe at /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stderr_930aa72cff3545d89b5b4744bda5e273.
+2026-08-24T02:02:18.7120124Z Successfully created stderr named pipe at: /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stderr_930aa72cff3545d89b5b4744bda5e273.
+2026-08-24T02:02:18.7120341Z Opening named pipe /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stderr_930aa72cff3545d89b5b4744bda5e273 for reading in non-blocking mode.
+2026-08-24T02:02:18.7120622Z Successfully opened named pipe: /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stderr_930aa72cff3545d89b5b4744bda5e273.
+2026-08-24T02:02:18.7120841Z Successfully removed non-blocking flag from /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stderr_930aa72cff3545d89b5b4744bda5e273.
+2026-08-24T02:02:18.7121348Z Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T02:02:19.8431895Z Starting container: 2c9e998cf9f0_cw2-videoshare-api.
+2026-08-24T02:02:19.9524228Z Starting watchers and probes.
+2026-08-24T02:02:19.9536735Z Starting metrics collection.
+2026-08-24T02:02:19.9537686Z Container is running.
+2026-08-24T02:02:19.9538334Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T02:02:20.2724324Z Container start method finished after 26903 ms.
+2026-08-24T02:02:20.2725209Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T02:02:20.2725335Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T02:02:56.3652423Z Container has finished running with exit code: 1.
+2026-08-24T02:02:56.3653252Z Container is terminating. Grace period: 5 seconds.
+2026-08-24T02:02:56.3798921Z Stop and delete container. Retry count = 0
+2026-08-24T02:02:56.3802352Z Stopping container: 2c9e998cf9f0_cw2-videoshare-api.
+2026-08-24T02:02:56.4468402Z Deleting container: 2c9e998cf9f0_cw2-videoshare-api. Retry count = 0
+2026-08-24T02:02:58.0919393Z Container spec TerminationMessagePolicy  path 
+2026-08-24T02:02:58.0992577Z Container is terminated. Total time elapsed: 1733 ms.
+2026-08-24T02:02:58.0993174Z Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T02:02:58.0993626Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:02:58.1503768Z Site startup probe failed after 37.8764989 seconds.
+2026-08-24T02:02:58.3497373Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:02:58.3513168Z Failed to start site. Revert by stopping site.
+2026-08-24T02:02:58.3619079Z State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:02:58.3714585Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:02:58.3714832Z Site: cw2-videoshare-api stopped.
+2026-08-24T02:02:58.4000816Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:02:58.7881862Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:02:58.9875138Z Site: cw2-videoshare-api will be blocked for 2 minutes till 08/24/2026 02:04:58
+2026-08-24T02:02:58.9961172Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site: cw2-videoshare-api will be blocked for 2 minutes till 08/24/2026 02:04:58, DetailsLevel: WARN
+2026-08-24T02:02:59.0348482Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 02:02:58 (UTC), DetailsLevel: WARN
+2026-08-24T02:02:59.3756853Z State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 02:02:58 (UTC), DetailsLevel: WARN
+2026-08-24T02:04:58.9884808Z Site: cw2-videoshare-api is unblocked.
+2026-08-24T02:07:48.1993499Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 02:02:58 (UTC), DetailsLevel: WARN
+2026-08-24T02:07:49.7985164Z State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 02:02:58 (UTC), DetailsLevel: WARN
+2026-08-24T02:07:49.7985582Z Container start method called.
+2026-08-24T02:07:49.7985868Z State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T02:07:49.7986147Z Establishing network.
+2026-08-24T02:07:49.7986446Z Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T02:08:06.8429255Z Container is starting.
+2026-08-24T02:08:06.8435605Z State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T02:08:06.8438716Z Establishing user namespace if not established already.
+2026-08-24T02:08:06.8440608Z Establishing network if not established already.
+2026-08-24T02:08:06.8443617Z Mounting volumes.
+2026-08-24T02:08:06.8449680Z Nested mountpoint 
+2026-08-24T02:08:06.8738162Z Nested mountpoint volatile/logs
+2026-08-24T02:08:06.8837118Z Nested mountpoint 
+2026-08-24T02:08:06.9023437Z Nested mountpoint 
+2026-08-24T02:08:06.9118164Z Nested mountpoint 
+2026-08-24T02:08:06.9138262Z Nested mountpoint 
+2026-08-24T02:08:07.3287915Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T02:08:07.3288573Z Creating container.
+2026-08-24T02:08:07.3289076Z Creating pipes for streaming container io.
+2026-08-24T02:08:07.3289531Z Creating stdout named pipe at /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stdout_1f03bf9aa1f94c649e52bb7baf5ca242.
+2026-08-24T02:08:07.3298482Z Successfully created stdout named pipe at: /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stdout_1f03bf9aa1f94c649e52bb7baf5ca242.
+2026-08-24T02:08:07.3299104Z Opening named pipe /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stdout_1f03bf9aa1f94c649e52bb7baf5ca242 for reading in non-blocking mode.
+2026-08-24T02:08:07.3299742Z Successfully opened named pipe: /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stdout_1f03bf9aa1f94c649e52bb7baf5ca242.
+2026-08-24T02:08:07.3300263Z Successfully removed non-blocking flag from /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stdout_1f03bf9aa1f94c649e52bb7baf5ca242.
+2026-08-24T02:08:07.3309513Z Creating stderr named pipe at /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stderr_3db33b466c0542b1940a485b69921e01.
+2026-08-24T02:08:07.3310312Z Successfully created stderr named pipe at: /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stderr_3db33b466c0542b1940a485b69921e01.
+2026-08-24T02:08:07.3310745Z Opening named pipe /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stderr_3db33b466c0542b1940a485b69921e01 for reading in non-blocking mode.
+2026-08-24T02:08:07.3311234Z Successfully opened named pipe: /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stderr_3db33b466c0542b1940a485b69921e01.
+2026-08-24T02:08:07.3311652Z Successfully removed non-blocking flag from /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stderr_3db33b466c0542b1940a485b69921e01.
+2026-08-24T02:08:07.3313588Z Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T02:08:07.6283784Z Starting container: 3c12175d3a4c_cw2-videoshare-api.
+2026-08-24T02:08:07.6788885Z Starting watchers and probes.
+2026-08-24T02:08:07.6792186Z Starting metrics collection.
+2026-08-24T02:08:07.6795886Z Container is running.
+2026-08-24T02:08:07.6802195Z State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T02:08:07.8188840Z Container start method finished after 18001 ms.
+2026-08-24T02:08:07.8269634Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T02:08:07.8270174Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T02:08:36.2248132Z Container has finished running with exit code: 1.
+2026-08-24T02:08:36.2273560Z Container is terminating. Grace period: 5 seconds.
+2026-08-24T02:08:36.2287802Z Stop and delete container. Retry count = 0
+2026-08-24T02:08:36.2291356Z Stopping container: 3c12175d3a4c_cw2-videoshare-api.
+2026-08-24T02:08:36.3001518Z Deleting container: 3c12175d3a4c_cw2-videoshare-api. Retry count = 0
+2026-08-24T02:08:36.5853447Z Container spec TerminationMessagePolicy  path 
+2026-08-24T02:08:36.5946321Z Container is terminated. Total time elapsed: 359 ms.
+2026-08-24T02:08:36.5947198Z Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T02:08:36.5953906Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:08:36.6266054Z Site startup probe failed after 28.7991666 seconds.
+2026-08-24T02:08:36.8347702Z State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:08:36, LastErrorDetails: Container exited with exit code 1 during startup after 28.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:08:36.8463021Z Failed to start site. Revert by stopping site.
+2026-08-24T02:08:36.8464217Z State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:08:36, LastErrorDetails: Container exited with exit code 1 during startup after 28.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:08:36.8465669Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:08:36, LastErrorDetails: Container exited with exit code 1 during startup after 28.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:08:36.8465820Z Site: cw2-videoshare-api stopped.

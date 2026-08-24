@@ -1,0 +1,1180 @@
+========== New Cold Start Attempt (2026-08-24T01:50:13.5803219+00:00) ==========
+2026-08-24T01:50:13.5803219+00:00 ContainerStatus: State: Starting, Action: EstablishingSiteNetworks, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-08-24T01:50:15.6779896+00:00 ContainerStatus: State: Starting, Action: StartingSiteContainers, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-08-24T01:50:15.6783166+00:00 ContainerStatus: Container start method called.
+2026-08-24T01:50:15.6844480+00:00 ContainerStatus: State: Starting, Action: PullingImage, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pulling image 10.1.0.4:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:50:15.6847347+00:00 ContainerStatus: Establishing network.
+2026-08-24T01:50:15.6856532+00:00 ContainerStatus: Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T01:50:51.5004325+00:00 ContainerStatus: Image appsvc/node:24-lts_20260504.4.tuxprod is pulled from registry 10.1.0.6:13209
+2026-08-24T01:50:51.5016670+00:00 ContainerStatus: Container is starting.
+2026-08-24T01:50:51.5228739+00:00 ContainerStatus: State: Starting, Action: MountingVolumes, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:50:51.5233823+00:00 ContainerStatus: Establishing user namespace if not established already.
+2026-08-24T01:50:51.5237408+00:00 ContainerStatus: Establishing network if not established already.
+2026-08-24T01:50:51.5246870+00:00 ContainerStatus: Mounting volumes.
+2026-08-24T01:50:51.5283267+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:50:51.5510268+00:00 ContainerStatus: Nested mountpoint volatile/logs
+2026-08-24T01:50:51.5809830+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:50:51.6701802+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:50:51.6807088+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:50:51.7093942+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:50:51.9568340+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T01:50:51.9569371+00:00 ContainerStatus: Creating container.
+2026-08-24T01:50:51.9569891+00:00 ContainerStatus: Creating pipes for streaming container io.
+2026-08-24T01:50:51.9570622+00:00 ContainerStatus: Creating stdout named pipe at /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stdout_5cb1c89c8a654e06ac364629ad009a5e.
+2026-08-24T01:50:51.9579826+00:00 ContainerStatus: Successfully created stdout named pipe at: /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stdout_5cb1c89c8a654e06ac364629ad009a5e.
+2026-08-24T01:50:51.9582783+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stdout_5cb1c89c8a654e06ac364629ad009a5e for reading in non-blocking mode.
+2026-08-24T01:50:51.9583497+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stdout_5cb1c89c8a654e06ac364629ad009a5e.
+2026-08-24T01:50:51.9583994+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stdout_5cb1c89c8a654e06ac364629ad009a5e.
+2026-08-24T01:50:51.9682070+00:00 ContainerStatus: Creating stderr named pipe at /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stderr_e711d7203d7e4e5889f7b5a896ec7442.
+2026-08-24T01:50:51.9685247+00:00 ContainerStatus: Successfully created stderr named pipe at: /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stderr_e711d7203d7e4e5889f7b5a896ec7442.
+2026-08-24T01:50:51.9685739+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stderr_e711d7203d7e4e5889f7b5a896ec7442 for reading in non-blocking mode.
+2026-08-24T01:50:51.9686109+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stderr_e711d7203d7e4e5889f7b5a896ec7442.
+2026-08-24T01:50:51.9686360+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/cdc4d8f342fe_cw2-videoshare-api/stderr_e711d7203d7e4e5889f7b5a896ec7442.
+2026-08-24T01:50:51.9764775+00:00 ContainerStatus: Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T01:50:52.3291648+00:00 ContainerStatus: Starting container: cdc4d8f342fe_cw2-videoshare-api.
+2026-08-24T01:50:52.4704138+00:00 ContainerStatus: Starting watchers and probes.
+2026-08-24T01:50:52.4777421+00:00 ContainerStatus: Starting metrics collection.
+2026-08-24T01:50:52.5031150+00:00 ContainerStatus: Container is running.
+2026-08-24T01:50:52.5034113+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:50:52.7720214+00:00 ContainerStatus: Container start method finished after 37093 ms.
+2026-08-24T01:50:52.7813197+00:00 ContainerStatus: State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:50:52.7813645+00:00 ContainerStatus: State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T01:50:53.1187804+00:00 ContainerStream:    _____                               
+2026-08-24T01:50:53.1230957+00:00 ContainerStream:   /  _  \ __________ _________   ____  
+2026-08-24T01:50:53.1231106+00:00 ContainerStream:  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-08-24T01:50:53.1231122+00:00 ContainerStream: /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-08-24T01:50:53.1231140+00:00 ContainerStream: \____|__  /_____ \____/ |__|    \___  >
+2026-08-24T01:50:53.1504760+00:00 ContainerStream:         \/      \/                  \/ 
+2026-08-24T01:50:53.1504848+00:00 ContainerStream: A P P   S E R V I C E   O N   L I N U X
+2026-08-24T01:50:53.1504863+00:00 ContainerStream: 
+2026-08-24T01:50:53.1504937+00:00 ContainerStream: Documentation    : http://aka.ms/webapp-linux
+2026-08-24T01:50:53.1504959+00:00 ContainerStream: NodeJS quickstart: https://aka.ms/node-qs
+2026-08-24T01:50:53.1504976+00:00 ContainerStream: NodeJS Version   : v24.15.0
+2026-08-24T01:50:53.1504991+00:00 ContainerStream: Instance Name    : lw0sdlwk0002L1
+2026-08-24T01:50:53.1505028+00:00 ContainerStream: Instance Id      : 3161b1ae9ca0a5f9e11e0146671e855c259b1ac7397ab581598a95aa31f15f3f
+2026-08-24T01:50:53.1505042+00:00 ContainerStream: 
+2026-08-24T01:50:53.1505058+00:00 ContainerStream: Note: Any data outside '/home' is not persisted
+2026-08-24T01:50:55.1364506+00:00 ContainerStream:  * Starting OpenBSD Secure Shell server sshd
+2026-08-24T01:50:55.1677170+00:00 ContainerStream:    ...done.
+2026-08-24T01:50:55.1893144+00:00 ContainerStream: WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-08-24T01:50:55.2482068+00:00 ContainerStream: Updating certificates in /etc/ssl/certs...
+2026-08-24T01:51:08.2300427+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-ECC.pem
+2026-08-24T01:51:08.2377532+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-RSA.pem
+2026-08-24T01:51:08.4576031+00:00 ContainerStream: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-08-24T01:51:08.4885090+00:00 ContainerStream: 4 added, 0 removed; done.
+2026-08-24T01:51:08.4890946+00:00 ContainerStream: Running hooks in /etc/ca-certificates/update.d...
+2026-08-24T01:51:08.4982509+00:00 ContainerStream: done.
+2026-08-24T01:51:08.5165581+00:00 ContainerStream: CA certificates copied and updated successfully.
+2026-08-24T01:51:08.6260111+00:00 ContainerStream:  * Starting periodic command scheduler cron
+2026-08-24T01:51:08.6566840+00:00 ContainerStream:    ...done.
+2026-08-24T01:51:08.7252729+00:00 ContainerStream: Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-08-24T01:51:08.7272449+00:00 ContainerStream: Could not find operation ID in manifest. Generating an operation id...
+2026-08-24T01:51:08.7352193+00:00 ContainerStream: Build Operation ID: e6a8f7c7-1a83-46be-882a-ce92ff8831b2
+2026-08-24T01:51:09.0504206+00:00 ContainerStream: Environment Variables for Application Insight's IPA Codeless Configuration exists..
+2026-08-24T01:51:09.0744122+00:00 ContainerStream: Writing output script to '/opt/startup/startup.sh'
+2026-08-24T01:51:09.1358294+00:00 ContainerStream: Running #!/bin/sh
+2026-08-24T01:51:09.1358680+00:00 ContainerStream: 
+2026-08-24T01:51:09.1358712+00:00 ContainerStream: # Enter the source directory to make sure the script runs where the user expects
+2026-08-24T01:51:09.1358734+00:00 ContainerStream: cd "/home/site/wwwroot"
+2026-08-24T01:51:09.1358749+00:00 ContainerStream: 
+2026-08-24T01:51:09.1358771+00:00 ContainerStream: export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+2026-08-24T01:51:09.1358852+00:00 ContainerStream: if [ -z "$PORT" ]; then
+2026-08-24T01:51:09.1358865+00:00 ContainerStream: 		export PORT=8080
+2026-08-24T01:51:09.1358879+00:00 ContainerStream: fi
+2026-08-24T01:51:09.1358892+00:00 ContainerStream: 
+2026-08-24T01:51:09.1358907+00:00 ContainerStream: echo Found tar.gz based node_modules.
+2026-08-24T01:51:09.1358924+00:00 ContainerStream: extractionCommand="tar -xzf node_modules.tar.gz -C /node_modules"
+2026-08-24T01:51:09.1358941+00:00 ContainerStream: echo "Removing existing modules directory from root..."
+2026-08-24T01:51:09.1358964+00:00 ContainerStream: rm -fr /node_modules
+2026-08-24T01:51:09.1358978+00:00 ContainerStream: mkdir -p /node_modules
+2026-08-24T01:51:09.1358992+00:00 ContainerStream: echo Extracting modules...
+2026-08-24T01:51:09.1359006+00:00 ContainerStream: $extractionCommand
+2026-08-24T01:51:09.1359099+00:00 ContainerStream: export NODE_PATH="/node_modules":$NODE_PATH
+2026-08-24T01:51:09.1359114+00:00 ContainerStream: export PATH=/node_modules/.bin:$PATH
+2026-08-24T01:51:09.1359128+00:00 ContainerStream: if [ -d node_modules ]; then
+2026-08-24T01:51:09.1359152+00:00 ContainerStream:     mv -f node_modules _del_node_modules || true
+2026-08-24T01:51:09.1359165+00:00 ContainerStream: fi
+2026-08-24T01:51:09.1359177+00:00 ContainerStream: 
+2026-08-24T01:51:09.1359190+00:00 ContainerStream: if [ -d /node_modules ]; then
+2026-08-24T01:51:09.1359204+00:00 ContainerStream:     ln -sfn /node_modules ./node_modules 
+2026-08-24T01:51:09.1359218+00:00 ContainerStream: fi
+2026-08-24T01:51:09.1359230+00:00 ContainerStream: 
+2026-08-24T01:51:09.1363697+00:00 ContainerStream: echo "Done."
+2026-08-24T01:51:09.1363733+00:00 ContainerStream: PATH="$PATH:/home/site/wwwroot" npm start
+2026-08-24T01:51:09.1549472+00:00 ContainerStream: Found tar.gz based node_modules.
+2026-08-24T01:51:09.1549722+00:00 ContainerStream: Removing existing modules directory from root...
+2026-08-24T01:51:09.1749287+00:00 ContainerStream: Extracting modules...
+2026-08-24T01:51:23.3710071+00:00 ContainerStream: Done.
+2026-08-24T01:51:24.2778576+00:00 ContainerStream: npm info using npm@10.9.2
+2026-08-24T01:51:24.2788076+00:00 ContainerStream: npm info using node@v24.15.0
+2026-08-24T01:51:25.5274590+00:00 ContainerStream: 
+2026-08-24T01:51:25.5276380+00:00 ContainerStream: > react-instagram-clone-2.0@1.0.0 start
+2026-08-24T01:51:25.5276419+00:00 ContainerStream: > node app.js
+2026-08-24T01:51:25.5276435+00:00 ContainerStream: 
+2026-08-24T01:51:27.0949107+00:00 ContainerStream: /node_modules/mysql/lib/protocol/Protocol.js:347
+2026-08-24T01:51:27.0949518+00:00 ContainerStream:     Timers.enroll(sequence, sequence._timeout);
+2026-08-24T01:51:27.0949538+00:00 ContainerStream:            ^
+2026-08-24T01:51:27.0949561+00:00 ContainerStream: 
+2026-08-24T01:51:27.0949583+00:00 ContainerStream: TypeError: Timers.enroll is not a function
+2026-08-24T01:51:27.0949601+00:00 ContainerStream:     at Protocol._startSequence (/node_modules/mysql/lib/protocol/Protocol.js:347:12)
+2026-08-24T01:51:27.0949677+00:00 ContainerStream:     at Protocol._enqueue (/node_modules/mysql/lib/protocol/Protocol.js:190:10)
+2026-08-24T01:51:27.0949693+00:00 ContainerStream:     at Protocol.handshake (/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+2026-08-24T01:51:27.0949708+00:00 ContainerStream:     at PoolConnection.connect (/node_modules/mysql/lib/Connection.js:130:18)
+2026-08-24T01:51:27.0949725+00:00 ContainerStream:     at Pool.getConnection (/node_modules/mysql/lib/Pool.js:48:16)
+2026-08-24T01:51:27.0949741+00:00 ContainerStream:     at Object.<anonymous> (/home/site/wwwroot/config/Mysql.js:38:4)
+2026-08-24T01:51:27.0949756+00:00 ContainerStream:     at Module._compile (node:internal/modules/cjs/loader:1830:14)
+2026-08-24T01:51:27.0949786+00:00 ContainerStream:     at Object..js (node:internal/modules/cjs/loader:1961:10)
+2026-08-24T01:51:27.0949803+00:00 ContainerStream:     at Module.load (node:internal/modules/cjs/loader:1553:32)
+2026-08-24T01:51:27.0949822+00:00 ContainerStream:     at Module._load (node:internal/modules/cjs/loader:1355:12)
+2026-08-24T01:51:27.0949834+00:00 ContainerStream: 
+2026-08-24T01:51:27.0949847+00:00 ContainerStream: Node.js v24.15.0
+2026-08-24T01:51:27.1249619+00:00 ContainerStream: npm http fetch GET 200 https://registry.npmjs.org/npm 515ms
+2026-08-24T01:51:27.1362461+00:00 ContainerStream: npm notice
+2026-08-24T01:51:27.1362849+00:00 ContainerStream: npm notice New major version of npm available! 10.9.2 -> 12.0.2
+2026-08-24T01:51:27.1362875+00:00 ContainerStream: npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+2026-08-24T01:51:27.1362893+00:00 ContainerStream: npm notice To update run: npm install -g npm@12.0.2
+2026-08-24T01:51:27.1362908+00:00 ContainerStream: npm notice
+2026-08-24T01:51:27.2455524+00:00 ContainerStatus: Container has finished running with exit code: 1.
+2026-08-24T01:51:27.2466015+00:00 ContainerStatus: Container is terminating. Grace period: 5 seconds.
+2026-08-24T01:51:27.2577645+00:00 ContainerStatus: Stop and delete container. Retry count = 0
+2026-08-24T01:51:27.2631201+00:00 ContainerStatus: Stopping container: cdc4d8f342fe_cw2-videoshare-api.
+2026-08-24T01:51:27.4124181+00:00 ContainerStatus: Deleting container: cdc4d8f342fe_cw2-videoshare-api. Retry count = 0
+2026-08-24T01:51:29.2795931+00:00 ContainerStatus: Container spec TerminationMessagePolicy  path 
+2026-08-24T01:51:29.2812149+00:00 ContainerStatus: Container is terminated. Total time elapsed: 2026 ms.
+2026-08-24T01:51:29.2819080+00:00 ContainerStatus: Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T01:51:29.3099994+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:51:29.3595385+00:00 ContainerStatus: Site startup probe failed after 36.5438076 seconds.
+2026-08-24T01:51:29.5378963+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:51:29.5600183+00:00 ContainerStatus: Failed to start site. Revert by stopping site.
+2026-08-24T01:51:29.5668559+00:00 ContainerStatus: State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:51:29.5808303+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:51:29.5809272+00:00 ContainerStatus: Site: cw2-videoshare-api stopped.
+========== New Cold Start Attempt (2026-08-24T01:51:29.6067273+00:00) ==========
+2026-08-24T01:51:29.6067273+00:00 ContainerStatus: State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:51:30.0551003+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:51:30.2814707+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:51:30 (UTC), DetailsLevel: ERR
+2026-08-24T01:51:30.7715733+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:51:30 (UTC), DetailsLevel: ERR
+2026-08-24T01:51:36.0139560+00:00 ContainerStatus: State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:51:30 (UTC), DetailsLevel: ERR
+2026-08-24T01:51:37.6535825+00:00 ContainerStatus: State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:51:30 (UTC), DetailsLevel: ERR
+2026-08-24T01:51:37.6536978+00:00 ContainerStatus: Container start method called.
+2026-08-24T01:51:37.6537436+00:00 ContainerStatus: State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:51:37.6537713+00:00 ContainerStatus: Establishing network.
+2026-08-24T01:51:37.6538096+00:00 ContainerStatus: Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T01:51:55.4940172+00:00 ContainerStatus: Container is starting.
+2026-08-24T01:51:55.4941494+00:00 ContainerStatus: State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:51:55.4944124+00:00 ContainerStatus: Establishing user namespace if not established already.
+2026-08-24T01:51:55.4946299+00:00 ContainerStatus: Establishing network if not established already.
+2026-08-24T01:51:55.4953360+00:00 ContainerStatus: Mounting volumes.
+2026-08-24T01:51:55.4956638+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:51:55.5044201+00:00 ContainerStatus: Nested mountpoint volatile/logs
+2026-08-24T01:51:55.5062254+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:51:55.5655004+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:51:55.5658691+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:51:55.5748293+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:51:55.8855768+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T01:51:55.8858157+00:00 ContainerStatus: Creating container.
+2026-08-24T01:51:55.8860720+00:00 ContainerStatus: Creating pipes for streaming container io.
+2026-08-24T01:51:55.8864039+00:00 ContainerStatus: Creating stdout named pipe at /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stdout_c160d2004eb348df82e3e030913a2f34.
+2026-08-24T01:51:55.9035707+00:00 ContainerStatus: Successfully created stdout named pipe at: /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stdout_c160d2004eb348df82e3e030913a2f34.
+2026-08-24T01:51:55.9040750+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stdout_c160d2004eb348df82e3e030913a2f34 for reading in non-blocking mode.
+2026-08-24T01:51:55.9041561+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stdout_c160d2004eb348df82e3e030913a2f34.
+2026-08-24T01:51:55.9042054+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stdout_c160d2004eb348df82e3e030913a2f34.
+2026-08-24T01:51:55.9043079+00:00 ContainerStatus: Creating stderr named pipe at /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stderr_db5956ab30f948abaae0d27a0f5bb64d.
+2026-08-24T01:51:55.9055080+00:00 ContainerStatus: Successfully created stderr named pipe at: /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stderr_db5956ab30f948abaae0d27a0f5bb64d.
+2026-08-24T01:51:55.9055800+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stderr_db5956ab30f948abaae0d27a0f5bb64d for reading in non-blocking mode.
+2026-08-24T01:51:55.9056632+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stderr_db5956ab30f948abaae0d27a0f5bb64d.
+2026-08-24T01:51:55.9057913+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/0d4bf869905a_cw2-videoshare-api/stderr_db5956ab30f948abaae0d27a0f5bb64d.
+2026-08-24T01:51:55.9059032+00:00 ContainerStatus: Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T01:51:56.3150561+00:00 ContainerStatus: Starting container: 0d4bf869905a_cw2-videoshare-api.
+2026-08-24T01:51:56.3738367+00:00 ContainerStatus: Starting watchers and probes.
+2026-08-24T01:51:56.3739955+00:00 ContainerStatus: Starting metrics collection.
+2026-08-24T01:51:56.3740394+00:00 ContainerStatus: Container is running.
+2026-08-24T01:51:56.3831334+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:51:56.4739737+00:00 ContainerStatus: Container start method finished after 18820 ms.
+2026-08-24T01:51:56.4740650+00:00 ContainerStatus: State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:51:56.4740764+00:00 ContainerStatus: State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T01:51:56.5432541+00:00 ContainerStream:    _____                               
+2026-08-24T01:51:56.5432700+00:00 ContainerStream:   /  _  \ __________ _________   ____  
+2026-08-24T01:51:56.5432715+00:00 ContainerStream:  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-08-24T01:51:56.5432727+00:00 ContainerStream: /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-08-24T01:51:56.5432738+00:00 ContainerStream: \____|__  /_____ \____/ |__|    \___  >
+2026-08-24T01:51:56.5432749+00:00 ContainerStream:         \/      \/                  \/ 
+2026-08-24T01:51:56.5432759+00:00 ContainerStream: A P P   S E R V I C E   O N   L I N U X
+2026-08-24T01:51:56.5432769+00:00 ContainerStream: 
+2026-08-24T01:51:56.5432782+00:00 ContainerStream: Documentation    : http://aka.ms/webapp-linux
+2026-08-24T01:51:56.5432794+00:00 ContainerStream: NodeJS quickstart: https://aka.ms/node-qs
+2026-08-24T01:51:56.5432805+00:00 ContainerStream: NodeJS Version   : v24.15.0
+2026-08-24T01:51:56.5432817+00:00 ContainerStream: Instance Name    : lw0sdlwk0002L1
+2026-08-24T01:51:56.5432832+00:00 ContainerStream: Instance Id      : 3161b1ae9ca0a5f9e11e0146671e855c259b1ac7397ab581598a95aa31f15f3f
+2026-08-24T01:51:56.5432841+00:00 ContainerStream: 
+2026-08-24T01:51:56.5432854+00:00 ContainerStream: Note: Any data outside '/home' is not persisted
+2026-08-24T01:51:58.7405992+00:00 ContainerStream:  * Starting OpenBSD Secure Shell server sshd
+2026-08-24T01:51:58.7790444+00:00 ContainerStream:    ...done.
+2026-08-24T01:51:58.7899763+00:00 ContainerStream: WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-08-24T01:51:58.8307557+00:00 ContainerStream: Updating certificates in /etc/ssl/certs...
+2026-08-24T01:52:16.8169306+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-ECC.pem
+2026-08-24T01:52:16.8176486+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-RSA.pem
+2026-08-24T01:52:17.9535068+00:00 ContainerStream: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-08-24T01:52:18.0541990+00:00 ContainerStream: 4 added, 0 removed; done.
+2026-08-24T01:52:18.0742418+00:00 ContainerStream: Running hooks in /etc/ca-certificates/update.d...
+2026-08-24T01:52:18.1015471+00:00 ContainerStream: done.
+2026-08-24T01:52:18.1015691+00:00 ContainerStream: CA certificates copied and updated successfully.
+2026-08-24T01:52:18.4039388+00:00 ContainerStream:  * Starting periodic command scheduler cron
+2026-08-24T01:52:18.4417623+00:00 ContainerStream:    ...done.
+2026-08-24T01:52:19.0291840+00:00 ContainerStream: Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-08-24T01:52:19.0384782+00:00 ContainerStream: Could not find operation ID in manifest. Generating an operation id...
+2026-08-24T01:52:19.0385109+00:00 ContainerStream: Build Operation ID: 7ed449fc-0649-4936-909f-e94cd3c1faf9
+2026-08-24T01:52:19.9318168+00:00 ContainerStream: Environment Variables for Application Insight's IPA Codeless Configuration exists..
+2026-08-24T01:52:20.0100917+00:00 ContainerStream: Writing output script to '/opt/startup/startup.sh'
+2026-08-24T01:52:20.1110033+00:00 ContainerStream: Running #!/bin/sh
+2026-08-24T01:52:20.1110403+00:00 ContainerStream: 
+2026-08-24T01:52:20.1110424+00:00 ContainerStream: # Enter the source directory to make sure the script runs where the user expects
+2026-08-24T01:52:20.1110436+00:00 ContainerStream: cd "/home/site/wwwroot"
+2026-08-24T01:52:20.1110445+00:00 ContainerStream: 
+2026-08-24T01:52:20.1397145+00:00 ContainerStream: export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+2026-08-24T01:52:20.1397339+00:00 ContainerStream: if [ -z "$PORT" ]; then
+2026-08-24T01:52:20.1397355+00:00 ContainerStream: 		export PORT=8080
+2026-08-24T01:52:20.1397366+00:00 ContainerStream: fi
+2026-08-24T01:52:20.1397378+00:00 ContainerStream: 
+2026-08-24T01:52:20.1397394+00:00 ContainerStream: echo Found tar.gz based node_modules.
+2026-08-24T01:52:20.1397406+00:00 ContainerStream: extractionCommand="tar -xzf node_modules.tar.gz -C /node_modules"
+2026-08-24T01:52:20.1397419+00:00 ContainerStream: echo "Removing existing modules directory from root..."
+2026-08-24T01:52:20.1397430+00:00 ContainerStream: rm -fr /node_modules
+2026-08-24T01:52:20.1397441+00:00 ContainerStream: mkdir -p /node_modules
+2026-08-24T01:52:20.1397453+00:00 ContainerStream: echo Extracting modules...
+2026-08-24T01:52:20.1397467+00:00 ContainerStream: $extractionCommand
+2026-08-24T01:52:20.1397480+00:00 ContainerStream: export NODE_PATH="/node_modules":$NODE_PATH
+2026-08-24T01:52:20.1397492+00:00 ContainerStream: export PATH=/node_modules/.bin:$PATH
+2026-08-24T01:52:20.1397561+00:00 ContainerStream: if [ -d node_modules ]; then
+2026-08-24T01:52:20.1397573+00:00 ContainerStream:     mv -f node_modules _del_node_modules || true
+2026-08-24T01:52:20.1397584+00:00 ContainerStream: fi
+2026-08-24T01:52:20.1397593+00:00 ContainerStream: 
+2026-08-24T01:52:20.1397607+00:00 ContainerStream: if [ -d /node_modules ]; then
+2026-08-24T01:52:20.1397618+00:00 ContainerStream:     ln -sfn /node_modules ./node_modules 
+2026-08-24T01:52:20.1397628+00:00 ContainerStream: fi
+2026-08-24T01:52:20.1397638+00:00 ContainerStream: 
+2026-08-24T01:52:20.1397648+00:00 ContainerStream: echo "Done."
+2026-08-24T01:52:20.1397659+00:00 ContainerStream: PATH="$PATH:/home/site/wwwroot" npm start
+2026-08-24T01:52:20.1397670+00:00 ContainerStream: Found tar.gz based node_modules.
+2026-08-24T01:52:20.1397682+00:00 ContainerStream: Removing existing modules directory from root...
+2026-08-24T01:52:20.1498132+00:00 ContainerStream: Extracting modules...
+2026-08-24T01:52:34.6080969+00:00 ContainerStream: Done.
+2026-08-24T01:52:35.2014651+00:00 ContainerStream: npm info using npm@10.9.2
+2026-08-24T01:52:35.2015393+00:00 ContainerStream: npm info using node@v24.15.0
+2026-08-24T01:52:36.4185819+00:00 ContainerStream: 
+2026-08-24T01:52:36.4186252+00:00 ContainerStream: > react-instagram-clone-2.0@1.0.0 start
+2026-08-24T01:52:36.4186271+00:00 ContainerStream: > node app.js
+2026-08-24T01:52:36.4186281+00:00 ContainerStream: 
+2026-08-24T01:52:37.8360017+00:00 ContainerStream: /node_modules/mysql/lib/protocol/Protocol.js:347
+2026-08-24T01:52:37.8360398+00:00 ContainerStream:     Timers.enroll(sequence, sequence._timeout);
+2026-08-24T01:52:37.8360413+00:00 ContainerStream:            ^
+2026-08-24T01:52:37.8360424+00:00 ContainerStream: 
+2026-08-24T01:52:37.8360436+00:00 ContainerStream: TypeError: Timers.enroll is not a function
+2026-08-24T01:52:37.8360526+00:00 ContainerStream:     at Protocol._startSequence (/node_modules/mysql/lib/protocol/Protocol.js:347:12)
+2026-08-24T01:52:37.8360542+00:00 ContainerStream:     at Protocol._enqueue (/node_modules/mysql/lib/protocol/Protocol.js:190:10)
+2026-08-24T01:52:37.8360554+00:00 ContainerStream:     at Protocol.handshake (/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+2026-08-24T01:52:37.8360567+00:00 ContainerStream:     at PoolConnection.connect (/node_modules/mysql/lib/Connection.js:130:18)
+2026-08-24T01:52:37.8360579+00:00 ContainerStream:     at Pool.getConnection (/node_modules/mysql/lib/Pool.js:48:16)
+2026-08-24T01:52:37.8360591+00:00 ContainerStream:     at Object.<anonymous> (/home/site/wwwroot/config/Mysql.js:38:4)
+2026-08-24T01:52:37.8360604+00:00 ContainerStream:     at Module._compile (node:internal/modules/cjs/loader:1830:14)
+2026-08-24T01:52:37.8360616+00:00 ContainerStream:     at Object..js (node:internal/modules/cjs/loader:1961:10)
+2026-08-24T01:52:37.8360628+00:00 ContainerStream:     at Module.load (node:internal/modules/cjs/loader:1553:32)
+2026-08-24T01:52:37.8360642+00:00 ContainerStream:     at Module._load (node:internal/modules/cjs/loader:1355:12)
+2026-08-24T01:52:37.8367849+00:00 ContainerStream: 
+2026-08-24T01:52:37.8367932+00:00 ContainerStream: Node.js v24.15.0
+2026-08-24T01:52:37.8672531+00:00 ContainerStream: npm http fetch GET 200 https://registry.npmjs.org/npm 438ms
+2026-08-24T01:52:37.8858870+00:00 ContainerStream: npm notice
+2026-08-24T01:52:37.8859146+00:00 ContainerStream: npm notice New major version of npm available! 10.9.2 -> 12.0.2
+2026-08-24T01:52:37.8859165+00:00 ContainerStream: npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+2026-08-24T01:52:37.8859178+00:00 ContainerStream: npm notice To update run: npm install -g npm@12.0.2
+2026-08-24T01:52:37.8859195+00:00 ContainerStream: npm notice
+2026-08-24T01:52:37.9746332+00:00 ContainerStatus: Container has finished running with exit code: 1.
+2026-08-24T01:52:37.9749304+00:00 ContainerStatus: Container is terminating. Grace period: 5 seconds.
+2026-08-24T01:52:37.9949994+00:00 ContainerStatus: Stop and delete container. Retry count = 0
+2026-08-24T01:52:37.9950491+00:00 ContainerStatus: Stopping container: 0d4bf869905a_cw2-videoshare-api.
+2026-08-24T01:52:38.0865093+00:00 ContainerStatus: Deleting container: 0d4bf869905a_cw2-videoshare-api. Retry count = 0
+2026-08-24T01:52:40.1234389+00:00 ContainerStatus: Container spec TerminationMessagePolicy  path 
+2026-08-24T01:52:40.1311356+00:00 ContainerStatus: Container is terminated. Total time elapsed: 2147 ms.
+2026-08-24T01:52:40.1312451+00:00 ContainerStatus: Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T01:52:40.1403537+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:51:29, LastErrorDetails: Container exited with exit code 1 during startup after 36.8s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:52:40.1509551+00:00 ContainerStatus: Site startup probe failed after 43.676384 seconds.
+2026-08-24T01:52:40.3107669+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:52:40.3123985+00:00 ContainerStatus: Failed to start site. Revert by stopping site.
+2026-08-24T01:52:40.3127525+00:00 ContainerStatus: State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:52:40.3129345+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:52:40.3129504+00:00 ContainerStatus: Site: cw2-videoshare-api stopped.
+========== New Cold Start Attempt (2026-08-24T01:52:40.3505343+00:00) ==========
+2026-08-24T01:52:40.3505343+00:00 ContainerStatus: State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:52:40.8857370+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:52:41.1468912+00:00 ContainerStatus: Site: cw2-videoshare-api will be blocked for 1 minutes till 08/24/2026 01:53:41
+2026-08-24T01:52:41.1549524+00:00 ContainerStatus: State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site: cw2-videoshare-api will be blocked for 1 minutes till 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:52:41.2201657+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:52:41 (UTC), DetailsLevel: WARN
+2026-08-24T01:52:41.6141555+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:52:41 (UTC), DetailsLevel: WARN
+2026-08-24T01:52:46.7838698+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:52:46.8008825+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:52:52.0464169+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:52:52.0464955+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:52:57.1958339+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:52:57.1958528+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:02.3685412+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:02.3685829+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:07.5676191+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:07.5679717+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:12.7282304+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:12.7282665+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:17.9772545+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:17.9772875+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:23.0966360+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:23.0966697+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:28.2484572+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:28.2484897+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:33.3906387+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:33.4102707+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:38.5036023+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:38.5047231+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:53:41.1456719+00:00 ContainerStatus: Site: cw2-videoshare-api is unblocked.
+2026-08-24T01:53:43.5678716+00:00 ContainerStatus: State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:45.1612286+00:00 ContainerStatus: State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:53:41, DetailsLevel: WARN
+2026-08-24T01:53:45.1613120+00:00 ContainerStatus: Container start method called.
+2026-08-24T01:53:45.1613598+00:00 ContainerStatus: State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:53:45.1614066+00:00 ContainerStatus: Establishing network.
+2026-08-24T01:53:45.1614611+00:00 ContainerStatus: Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T01:54:03.3610048+00:00 ContainerStatus: Container is starting.
+2026-08-24T01:54:03.3610976+00:00 ContainerStatus: State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:54:03.3611249+00:00 ContainerStatus: Establishing user namespace if not established already.
+2026-08-24T01:54:03.3611537+00:00 ContainerStatus: Establishing network if not established already.
+2026-08-24T01:54:03.3611853+00:00 ContainerStatus: Mounting volumes.
+2026-08-24T01:54:03.3612811+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:54:03.3998782+00:00 ContainerStatus: Nested mountpoint volatile/logs
+2026-08-24T01:54:03.4386282+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:54:03.4589060+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:54:03.5383734+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:54:03.5882184+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:54:03.8179332+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T01:54:03.8179719+00:00 ContainerStatus: Creating container.
+2026-08-24T01:54:03.8179960+00:00 ContainerStatus: Creating pipes for streaming container io.
+2026-08-24T01:54:03.8180272+00:00 ContainerStatus: Creating stdout named pipe at /podr/container/pipe/b9906728c783_cw2-videoshare-api/stdout_f04cf5db00144f008c532b36239d225f.
+2026-08-24T01:54:03.8181050+00:00 ContainerStatus: Successfully created stdout named pipe at: /podr/container/pipe/b9906728c783_cw2-videoshare-api/stdout_f04cf5db00144f008c532b36239d225f.
+2026-08-24T01:54:03.8181262+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/b9906728c783_cw2-videoshare-api/stdout_f04cf5db00144f008c532b36239d225f for reading in non-blocking mode.
+2026-08-24T01:54:03.8274092+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/b9906728c783_cw2-videoshare-api/stdout_f04cf5db00144f008c532b36239d225f.
+2026-08-24T01:54:03.8284706+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/b9906728c783_cw2-videoshare-api/stdout_f04cf5db00144f008c532b36239d225f.
+2026-08-24T01:54:03.8360692+00:00 ContainerStatus: Creating stderr named pipe at /podr/container/pipe/b9906728c783_cw2-videoshare-api/stderr_8aa63cf33fd54a60920fe2e246671e21.
+2026-08-24T01:54:03.8361846+00:00 ContainerStatus: Successfully created stderr named pipe at: /podr/container/pipe/b9906728c783_cw2-videoshare-api/stderr_8aa63cf33fd54a60920fe2e246671e21.
+2026-08-24T01:54:03.8362364+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/b9906728c783_cw2-videoshare-api/stderr_8aa63cf33fd54a60920fe2e246671e21 for reading in non-blocking mode.
+2026-08-24T01:54:03.8363086+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/b9906728c783_cw2-videoshare-api/stderr_8aa63cf33fd54a60920fe2e246671e21.
+2026-08-24T01:54:03.8363515+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/b9906728c783_cw2-videoshare-api/stderr_8aa63cf33fd54a60920fe2e246671e21.
+2026-08-24T01:54:03.8365993+00:00 ContainerStatus: Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T01:54:04.1297267+00:00 ContainerStatus: Starting container: b9906728c783_cw2-videoshare-api.
+2026-08-24T01:54:04.1832325+00:00 ContainerStatus: Starting watchers and probes.
+2026-08-24T01:54:04.1843462+00:00 ContainerStatus: Starting metrics collection.
+2026-08-24T01:54:04.1844768+00:00 ContainerStatus: Container is running.
+2026-08-24T01:54:04.2017970+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:54:04.3008929+00:00 ContainerStatus: Container start method finished after 19139 ms.
+2026-08-24T01:54:04.3009916+00:00 ContainerStatus: State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:54:04.3010042+00:00 ContainerStatus: State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T01:54:04.4218836+00:00 ContainerStream:    _____                               
+2026-08-24T01:54:04.4219156+00:00 ContainerStream:   /  _  \ __________ _________   ____  
+2026-08-24T01:54:04.4219230+00:00 ContainerStream:  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-08-24T01:54:04.4219242+00:00 ContainerStream: /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-08-24T01:54:04.4219301+00:00 ContainerStream: \____|__  /_____ \____/ |__|    \___  >
+2026-08-24T01:54:04.4219313+00:00 ContainerStream:         \/      \/                  \/ 
+2026-08-24T01:54:04.4219323+00:00 ContainerStream: A P P   S E R V I C E   O N   L I N U X
+2026-08-24T01:54:04.4219333+00:00 ContainerStream: 
+2026-08-24T01:54:04.4219345+00:00 ContainerStream: Documentation    : http://aka.ms/webapp-linux
+2026-08-24T01:54:04.4219357+00:00 ContainerStream: NodeJS quickstart: https://aka.ms/node-qs
+2026-08-24T01:54:04.4219368+00:00 ContainerStream: NodeJS Version   : v24.15.0
+2026-08-24T01:54:04.4219379+00:00 ContainerStream: Instance Name    : lw0sdlwk0002L1
+2026-08-24T01:54:04.4219395+00:00 ContainerStream: Instance Id      : 3161b1ae9ca0a5f9e11e0146671e855c259b1ac7397ab581598a95aa31f15f3f
+2026-08-24T01:54:04.4219404+00:00 ContainerStream: 
+2026-08-24T01:54:04.4219416+00:00 ContainerStream: Note: Any data outside '/home' is not persisted
+2026-08-24T01:54:06.0367044+00:00 ContainerStream:  * Starting OpenBSD Secure Shell server sshd
+2026-08-24T01:54:06.0779683+00:00 ContainerStream:    ...done.
+2026-08-24T01:54:06.0889484+00:00 ContainerStream: WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-08-24T01:54:06.1282144+00:00 ContainerStream: Updating certificates in /etc/ssl/certs...
+2026-08-24T01:54:18.7723820+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-ECC.pem
+2026-08-24T01:54:18.7798868+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-RSA.pem
+2026-08-24T01:54:18.9527532+00:00 ContainerStream: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-08-24T01:54:18.9900373+00:00 ContainerStream: 4 added, 0 removed; done.
+2026-08-24T01:54:18.9912896+00:00 ContainerStream: Running hooks in /etc/ca-certificates/update.d...
+2026-08-24T01:54:19.0002745+00:00 ContainerStream: done.
+2026-08-24T01:54:19.0128815+00:00 ContainerStream: CA certificates copied and updated successfully.
+2026-08-24T01:54:19.1148370+00:00 ContainerStream:  * Starting periodic command scheduler cron
+2026-08-24T01:54:19.1203608+00:00 ContainerStream:    ...done.
+2026-08-24T01:54:19.2794379+00:00 ContainerStream: Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-08-24T01:54:19.2820904+00:00 ContainerStream: Could not find operation ID in manifest. Generating an operation id...
+2026-08-24T01:54:19.2903325+00:00 ContainerStream: Build Operation ID: f367783b-a188-40db-bc47-138d3d436a5e
+2026-08-24T01:54:19.5996835+00:00 ContainerStream: Environment Variables for Application Insight's IPA Codeless Configuration exists..
+2026-08-24T01:54:19.6300421+00:00 ContainerStream: Writing output script to '/opt/startup/startup.sh'
+2026-08-24T01:54:19.7771385+00:00 ContainerStream: Running #!/bin/sh
+2026-08-24T01:54:19.7771679+00:00 ContainerStream: 
+2026-08-24T01:54:19.7771703+00:00 ContainerStream: # Enter the source directory to make sure the script runs where the user expects
+2026-08-24T01:54:19.7771716+00:00 ContainerStream: cd "/home/site/wwwroot"
+2026-08-24T01:54:19.7771767+00:00 ContainerStream: 
+2026-08-24T01:54:19.7776863+00:00 ContainerStream: export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+2026-08-24T01:54:19.7776917+00:00 ContainerStream: if [ -z "$PORT" ]; then
+2026-08-24T01:54:19.7776930+00:00 ContainerStream: 		export PORT=8080
+2026-08-24T01:54:19.7776940+00:00 ContainerStream: fi
+2026-08-24T01:54:19.7776950+00:00 ContainerStream: 
+2026-08-24T01:54:19.7780982+00:00 ContainerStream: echo Found tar.gz based node_modules.
+2026-08-24T01:54:19.7781029+00:00 ContainerStream: extractionCommand="tar -xzf node_modules.tar.gz -C /node_modules"
+2026-08-24T01:54:19.7784693+00:00 ContainerStream: echo "Removing existing modules directory from root..."
+2026-08-24T01:54:19.7784736+00:00 ContainerStream: rm -fr /node_modules
+2026-08-24T01:54:19.7784749+00:00 ContainerStream: mkdir -p /node_modules
+2026-08-24T01:54:19.7784760+00:00 ContainerStream: echo Extracting modules...
+2026-08-24T01:54:19.7784782+00:00 ContainerStream: $extractionCommand
+2026-08-24T01:54:19.7976621+00:00 ContainerStream: export NODE_PATH="/node_modules":$NODE_PATH
+2026-08-24T01:54:19.7976918+00:00 ContainerStream: export PATH=/node_modules/.bin:$PATH
+2026-08-24T01:54:19.7976934+00:00 ContainerStream: if [ -d node_modules ]; then
+2026-08-24T01:54:19.7976948+00:00 ContainerStream:     mv -f node_modules _del_node_modules || true
+2026-08-24T01:54:19.7976958+00:00 ContainerStream: fi
+2026-08-24T01:54:19.7976969+00:00 ContainerStream: 
+2026-08-24T01:54:19.7976981+00:00 ContainerStream: if [ -d /node_modules ]; then
+2026-08-24T01:54:19.7976999+00:00 ContainerStream:     ln -sfn /node_modules ./node_modules 
+2026-08-24T01:54:19.7977009+00:00 ContainerStream: fi
+2026-08-24T01:54:19.7977018+00:00 ContainerStream: 
+2026-08-24T01:54:19.7977029+00:00 ContainerStream: echo "Done."
+2026-08-24T01:54:19.7977040+00:00 ContainerStream: PATH="$PATH:/home/site/wwwroot" npm start
+2026-08-24T01:54:19.7977051+00:00 ContainerStream: Found tar.gz based node_modules.
+2026-08-24T01:54:19.7977114+00:00 ContainerStream: Removing existing modules directory from root...
+2026-08-24T01:54:19.8072851+00:00 ContainerStream: Extracting modules...
+2026-08-24T01:54:31.8607293+00:00 ContainerStream: Done.
+2026-08-24T01:54:32.5313874+00:00 ContainerStream: npm info using npm@10.9.2
+2026-08-24T01:54:32.5323684+00:00 ContainerStream: npm info using node@v24.15.0
+2026-08-24T01:54:33.6815178+00:00 ContainerStream: 
+2026-08-24T01:54:33.6815514+00:00 ContainerStream: > react-instagram-clone-2.0@1.0.0 start
+2026-08-24T01:54:33.6815535+00:00 ContainerStream: > node app.js
+2026-08-24T01:54:33.6815552+00:00 ContainerStream: 
+2026-08-24T01:54:35.1178792+00:00 ContainerStream: /node_modules/mysql/lib/protocol/Protocol.js:347
+2026-08-24T01:54:35.1179232+00:00 ContainerStream:     Timers.enroll(sequence, sequence._timeout);
+2026-08-24T01:54:35.1179247+00:00 ContainerStream:            ^
+2026-08-24T01:54:35.1179258+00:00 ContainerStream: 
+2026-08-24T01:54:35.1179271+00:00 ContainerStream: TypeError: Timers.enroll is not a function
+2026-08-24T01:54:35.1179286+00:00 ContainerStream:     at Protocol._startSequence (/node_modules/mysql/lib/protocol/Protocol.js:347:12)
+2026-08-24T01:54:35.1179300+00:00 ContainerStream:     at Protocol._enqueue (/node_modules/mysql/lib/protocol/Protocol.js:190:10)
+2026-08-24T01:54:35.1179321+00:00 ContainerStream:     at Protocol.handshake (/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+2026-08-24T01:54:35.1179334+00:00 ContainerStream:     at PoolConnection.connect (/node_modules/mysql/lib/Connection.js:130:18)
+2026-08-24T01:54:35.1179348+00:00 ContainerStream:     at Pool.getConnection (/node_modules/mysql/lib/Pool.js:48:16)
+2026-08-24T01:54:35.1179429+00:00 ContainerStream:     at Object.<anonymous> (/home/site/wwwroot/config/Mysql.js:38:4)
+2026-08-24T01:54:35.1179443+00:00 ContainerStream:     at Module._compile (node:internal/modules/cjs/loader:1830:14)
+2026-08-24T01:54:35.1179456+00:00 ContainerStream:     at Object..js (node:internal/modules/cjs/loader:1961:10)
+2026-08-24T01:54:35.1179469+00:00 ContainerStream:     at Module.load (node:internal/modules/cjs/loader:1553:32)
+2026-08-24T01:54:35.1179482+00:00 ContainerStream:     at Module._load (node:internal/modules/cjs/loader:1355:12)
+2026-08-24T01:54:35.1190823+00:00 ContainerStream: 
+2026-08-24T01:54:35.1190966+00:00 ContainerStream: Node.js v24.15.0
+2026-08-24T01:54:35.1780899+00:00 ContainerStream: npm http fetch GET 200 https://registry.npmjs.org/npm 740ms
+2026-08-24T01:54:35.2070895+00:00 ContainerStream: npm notice
+2026-08-24T01:54:35.2071245+00:00 ContainerStream: npm notice New major version of npm available! 10.9.2 -> 12.0.2
+2026-08-24T01:54:35.2071264+00:00 ContainerStream: npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+2026-08-24T01:54:35.2071340+00:00 ContainerStream: npm notice To update run: npm install -g npm@12.0.2
+2026-08-24T01:54:35.2071411+00:00 ContainerStream: npm notice
+2026-08-24T01:54:35.2774497+00:00 ContainerStatus: Container has finished running with exit code: 1.
+2026-08-24T01:54:35.2775056+00:00 ContainerStatus: Container is terminating. Grace period: 5 seconds.
+2026-08-24T01:54:35.2965608+00:00 ContainerStatus: Stop and delete container. Retry count = 0
+2026-08-24T01:54:35.2969673+00:00 ContainerStatus: Stopping container: b9906728c783_cw2-videoshare-api.
+2026-08-24T01:54:35.3978186+00:00 ContainerStatus: Deleting container: b9906728c783_cw2-videoshare-api. Retry count = 0
+2026-08-24T01:54:37.1877542+00:00 ContainerStatus: Container spec TerminationMessagePolicy  path 
+2026-08-24T01:54:37.1976768+00:00 ContainerStatus: Container is terminated. Total time elapsed: 1903 ms.
+2026-08-24T01:54:37.1977469+00:00 ContainerStatus: Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T01:54:37.2171258+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:52:40, LastErrorDetails: Container exited with exit code 1 during startup after 43.7s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:54:37.2354385+00:00 ContainerStatus: Site startup probe failed after 32.9265526 seconds.
+2026-08-24T01:54:37.3870240+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:54:37.4455231+00:00 ContainerStatus: Failed to start site. Revert by stopping site.
+2026-08-24T01:54:37.4456510+00:00 ContainerStatus: State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:54:37.4457885+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:54:37.4458023+00:00 ContainerStatus: Site: cw2-videoshare-api stopped.
+========== New Cold Start Attempt (2026-08-24T01:54:37.4680973+00:00) ==========
+2026-08-24T01:54:37.4680973+00:00 ContainerStatus: State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:54:37.8787366+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:54:38.1375174+00:00 ContainerStatus: Site: cw2-videoshare-api will be blocked for 1 minutes till 08/24/2026 01:55:38
+2026-08-24T01:54:38.1375692+00:00 ContainerStatus: State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site: cw2-videoshare-api will be blocked for 1 minutes till 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:54:38.1379496+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:54:38 (UTC), DetailsLevel: WARN
+2026-08-24T01:54:38.5382518+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:54:38 (UTC), DetailsLevel: WARN
+2026-08-24T01:54:43.5322523+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:54:43.5322935+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:54:48.6850828+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:54:48.6851026+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:54:53.8829502+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:54:53.8831044+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:54:58.9886327+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:54:58.9889169+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:04.0922130+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:04.0922324+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:09.1843156+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:09.1921199+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:14.3212769+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:14.3215865+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:19.4620423+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:19.4623820+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:24.5632062+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:24.5633365+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:29.6313410+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:29.6313749+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:34.7146071+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:34.7146271+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:55:38.1377161+00:00 ContainerStatus: Site: cw2-videoshare-api is unblocked.
+2026-08-24T01:55:39.7691222+00:00 ContainerStatus: State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:41.7126924+00:00 ContainerStatus: State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:55:38, DetailsLevel: WARN
+2026-08-24T01:55:41.7127386+00:00 ContainerStatus: Container start method called.
+2026-08-24T01:55:41.7127642+00:00 ContainerStatus: State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:55:41.7127902+00:00 ContainerStatus: Establishing network.
+2026-08-24T01:55:41.7128231+00:00 ContainerStatus: Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T01:55:58.8053775+00:00 ContainerStatus: Container is starting.
+2026-08-24T01:55:58.8056893+00:00 ContainerStatus: State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:55:58.8058968+00:00 ContainerStatus: Establishing user namespace if not established already.
+2026-08-24T01:55:58.8061169+00:00 ContainerStatus: Establishing network if not established already.
+2026-08-24T01:55:58.8062993+00:00 ContainerStatus: Mounting volumes.
+2026-08-24T01:55:58.8115893+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:55:58.8515578+00:00 ContainerStatus: Nested mountpoint volatile/logs
+2026-08-24T01:55:58.8613908+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:55:58.8621690+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:55:58.8819902+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:55:58.8836303+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:55:59.2806692+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T01:55:59.2808054+00:00 ContainerStatus: Creating container.
+2026-08-24T01:55:59.2810524+00:00 ContainerStatus: Creating pipes for streaming container io.
+2026-08-24T01:55:59.2811106+00:00 ContainerStatus: Creating stdout named pipe at /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stdout_ed41547643b94180b8ac5e353a3165cf.
+2026-08-24T01:55:59.2812382+00:00 ContainerStatus: Successfully created stdout named pipe at: /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stdout_ed41547643b94180b8ac5e353a3165cf.
+2026-08-24T01:55:59.2812819+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stdout_ed41547643b94180b8ac5e353a3165cf for reading in non-blocking mode.
+2026-08-24T01:55:59.2813392+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stdout_ed41547643b94180b8ac5e353a3165cf.
+2026-08-24T01:55:59.2985514+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stdout_ed41547643b94180b8ac5e353a3165cf.
+2026-08-24T01:55:59.3000754+00:00 ContainerStatus: Creating stderr named pipe at /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stderr_89c49429aa0b46e98ad9917fde0c25e8.
+2026-08-24T01:55:59.3003551+00:00 ContainerStatus: Successfully created stderr named pipe at: /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stderr_89c49429aa0b46e98ad9917fde0c25e8.
+2026-08-24T01:55:59.3005576+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stderr_89c49429aa0b46e98ad9917fde0c25e8 for reading in non-blocking mode.
+2026-08-24T01:55:59.3008502+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stderr_89c49429aa0b46e98ad9917fde0c25e8.
+2026-08-24T01:55:59.3010724+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/e8c3c6c30331_cw2-videoshare-api/stderr_89c49429aa0b46e98ad9917fde0c25e8.
+2026-08-24T01:55:59.3085549+00:00 ContainerStatus: Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T01:55:59.6408226+00:00 ContainerStatus: Starting container: e8c3c6c30331_cw2-videoshare-api.
+2026-08-24T01:55:59.6983433+00:00 ContainerStatus: Starting watchers and probes.
+2026-08-24T01:55:59.6987672+00:00 ContainerStatus: Starting metrics collection.
+2026-08-24T01:55:59.7070718+00:00 ContainerStatus: Container is running.
+2026-08-24T01:55:59.7071274+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:55:59.7662705+00:00 ContainerStatus: Container start method finished after 18053 ms.
+2026-08-24T01:55:59.7667445+00:00 ContainerStatus: State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:55:59.7669685+00:00 ContainerStatus: State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T01:55:59.9558508+00:00 ContainerStream:    _____                               
+2026-08-24T01:55:59.9558862+00:00 ContainerStream:   /  _  \ __________ _________   ____  
+2026-08-24T01:55:59.9558877+00:00 ContainerStream:  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-08-24T01:55:59.9558889+00:00 ContainerStream: /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-08-24T01:55:59.9558901+00:00 ContainerStream: \____|__  /_____ \____/ |__|    \___  >
+2026-08-24T01:55:59.9558913+00:00 ContainerStream:         \/      \/                  \/ 
+2026-08-24T01:55:59.9558925+00:00 ContainerStream: A P P   S E R V I C E   O N   L I N U X
+2026-08-24T01:55:59.9558935+00:00 ContainerStream: 
+2026-08-24T01:55:59.9558948+00:00 ContainerStream: Documentation    : http://aka.ms/webapp-linux
+2026-08-24T01:55:59.9558959+00:00 ContainerStream: NodeJS quickstart: https://aka.ms/node-qs
+2026-08-24T01:55:59.9558971+00:00 ContainerStream: NodeJS Version   : v24.15.0
+2026-08-24T01:55:59.9558983+00:00 ContainerStream: Instance Name    : lw0sdlwk0002L1
+2026-08-24T01:55:59.9558998+00:00 ContainerStream: Instance Id      : 3161b1ae9ca0a5f9e11e0146671e855c259b1ac7397ab581598a95aa31f15f3f
+2026-08-24T01:55:59.9559008+00:00 ContainerStream: 
+2026-08-24T01:55:59.9559036+00:00 ContainerStream: Note: Any data outside '/home' is not persisted
+2026-08-24T01:56:01.7465141+00:00 ContainerStream:  * Starting OpenBSD Secure Shell server sshd
+2026-08-24T01:56:01.8048702+00:00 ContainerStream:    ...done.
+2026-08-24T01:56:01.8158069+00:00 ContainerStream: WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-08-24T01:56:01.8655655+00:00 ContainerStream: Updating certificates in /etc/ssl/certs...
+2026-08-24T01:56:16.7360707+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-ECC.pem
+2026-08-24T01:56:16.7452564+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-RSA.pem
+2026-08-24T01:56:17.0144591+00:00 ContainerStream: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-08-24T01:56:17.0439395+00:00 ContainerStream: 4 added, 0 removed; done.
+2026-08-24T01:56:17.0446993+00:00 ContainerStream: Running hooks in /etc/ca-certificates/update.d...
+2026-08-24T01:56:17.0550278+00:00 ContainerStream: done.
+2026-08-24T01:56:17.0853970+00:00 ContainerStream: CA certificates copied and updated successfully.
+2026-08-24T01:56:17.2335262+00:00 ContainerStream:  * Starting periodic command scheduler cron
+2026-08-24T01:56:17.2550134+00:00 ContainerStream:    ...done.
+2026-08-24T01:56:17.4927105+00:00 ContainerStream: Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-08-24T01:56:17.5033624+00:00 ContainerStream: Could not find operation ID in manifest. Generating an operation id...
+2026-08-24T01:56:17.5033994+00:00 ContainerStream: Build Operation ID: 9d34962b-93af-4a6c-927a-b2abf75799a6
+2026-08-24T01:56:17.8409470+00:00 ContainerStream: Environment Variables for Application Insight's IPA Codeless Configuration exists..
+2026-08-24T01:56:17.8608637+00:00 ContainerStream: Writing output script to '/opt/startup/startup.sh'
+2026-08-24T01:56:17.8934428+00:00 ContainerStream: Running #!/bin/sh
+2026-08-24T01:56:17.8934791+00:00 ContainerStream: 
+2026-08-24T01:56:17.8934813+00:00 ContainerStream: # Enter the source directory to make sure the script runs where the user expects
+2026-08-24T01:56:17.8934937+00:00 ContainerStream: cd "/home/site/wwwroot"
+2026-08-24T01:56:17.8934948+00:00 ContainerStream: 
+2026-08-24T01:56:17.9008337+00:00 ContainerStream: export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+2026-08-24T01:56:17.9008542+00:00 ContainerStream: if [ -z "$PORT" ]; then
+2026-08-24T01:56:17.9008558+00:00 ContainerStream: 		export PORT=8080
+2026-08-24T01:56:17.9008568+00:00 ContainerStream: fi
+2026-08-24T01:56:17.9008578+00:00 ContainerStream: 
+2026-08-24T01:56:17.9013226+00:00 ContainerStream: echo Found tar.gz based node_modules.
+2026-08-24T01:56:17.9013338+00:00 ContainerStream: extractionCommand="tar -xzf node_modules.tar.gz -C /node_modules"
+2026-08-24T01:56:17.9016811+00:00 ContainerStream: echo "Removing existing modules directory from root..."
+2026-08-24T01:56:17.9016851+00:00 ContainerStream: rm -fr /node_modules
+2026-08-24T01:56:17.9016863+00:00 ContainerStream: mkdir -p /node_modules
+2026-08-24T01:56:17.9016890+00:00 ContainerStream: echo Extracting modules...
+2026-08-24T01:56:17.9016901+00:00 ContainerStream: $extractionCommand
+2026-08-24T01:56:17.9021592+00:00 ContainerStream: export NODE_PATH="/node_modules":$NODE_PATH
+2026-08-24T01:56:17.9021673+00:00 ContainerStream: export PATH=/node_modules/.bin:$PATH
+2026-08-24T01:56:17.9021685+00:00 ContainerStream: if [ -d node_modules ]; then
+2026-08-24T01:56:17.9021697+00:00 ContainerStream:     mv -f node_modules _del_node_modules || true
+2026-08-24T01:56:17.9021708+00:00 ContainerStream: fi
+2026-08-24T01:56:17.9025594+00:00 ContainerStream: 
+2026-08-24T01:56:17.9025635+00:00 ContainerStream: if [ -d /node_modules ]; then
+2026-08-24T01:56:17.9025647+00:00 ContainerStream:     ln -sfn /node_modules ./node_modules 
+2026-08-24T01:56:17.9025657+00:00 ContainerStream: fi
+2026-08-24T01:56:17.9025667+00:00 ContainerStream: 
+2026-08-24T01:56:17.9025678+00:00 ContainerStream: echo "Done."
+2026-08-24T01:56:17.9029560+00:00 ContainerStream: PATH="$PATH:/home/site/wwwroot" npm start
+2026-08-24T01:56:17.9129129+00:00 ContainerStream: Found tar.gz based node_modules.
+2026-08-24T01:56:17.9200439+00:00 ContainerStream: Removing existing modules directory from root...
+2026-08-24T01:56:17.9517668+00:00 ContainerStream: Extracting modules...
+2026-08-24T01:56:29.3545025+00:00 ContainerStream: Done.
+2026-08-24T01:56:30.0388957+00:00 ContainerStream: npm info using npm@10.9.2
+2026-08-24T01:56:30.0467783+00:00 ContainerStream: npm info using node@v24.15.0
+2026-08-24T01:56:31.0904656+00:00 ContainerStream: 
+2026-08-24T01:56:31.0904985+00:00 ContainerStream: > react-instagram-clone-2.0@1.0.0 start
+2026-08-24T01:56:31.0905003+00:00 ContainerStream: > node app.js
+2026-08-24T01:56:31.0905014+00:00 ContainerStream: 
+2026-08-24T01:56:32.4815035+00:00 ContainerStream: /node_modules/mysql/lib/protocol/Protocol.js:347
+2026-08-24T01:56:32.4815393+00:00 ContainerStream:     Timers.enroll(sequence, sequence._timeout);
+2026-08-24T01:56:32.4815409+00:00 ContainerStream:            ^
+2026-08-24T01:56:32.4815419+00:00 ContainerStream: 
+2026-08-24T01:56:32.4815432+00:00 ContainerStream: TypeError: Timers.enroll is not a function
+2026-08-24T01:56:32.4815447+00:00 ContainerStream:     at Protocol._startSequence (/node_modules/mysql/lib/protocol/Protocol.js:347:12)
+2026-08-24T01:56:32.4815461+00:00 ContainerStream:     at Protocol._enqueue (/node_modules/mysql/lib/protocol/Protocol.js:190:10)
+2026-08-24T01:56:32.4815478+00:00 ContainerStream:     at Protocol.handshake (/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+2026-08-24T01:56:32.4815493+00:00 ContainerStream:     at PoolConnection.connect (/node_modules/mysql/lib/Connection.js:130:18)
+2026-08-24T01:56:32.4815507+00:00 ContainerStream:     at Pool.getConnection (/node_modules/mysql/lib/Pool.js:48:16)
+2026-08-24T01:56:32.4815590+00:00 ContainerStream:     at Object.<anonymous> (/home/site/wwwroot/config/Mysql.js:38:4)
+2026-08-24T01:56:32.4815605+00:00 ContainerStream:     at Module._compile (node:internal/modules/cjs/loader:1830:14)
+2026-08-24T01:56:32.4815617+00:00 ContainerStream:     at Object..js (node:internal/modules/cjs/loader:1961:10)
+2026-08-24T01:56:32.4815630+00:00 ContainerStream:     at Module.load (node:internal/modules/cjs/loader:1553:32)
+2026-08-24T01:56:32.4815642+00:00 ContainerStream:     at Module._load (node:internal/modules/cjs/loader:1355:12)
+2026-08-24T01:56:32.4817077+00:00 ContainerStream: 
+2026-08-24T01:56:32.4817101+00:00 ContainerStream: Node.js v24.15.0
+2026-08-24T01:56:32.5094823+00:00 ContainerStream: npm http fetch GET 200 https://registry.npmjs.org/npm 428ms
+2026-08-24T01:56:32.5204169+00:00 ContainerStream: npm notice
+2026-08-24T01:56:32.5204319+00:00 ContainerStream: npm notice New major version of npm available! 10.9.2 -> 12.0.2
+2026-08-24T01:56:32.5204339+00:00 ContainerStream: npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+2026-08-24T01:56:32.5204461+00:00 ContainerStream: npm notice To update run: npm install -g npm@12.0.2
+2026-08-24T01:56:32.5204505+00:00 ContainerStream: npm notice
+2026-08-24T01:56:32.6581232+00:00 ContainerStatus: Container has finished running with exit code: 1.
+2026-08-24T01:56:32.6605048+00:00 ContainerStatus: Container is terminating. Grace period: 5 seconds.
+2026-08-24T01:56:32.6794276+00:00 ContainerStatus: Stop and delete container. Retry count = 0
+2026-08-24T01:56:32.6798680+00:00 ContainerStatus: Stopping container: e8c3c6c30331_cw2-videoshare-api.
+2026-08-24T01:56:32.9472726+00:00 ContainerStatus: Deleting container: e8c3c6c30331_cw2-videoshare-api. Retry count = 0
+2026-08-24T01:56:34.9450274+00:00 ContainerStatus: Container spec TerminationMessagePolicy  path 
+2026-08-24T01:56:34.9484853+00:00 ContainerStatus: Container is terminated. Total time elapsed: 2270 ms.
+2026-08-24T01:56:34.9490959+00:00 ContainerStatus: Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T01:56:34.9661777+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:54:37, LastErrorDetails: Container exited with exit code 1 during startup after 33.0s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:56:34.9785598+00:00 ContainerStatus: Site startup probe failed after 35.2111415 seconds.
+2026-08-24T01:56:35.1344335+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:56:35.1471538+00:00 ContainerStatus: Failed to start site. Revert by stopping site.
+2026-08-24T01:56:35.1475271+00:00 ContainerStatus: State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:56:35.1478769+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:56:35.1478956+00:00 ContainerStatus: Site: cw2-videoshare-api stopped.
+========== New Cold Start Attempt (2026-08-24T01:56:35.1558735+00:00) ==========
+2026-08-24T01:56:35.1558735+00:00 ContainerStatus: State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:56:35.5517645+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:56:35.7752805+00:00 ContainerStatus: Site: cw2-videoshare-api will be blocked for 2 minutes till 08/24/2026 01:58:35
+2026-08-24T01:56:35.7757461+00:00 ContainerStatus: State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site: cw2-videoshare-api will be blocked for 2 minutes till 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:56:35.7936707+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:56:35 (UTC), DetailsLevel: WARN
+2026-08-24T01:56:36.0547515+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:56:35 (UTC), DetailsLevel: WARN
+2026-08-24T01:56:41.3745619+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:56:41.3745964+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:56:46.5311217+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:56:46.5311638+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:56:51.6460155+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:56:51.6460560+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:56:56.7370734+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:56:56.7371236+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:01.9086286+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:01.9086683+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:07.2697901+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:07.2698335+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:12.5471024+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:12.5485087+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:17.8304350+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:17.8304864+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:22.8924577+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:22.8924927+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:27.9248302+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:27.9248702+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:33.0412499+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:33.0413370+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:38.1390086+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:38.1390459+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:43.2281215+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:43.2281435+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:48.3460368+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:48.3484963+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:53.4745313+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:53.4745741+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:57:58.6267406+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:57:58.6268557+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:04.0915644+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:04.0917156+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:09.2387677+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:09.2388180+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:14.4766648+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:14.4767194+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:19.6567018+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:19.6567414+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:25.1469116+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:25.1469414+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:30.2752892+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:30.2753182+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:35.3694348+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:35.3694732+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:58:35.7960348+00:00 ContainerStatus: Site: cw2-videoshare-api is unblocked.
+2026-08-24T01:58:40.5945540+00:00 ContainerStatus: State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:43.7313964+00:00 ContainerStatus: State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 01:58:35, DetailsLevel: WARN
+2026-08-24T01:58:43.7314592+00:00 ContainerStatus: Container start method called.
+2026-08-24T01:58:43.7314904+00:00 ContainerStatus: State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:58:43.7315232+00:00 ContainerStatus: Establishing network.
+2026-08-24T01:58:43.7331123+00:00 ContainerStatus: Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T01:59:05.5907197+00:00 ContainerStatus: Container is starting.
+2026-08-24T01:59:05.6001647+00:00 ContainerStatus: State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T01:59:05.6005767+00:00 ContainerStatus: Establishing user namespace if not established already.
+2026-08-24T01:59:05.6006778+00:00 ContainerStatus: Establishing network if not established already.
+2026-08-24T01:59:05.6007497+00:00 ContainerStatus: Mounting volumes.
+2026-08-24T01:59:05.6092020+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:59:05.6611103+00:00 ContainerStatus: Nested mountpoint volatile/logs
+2026-08-24T01:59:05.7084824+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:59:05.7685507+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:59:05.8487582+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:59:05.8676437+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T01:59:06.4626519+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T01:59:06.4630392+00:00 ContainerStatus: Creating container.
+2026-08-24T01:59:06.4632682+00:00 ContainerStatus: Creating pipes for streaming container io.
+2026-08-24T01:59:06.4720222+00:00 ContainerStatus: Creating stdout named pipe at /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stdout_2d6c1ccb0f5d4dd094e4ff5bce62c588.
+2026-08-24T01:59:06.4814655+00:00 ContainerStatus: Successfully created stdout named pipe at: /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stdout_2d6c1ccb0f5d4dd094e4ff5bce62c588.
+2026-08-24T01:59:06.4818789+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stdout_2d6c1ccb0f5d4dd094e4ff5bce62c588 for reading in non-blocking mode.
+2026-08-24T01:59:06.4822895+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stdout_2d6c1ccb0f5d4dd094e4ff5bce62c588.
+2026-08-24T01:59:06.4826689+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stdout_2d6c1ccb0f5d4dd094e4ff5bce62c588.
+2026-08-24T01:59:06.4836671+00:00 ContainerStatus: Creating stderr named pipe at /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stderr_05d203ad35324d01b60ce59fb831efb1.
+2026-08-24T01:59:06.4837591+00:00 ContainerStatus: Successfully created stderr named pipe at: /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stderr_05d203ad35324d01b60ce59fb831efb1.
+2026-08-24T01:59:06.4838032+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stderr_05d203ad35324d01b60ce59fb831efb1 for reading in non-blocking mode.
+2026-08-24T01:59:06.4838602+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stderr_05d203ad35324d01b60ce59fb831efb1.
+2026-08-24T01:59:06.4839611+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/9b4c0e841ba3_cw2-videoshare-api/stderr_05d203ad35324d01b60ce59fb831efb1.
+2026-08-24T01:59:06.4936515+00:00 ContainerStatus: Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T01:59:07.5789653+00:00 ContainerStatus: Starting container: 9b4c0e841ba3_cw2-videoshare-api.
+2026-08-24T01:59:07.6394029+00:00 ContainerStatus: Starting watchers and probes.
+2026-08-24T01:59:07.6477250+00:00 ContainerStatus: Starting metrics collection.
+2026-08-24T01:59:07.6478346+00:00 ContainerStatus: Container is running.
+2026-08-24T01:59:07.6478846+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:59:07.7661701+00:00 ContainerStatus: Container start method finished after 24034 ms.
+2026-08-24T01:59:07.7771111+00:00 ContainerStatus: State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T01:59:07.7774736+00:00 ContainerStatus: State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T01:59:08.1752227+00:00 ContainerStream:    _____                               
+2026-08-24T01:59:08.1752549+00:00 ContainerStream:   /  _  \ __________ _________   ____  
+2026-08-24T01:59:08.1752564+00:00 ContainerStream:  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-08-24T01:59:08.1752575+00:00 ContainerStream: /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-08-24T01:59:08.1752592+00:00 ContainerStream: \____|__  /_____ \____/ |__|    \___  >
+2026-08-24T01:59:08.1752606+00:00 ContainerStream:         \/      \/                  \/ 
+2026-08-24T01:59:08.1752618+00:00 ContainerStream: A P P   S E R V I C E   O N   L I N U X
+2026-08-24T01:59:08.1752628+00:00 ContainerStream: 
+2026-08-24T01:59:08.1752640+00:00 ContainerStream: Documentation    : http://aka.ms/webapp-linux
+2026-08-24T01:59:08.1752718+00:00 ContainerStream: NodeJS quickstart: https://aka.ms/node-qs
+2026-08-24T01:59:08.1752731+00:00 ContainerStream: NodeJS Version   : v24.15.0
+2026-08-24T01:59:08.1752742+00:00 ContainerStream: Instance Name    : lw0sdlwk0002L1
+2026-08-24T01:59:08.1752758+00:00 ContainerStream: Instance Id      : 3161b1ae9ca0a5f9e11e0146671e855c259b1ac7397ab581598a95aa31f15f3f
+2026-08-24T01:59:08.1752767+00:00 ContainerStream: 
+2026-08-24T01:59:08.1752780+00:00 ContainerStream: Note: Any data outside '/home' is not persisted
+2026-08-24T01:59:13.4751757+00:00 ContainerStream:  * Starting OpenBSD Secure Shell server sshd
+2026-08-24T01:59:13.5343148+00:00 ContainerStream:    ...done.
+2026-08-24T01:59:13.5540299+00:00 ContainerStream: WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-08-24T01:59:13.6044960+00:00 ContainerStream: Updating certificates in /etc/ssl/certs...
+2026-08-24T01:59:32.0651399+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-ECC.pem
+2026-08-24T01:59:32.0751896+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-RSA.pem
+2026-08-24T01:59:32.7223708+00:00 ContainerStream: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-08-24T01:59:32.8217471+00:00 ContainerStream: 4 added, 0 removed; done.
+2026-08-24T01:59:32.8221323+00:00 ContainerStream: Running hooks in /etc/ca-certificates/update.d...
+2026-08-24T01:59:32.8315740+00:00 ContainerStream: done.
+2026-08-24T01:59:32.8705111+00:00 ContainerStream: CA certificates copied and updated successfully.
+2026-08-24T01:59:33.1702302+00:00 ContainerStream:  * Starting periodic command scheduler cron
+2026-08-24T01:59:33.2019077+00:00 ContainerStream:    ...done.
+2026-08-24T01:59:33.6413780+00:00 ContainerStream: Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-08-24T01:59:33.6510567+00:00 ContainerStream: Could not find operation ID in manifest. Generating an operation id...
+2026-08-24T01:59:33.6519191+00:00 ContainerStream: Build Operation ID: 156bc3e2-af2b-4407-a0b6-268ac32300d9
+2026-08-24T01:59:34.0684608+00:00 ContainerStream: Environment Variables for Application Insight's IPA Codeless Configuration exists..
+2026-08-24T01:59:34.1087605+00:00 ContainerStream: Writing output script to '/opt/startup/startup.sh'
+2026-08-24T01:59:34.1694583+00:00 ContainerStream: Running #!/bin/sh
+2026-08-24T01:59:34.1695027+00:00 ContainerStream: 
+2026-08-24T01:59:34.1695050+00:00 ContainerStream: # Enter the source directory to make sure the script runs where the user expects
+2026-08-24T01:59:34.1695070+00:00 ContainerStream: cd "/home/site/wwwroot"
+2026-08-24T01:59:34.1695081+00:00 ContainerStream: 
+2026-08-24T01:59:34.1702932+00:00 ContainerStream: export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+2026-08-24T01:59:34.1703070+00:00 ContainerStream: if [ -z "$PORT" ]; then
+2026-08-24T01:59:34.1703084+00:00 ContainerStream: 		export PORT=8080
+2026-08-24T01:59:34.1703094+00:00 ContainerStream: fi
+2026-08-24T01:59:34.1703106+00:00 ContainerStream: 
+2026-08-24T01:59:34.1707789+00:00 ContainerStream: echo Found tar.gz based node_modules.
+2026-08-24T01:59:34.1707846+00:00 ContainerStream: extractionCommand="tar -xzf node_modules.tar.gz -C /node_modules"
+2026-08-24T01:59:34.1785049+00:00 ContainerStream: echo "Removing existing modules directory from root..."
+2026-08-24T01:59:34.1785132+00:00 ContainerStream: rm -fr /node_modules
+2026-08-24T01:59:34.1785147+00:00 ContainerStream: mkdir -p /node_modules
+2026-08-24T01:59:34.1785165+00:00 ContainerStream: echo Extracting modules...
+2026-08-24T01:59:34.1785178+00:00 ContainerStream: $extractionCommand
+2026-08-24T01:59:34.1785192+00:00 ContainerStream: export NODE_PATH="/node_modules":$NODE_PATH
+2026-08-24T01:59:34.1785204+00:00 ContainerStream: export PATH=/node_modules/.bin:$PATH
+2026-08-24T01:59:34.1785216+00:00 ContainerStream: if [ -d node_modules ]; then
+2026-08-24T01:59:34.1785228+00:00 ContainerStream:     mv -f node_modules _del_node_modules || true
+2026-08-24T01:59:34.1785238+00:00 ContainerStream: fi
+2026-08-24T01:59:34.1785252+00:00 ContainerStream: 
+2026-08-24T01:59:34.1785265+00:00 ContainerStream: if [ -d /node_modules ]; then
+2026-08-24T01:59:34.1785278+00:00 ContainerStream:     ln -sfn /node_modules ./node_modules 
+2026-08-24T01:59:34.1785288+00:00 ContainerStream: fi
+2026-08-24T01:59:34.1785334+00:00 ContainerStream: 
+2026-08-24T01:59:34.1785346+00:00 ContainerStream: echo "Done."
+2026-08-24T01:59:34.1785358+00:00 ContainerStream: PATH="$PATH:/home/site/wwwroot" npm start
+2026-08-24T01:59:34.1808210+00:00 ContainerStream: Found tar.gz based node_modules.
+2026-08-24T01:59:34.1977798+00:00 ContainerStream: Removing existing modules directory from root...
+2026-08-24T01:59:34.2485002+00:00 ContainerStream: Extracting modules...
+2026-08-24T01:59:35.6920078+00:00 ContainerStream: tar: Skipping to next header
+2026-08-24T01:59:37.8835188+00:00 ContainerStream: tar: Exiting with failure status due to previous errors
+2026-08-24T01:59:37.9735898+00:00 ContainerStream: Done.
+2026-08-24T01:59:39.7882850+00:00 ContainerStream: npm info using npm@10.9.2
+2026-08-24T01:59:39.7968043+00:00 ContainerStream: npm info using node@v24.15.0
+2026-08-24T01:59:41.3188524+00:00 ContainerStream: 
+2026-08-24T01:59:41.3188868+00:00 ContainerStream: > react-instagram-clone-2.0@1.0.0 start
+2026-08-24T01:59:41.3188885+00:00 ContainerStream: > node app.js
+2026-08-24T01:59:41.3188895+00:00 ContainerStream: 
+2026-08-24T01:59:41.6381728+00:00 ContainerStream: node:internal/modules/cjs/loader:1479
+2026-08-24T01:59:41.6382138+00:00 ContainerStream:   throw err;
+2026-08-24T01:59:41.6382153+00:00 ContainerStream:   ^
+2026-08-24T01:59:41.6382164+00:00 ContainerStream: 
+2026-08-24T01:59:41.6382176+00:00 ContainerStream: Error: Cannot find module 'dotenv'
+2026-08-24T01:59:41.6382188+00:00 ContainerStream: Require stack:
+2026-08-24T01:59:41.6382199+00:00 ContainerStream: - /home/site/wwwroot/app.js
+2026-08-24T01:59:41.6382213+00:00 ContainerStream:     at Module._resolveFilename (node:internal/modules/cjs/loader:1476:15)
+2026-08-24T01:59:41.6382226+00:00 ContainerStream:     at wrapResolveFilename (node:internal/modules/cjs/loader:1049:27)
+2026-08-24T01:59:41.6382239+00:00 ContainerStream:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1073:10)
+2026-08-24T01:59:41.6382253+00:00 ContainerStream:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1094:12)
+2026-08-24T01:59:41.6382266+00:00 ContainerStream:     at Module._load (node:internal/modules/cjs/loader:1262:25)
+2026-08-24T01:59:41.6382279+00:00 ContainerStream:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-08-24T01:59:41.6382292+00:00 ContainerStream:     at Module.require (node:internal/modules/cjs/loader:1576:12)
+2026-08-24T01:59:41.6382319+00:00 ContainerStream:     at require (node:internal/modules/helpers:153:16)
+2026-08-24T01:59:41.6382331+00:00 ContainerStream:     at Object.<anonymous> (/home/site/wwwroot/app.js:4:1)
+2026-08-24T01:59:41.6382347+00:00 ContainerStream:     at Module._compile (node:internal/modules/cjs/loader:1830:14) {
+2026-08-24T01:59:41.6382358+00:00 ContainerStream:   code: 'MODULE_NOT_FOUND',
+2026-08-24T01:59:41.6382371+00:00 ContainerStream:   requireStack: [ '/home/site/wwwroot/app.js' ]
+2026-08-24T01:59:41.6382381+00:00 ContainerStream: }
+2026-08-24T01:59:41.6383434+00:00 ContainerStream: 
+2026-08-24T01:59:41.6383457+00:00 ContainerStream: Node.js v24.15.0
+2026-08-24T01:59:41.7661686+00:00 ContainerStream: npm http fetch GET 200 https://registry.npmjs.org/npm 468ms
+2026-08-24T01:59:41.8763858+00:00 ContainerStream: npm notice
+2026-08-24T01:59:41.8764106+00:00 ContainerStream: npm notice New major version of npm available! 10.9.2 -> 12.0.2
+2026-08-24T01:59:41.8764125+00:00 ContainerStream: npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+2026-08-24T01:59:41.8764186+00:00 ContainerStream: npm notice To update run: npm install -g npm@12.0.2
+2026-08-24T01:59:41.8764198+00:00 ContainerStream: npm notice
+2026-08-24T01:59:41.9742209+00:00 ContainerStatus: Container has finished running with exit code: 1.
+2026-08-24T01:59:41.9744539+00:00 ContainerStatus: Container is terminating. Grace period: 5 seconds.
+2026-08-24T01:59:41.9833533+00:00 ContainerStatus: Stop and delete container. Retry count = 0
+2026-08-24T01:59:41.9856390+00:00 ContainerStatus: Stopping container: 9b4c0e841ba3_cw2-videoshare-api.
+2026-08-24T01:59:42.0994564+00:00 ContainerStatus: Deleting container: 9b4c0e841ba3_cw2-videoshare-api. Retry count = 0
+2026-08-24T01:59:42.5429781+00:00 ContainerStatus: Container spec TerminationMessagePolicy  path 
+2026-08-24T01:59:42.5514439+00:00 ContainerStatus: Container is terminated. Total time elapsed: 566 ms.
+2026-08-24T01:59:42.5516929+00:00 ContainerStatus: Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T01:59:42.5545704+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:56:35, LastErrorDetails: Container exited with exit code 1 during startup after 35.2s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:59:42.6113953+00:00 ContainerStatus: Site startup probe failed after 34.757987 seconds.
+2026-08-24T01:59:42.7824055+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:59:42.8398789+00:00 ContainerStatus: Failed to start site. Revert by stopping site.
+2026-08-24T01:59:42.8403746+00:00 ContainerStatus: State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:59:42.8409600+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:59:42.8409767+00:00 ContainerStatus: Site: cw2-videoshare-api stopped.
+========== New Cold Start Attempt (2026-08-24T01:59:42.8722184+00:00) ==========
+2026-08-24T01:59:42.8722184+00:00 ContainerStatus: State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:59:43.2134194+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T01:59:43.6599463+00:00 ContainerStatus: Site: cw2-videoshare-api will be blocked for 2 minutes till 08/24/2026 02:01:43
+2026-08-24T01:59:43.6600507+00:00 ContainerStatus: State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site: cw2-videoshare-api will be blocked for 2 minutes till 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T01:59:43.6615202+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:59:43 (UTC), DetailsLevel: WARN
+2026-08-24T01:59:44.0423249+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 01:59:43 (UTC), DetailsLevel: WARN
+2026-08-24T01:59:48.9790976+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T01:59:48.9791402+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:59:54.0602103+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T01:59:54.0602531+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T01:59:59.1823902+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T01:59:59.1824707+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T02:00:04.3499020+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T02:00:04.3499387+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T02:00:09.5242541+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T02:00:09.5245198+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-24T02:01:43.6631961+00:00 ContainerStatus: Site: cw2-videoshare-api is unblocked.
+2026-08-24T02:01:50.5066215+00:00 ContainerStatus: State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T02:01:53.3688607+00:00 ContainerStatus: State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/24/2026 02:01:43, DetailsLevel: WARN
+2026-08-24T02:01:53.3689220+00:00 ContainerStatus: Container start method called.
+2026-08-24T02:01:53.3689541+00:00 ContainerStatus: State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T02:01:53.3689874+00:00 ContainerStatus: Establishing network.
+2026-08-24T02:01:53.3690216+00:00 ContainerStatus: Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T02:02:17.3726113+00:00 ContainerStatus: Container is starting.
+2026-08-24T02:02:17.3937316+00:00 ContainerStatus: State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T02:02:17.3950860+00:00 ContainerStatus: Establishing user namespace if not established already.
+2026-08-24T02:02:17.4150999+00:00 ContainerStatus: Establishing network if not established already.
+2026-08-24T02:02:17.4152604+00:00 ContainerStatus: Mounting volumes.
+2026-08-24T02:02:17.4241736+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T02:02:17.4844082+00:00 ContainerStatus: Nested mountpoint volatile/logs
+2026-08-24T02:02:17.5129573+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T02:02:17.5236796+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T02:02:17.5326022+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T02:02:17.5349692+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T02:02:18.6704888+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T02:02:18.6705378+00:00 ContainerStatus: Creating container.
+2026-08-24T02:02:18.6705663+00:00 ContainerStatus: Creating pipes for streaming container io.
+2026-08-24T02:02:18.6705952+00:00 ContainerStatus: Creating stdout named pipe at /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stdout_d1ac81aac3154569be418263ff0edaaf.
+2026-08-24T02:02:18.7117912+00:00 ContainerStatus: Successfully created stdout named pipe at: /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stdout_d1ac81aac3154569be418263ff0edaaf.
+2026-08-24T02:02:18.7118376+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stdout_d1ac81aac3154569be418263ff0edaaf for reading in non-blocking mode.
+2026-08-24T02:02:18.7118807+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stdout_d1ac81aac3154569be418263ff0edaaf.
+2026-08-24T02:02:18.7119039+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stdout_d1ac81aac3154569be418263ff0edaaf.
+2026-08-24T02:02:18.7119627+00:00 ContainerStatus: Creating stderr named pipe at /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stderr_930aa72cff3545d89b5b4744bda5e273.
+2026-08-24T02:02:18.7120124+00:00 ContainerStatus: Successfully created stderr named pipe at: /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stderr_930aa72cff3545d89b5b4744bda5e273.
+2026-08-24T02:02:18.7120341+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stderr_930aa72cff3545d89b5b4744bda5e273 for reading in non-blocking mode.
+2026-08-24T02:02:18.7120622+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stderr_930aa72cff3545d89b5b4744bda5e273.
+2026-08-24T02:02:18.7120841+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/2c9e998cf9f0_cw2-videoshare-api/stderr_930aa72cff3545d89b5b4744bda5e273.
+2026-08-24T02:02:18.7121348+00:00 ContainerStatus: Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T02:02:19.8431895+00:00 ContainerStatus: Starting container: 2c9e998cf9f0_cw2-videoshare-api.
+2026-08-24T02:02:19.9524228+00:00 ContainerStatus: Starting watchers and probes.
+2026-08-24T02:02:19.9536735+00:00 ContainerStatus: Starting metrics collection.
+2026-08-24T02:02:19.9537686+00:00 ContainerStatus: Container is running.
+2026-08-24T02:02:19.9538334+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T02:02:20.2724324+00:00 ContainerStatus: Container start method finished after 26903 ms.
+2026-08-24T02:02:20.2725209+00:00 ContainerStatus: State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T02:02:20.2725335+00:00 ContainerStatus: State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T02:02:20.8777808+00:00 ContainerStream:    _____                               
+2026-08-24T02:02:20.8778142+00:00 ContainerStream:   /  _  \ __________ _________   ____  
+2026-08-24T02:02:20.8778158+00:00 ContainerStream:  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-08-24T02:02:20.8778168+00:00 ContainerStream: /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-08-24T02:02:20.8778184+00:00 ContainerStream: \____|__  /_____ \____/ |__|    \___  >
+2026-08-24T02:02:20.8778195+00:00 ContainerStream:         \/      \/                  \/ 
+2026-08-24T02:02:20.8778267+00:00 ContainerStream: A P P   S E R V I C E   O N   L I N U X
+2026-08-24T02:02:20.8778277+00:00 ContainerStream: 
+2026-08-24T02:02:20.8778288+00:00 ContainerStream: Documentation    : http://aka.ms/webapp-linux
+2026-08-24T02:02:20.8778300+00:00 ContainerStream: NodeJS quickstart: https://aka.ms/node-qs
+2026-08-24T02:02:20.8778310+00:00 ContainerStream: NodeJS Version   : v24.15.0
+2026-08-24T02:02:20.8778328+00:00 ContainerStream: Instance Name    : lw0sdlwk0002L1
+2026-08-24T02:02:20.8778400+00:00 ContainerStream: Instance Id      : 3161b1ae9ca0a5f9e11e0146671e855c259b1ac7397ab581598a95aa31f15f3f
+2026-08-24T02:02:20.8778412+00:00 ContainerStream: 
+2026-08-24T02:02:20.8778425+00:00 ContainerStream: Note: Any data outside '/home' is not persisted
+2026-08-24T02:02:25.7243926+00:00 ContainerStream:  * Starting OpenBSD Secure Shell server sshd
+2026-08-24T02:02:25.7552410+00:00 ContainerStream:    ...done.
+2026-08-24T02:02:25.7752675+00:00 ContainerStream: WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-08-24T02:02:25.8224871+00:00 ContainerStream: Updating certificates in /etc/ssl/certs...
+2026-08-24T02:02:38.7119052+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-ECC.pem
+2026-08-24T02:02:38.7128385+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-RSA.pem
+2026-08-24T02:02:38.9620534+00:00 ContainerStream: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-08-24T02:02:38.9935616+00:00 ContainerStream: 4 added, 0 removed; done.
+2026-08-24T02:02:38.9944748+00:00 ContainerStream: Running hooks in /etc/ca-certificates/update.d...
+2026-08-24T02:02:39.0051762+00:00 ContainerStream: done.
+2026-08-24T02:02:39.0438989+00:00 ContainerStream: CA certificates copied and updated successfully.
+2026-08-24T02:02:39.1837176+00:00 ContainerStream:  * Starting periodic command scheduler cron
+2026-08-24T02:02:39.2041805+00:00 ContainerStream:    ...done.
+2026-08-24T02:02:39.4637131+00:00 ContainerStream: Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-08-24T02:02:39.4921992+00:00 ContainerStream: Could not find operation ID in manifest. Generating an operation id...
+2026-08-24T02:02:39.4922302+00:00 ContainerStream: Build Operation ID: 2918d7a1-ca17-4eff-bffc-4feb0128f95e
+2026-08-24T02:02:40.0086394+00:00 ContainerStream: Environment Variables for Application Insight's IPA Codeless Configuration exists..
+2026-08-24T02:02:40.1351941+00:00 ContainerStream: Writing output script to '/opt/startup/startup.sh'
+2026-08-24T02:02:40.1859312+00:00 ContainerStream: Running #!/bin/sh
+2026-08-24T02:02:40.1859611+00:00 ContainerStream: 
+2026-08-24T02:02:40.1859634+00:00 ContainerStream: # Enter the source directory to make sure the script runs where the user expects
+2026-08-24T02:02:40.1859646+00:00 ContainerStream: cd "/home/site/wwwroot"
+2026-08-24T02:02:40.1859656+00:00 ContainerStream: 
+2026-08-24T02:02:40.1863459+00:00 ContainerStream: export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+2026-08-24T02:02:40.1863525+00:00 ContainerStream: if [ -z "$PORT" ]; then
+2026-08-24T02:02:40.1863538+00:00 ContainerStream: 		export PORT=8080
+2026-08-24T02:02:40.1863550+00:00 ContainerStream: fi
+2026-08-24T02:02:40.1863560+00:00 ContainerStream: 
+2026-08-24T02:02:40.1865178+00:00 ContainerStream: echo Found tar.gz based node_modules.
+2026-08-24T02:02:40.1865226+00:00 ContainerStream: extractionCommand="tar -xzf node_modules.tar.gz -C /node_modules"
+2026-08-24T02:02:40.1866357+00:00 ContainerStream: echo "Removing existing modules directory from root..."
+2026-08-24T02:02:40.1866396+00:00 ContainerStream: rm -fr /node_modules
+2026-08-24T02:02:40.1866407+00:00 ContainerStream: mkdir -p /node_modules
+2026-08-24T02:02:40.1866419+00:00 ContainerStream: echo Extracting modules...
+2026-08-24T02:02:40.1866430+00:00 ContainerStream: $extractionCommand
+2026-08-24T02:02:40.1867806+00:00 ContainerStream: export NODE_PATH="/node_modules":$NODE_PATH
+2026-08-24T02:02:40.1867844+00:00 ContainerStream: export PATH=/node_modules/.bin:$PATH
+2026-08-24T02:02:40.1867857+00:00 ContainerStream: if [ -d node_modules ]; then
+2026-08-24T02:02:40.1867870+00:00 ContainerStream:     mv -f node_modules _del_node_modules || true
+2026-08-24T02:02:40.1867879+00:00 ContainerStream: fi
+2026-08-24T02:02:40.1869268+00:00 ContainerStream: 
+2026-08-24T02:02:40.1869309+00:00 ContainerStream: if [ -d /node_modules ]; then
+2026-08-24T02:02:40.1869321+00:00 ContainerStream:     ln -sfn /node_modules ./node_modules 
+2026-08-24T02:02:40.1869347+00:00 ContainerStream: fi
+2026-08-24T02:02:40.1869356+00:00 ContainerStream: 
+2026-08-24T02:02:40.1869367+00:00 ContainerStream: echo "Done."
+2026-08-24T02:02:40.1870841+00:00 ContainerStream: PATH="$PATH:/home/site/wwwroot" npm start
+2026-08-24T02:02:40.2045548+00:00 ContainerStream: Found tar.gz based node_modules.
+2026-08-24T02:02:40.2153463+00:00 ContainerStream: Removing existing modules directory from root...
+2026-08-24T02:02:40.2366764+00:00 ContainerStream: Extracting modules...
+2026-08-24T02:02:51.1042364+00:00 ContainerStream: Done.
+2026-08-24T02:02:51.8112809+00:00 ContainerStream: npm info using npm@10.9.2
+2026-08-24T02:02:51.8188401+00:00 ContainerStream: npm info using node@v24.15.0
+2026-08-24T02:02:53.3422582+00:00 ContainerStream: 
+2026-08-24T02:02:53.3422878+00:00 ContainerStream: > react-instagram-clone-2.0@1.0.0 start
+2026-08-24T02:02:53.3422895+00:00 ContainerStream: > node app.js
+2026-08-24T02:02:53.3422905+00:00 ContainerStream: 
+2026-08-24T02:02:56.2267737+00:00 ContainerStream: /node_modules/mysql/lib/protocol/Protocol.js:347
+2026-08-24T02:02:56.2268123+00:00 ContainerStream:     Timers.enroll(sequence, sequence._timeout);
+2026-08-24T02:02:56.2268139+00:00 ContainerStream:            ^
+2026-08-24T02:02:56.2268150+00:00 ContainerStream: 
+2026-08-24T02:02:56.2268163+00:00 ContainerStream: TypeError: Timers.enroll is not a function
+2026-08-24T02:02:56.2268177+00:00 ContainerStream:     at Protocol._startSequence (/node_modules/mysql/lib/protocol/Protocol.js:347:12)
+2026-08-24T02:02:56.2268195+00:00 ContainerStream:     at Protocol._enqueue (/node_modules/mysql/lib/protocol/Protocol.js:190:10)
+2026-08-24T02:02:56.2268212+00:00 ContainerStream:     at Protocol.handshake (/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+2026-08-24T02:02:56.2268224+00:00 ContainerStream:     at PoolConnection.connect (/node_modules/mysql/lib/Connection.js:130:18)
+2026-08-24T02:02:56.2268238+00:00 ContainerStream:     at Pool.getConnection (/node_modules/mysql/lib/Pool.js:48:16)
+2026-08-24T02:02:56.2268313+00:00 ContainerStream:     at Object.<anonymous> (/home/site/wwwroot/config/Mysql.js:38:4)
+2026-08-24T02:02:56.2268327+00:00 ContainerStream:     at Module._compile (node:internal/modules/cjs/loader:1830:14)
+2026-08-24T02:02:56.2268341+00:00 ContainerStream:     at Object..js (node:internal/modules/cjs/loader:1961:10)
+2026-08-24T02:02:56.2268353+00:00 ContainerStream:     at Module.load (node:internal/modules/cjs/loader:1553:32)
+2026-08-24T02:02:56.2268365+00:00 ContainerStream:     at Module._load (node:internal/modules/cjs/loader:1355:12)
+2026-08-24T02:02:56.2268374+00:00 ContainerStream: 
+2026-08-24T02:02:56.2268385+00:00 ContainerStream: Node.js v24.15.0
+2026-08-24T02:02:56.2481679+00:00 ContainerStream: npm http fetch GET 200 https://registry.npmjs.org/npm 410ms
+2026-08-24T02:02:56.2658069+00:00 ContainerStream: npm notice
+2026-08-24T02:02:56.2658375+00:00 ContainerStream: npm notice New major version of npm available! 10.9.2 -> 12.0.2
+2026-08-24T02:02:56.2658395+00:00 ContainerStream: npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+2026-08-24T02:02:56.2658409+00:00 ContainerStream: npm notice To update run: npm install -g npm@12.0.2
+2026-08-24T02:02:56.2658472+00:00 ContainerStream: npm notice
+2026-08-24T02:02:56.3652423+00:00 ContainerStatus: Container has finished running with exit code: 1.
+2026-08-24T02:02:56.3653252+00:00 ContainerStatus: Container is terminating. Grace period: 5 seconds.
+2026-08-24T02:02:56.3798921+00:00 ContainerStatus: Stop and delete container. Retry count = 0
+2026-08-24T02:02:56.3802352+00:00 ContainerStatus: Stopping container: 2c9e998cf9f0_cw2-videoshare-api.
+2026-08-24T02:02:56.4468402+00:00 ContainerStatus: Deleting container: 2c9e998cf9f0_cw2-videoshare-api. Retry count = 0
+2026-08-24T02:02:58.0919393+00:00 ContainerStatus: Container spec TerminationMessagePolicy  path 
+2026-08-24T02:02:58.0992577+00:00 ContainerStatus: Container is terminated. Total time elapsed: 1733 ms.
+2026-08-24T02:02:58.0993174+00:00 ContainerStatus: Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T02:02:58.0993626+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 01:59:42, LastErrorDetails: Container exited with exit code 1 during startup after 34.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:02:58.1503768+00:00 ContainerStatus: Site startup probe failed after 37.8764989 seconds.
+2026-08-24T02:02:58.3497373+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:02:58.3513168+00:00 ContainerStatus: Failed to start site. Revert by stopping site.
+2026-08-24T02:02:58.3619079+00:00 ContainerStatus: State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:02:58.3714585+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:02:58.3714832+00:00 ContainerStatus: Site: cw2-videoshare-api stopped.
+========== New Cold Start Attempt (2026-08-24T02:02:58.4000816+00:00) ==========
+2026-08-24T02:02:58.4000816+00:00 ContainerStatus: State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:02:58.7881862+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:02:58.9875138+00:00 ContainerStatus: Site: cw2-videoshare-api will be blocked for 2 minutes till 08/24/2026 02:04:58
+2026-08-24T02:02:58.9961172+00:00 ContainerStatus: State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site: cw2-videoshare-api will be blocked for 2 minutes till 08/24/2026 02:04:58, DetailsLevel: WARN
+2026-08-24T02:02:59.0348482+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 02:02:58 (UTC), DetailsLevel: WARN
+2026-08-24T02:02:59.3756853+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 02:02:58 (UTC), DetailsLevel: WARN
+2026-08-24T02:04:58.9884808+00:00 ContainerStatus: Site: cw2-videoshare-api is unblocked.
+2026-08-24T02:07:48.1993499+00:00 ContainerStatus: State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 02:02:58 (UTC), DetailsLevel: WARN
+2026-08-24T02:07:49.7985164+00:00 ContainerStatus: State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site stopped at 08/24/2026 02:02:58 (UTC), DetailsLevel: WARN
+2026-08-24T02:07:49.7985582+00:00 ContainerStatus: Container start method called.
+2026-08-24T02:07:49.7985868+00:00 ContainerStatus: State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T02:07:49.7986147+00:00 ContainerStatus: Establishing network.
+2026-08-24T02:07:49.7986446+00:00 ContainerStatus: Pulling image: appsvc/node:24-lts_20260504.4.tuxprod.
+2026-08-24T02:08:06.8429255+00:00 ContainerStatus: Container is starting.
+2026-08-24T02:08:06.8435605+00:00 ContainerStatus: State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Mounting volumes for cw2-videoshare-api., DetailsLevel: INFO
+2026-08-24T02:08:06.8438716+00:00 ContainerStatus: Establishing user namespace if not established already.
+2026-08-24T02:08:06.8440608+00:00 ContainerStatus: Establishing network if not established already.
+2026-08-24T02:08:06.8443617+00:00 ContainerStatus: Mounting volumes.
+2026-08-24T02:08:06.8449680+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T02:08:06.8738162+00:00 ContainerStatus: Nested mountpoint volatile/logs
+2026-08-24T02:08:06.8837118+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T02:08:06.9023437+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T02:08:06.9118164+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T02:08:06.9138262+00:00 ContainerStatus: Nested mountpoint 
+2026-08-24T02:08:07.3287915+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for cw2-videoshare-api. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-24T02:08:07.3288573+00:00 ContainerStatus: Creating container.
+2026-08-24T02:08:07.3289076+00:00 ContainerStatus: Creating pipes for streaming container io.
+2026-08-24T02:08:07.3289531+00:00 ContainerStatus: Creating stdout named pipe at /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stdout_1f03bf9aa1f94c649e52bb7baf5ca242.
+2026-08-24T02:08:07.3298482+00:00 ContainerStatus: Successfully created stdout named pipe at: /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stdout_1f03bf9aa1f94c649e52bb7baf5ca242.
+2026-08-24T02:08:07.3299104+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stdout_1f03bf9aa1f94c649e52bb7baf5ca242 for reading in non-blocking mode.
+2026-08-24T02:08:07.3299742+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stdout_1f03bf9aa1f94c649e52bb7baf5ca242.
+2026-08-24T02:08:07.3300263+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stdout_1f03bf9aa1f94c649e52bb7baf5ca242.
+2026-08-24T02:08:07.3309513+00:00 ContainerStatus: Creating stderr named pipe at /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stderr_3db33b466c0542b1940a485b69921e01.
+2026-08-24T02:08:07.3310312+00:00 ContainerStatus: Successfully created stderr named pipe at: /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stderr_3db33b466c0542b1940a485b69921e01.
+2026-08-24T02:08:07.3310745+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stderr_3db33b466c0542b1940a485b69921e01 for reading in non-blocking mode.
+2026-08-24T02:08:07.3311234+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stderr_3db33b466c0542b1940a485b69921e01.
+2026-08-24T02:08:07.3311652+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/3c12175d3a4c_cw2-videoshare-api/stderr_3db33b466c0542b1940a485b69921e01.
+2026-08-24T02:08:07.3313588+00:00 ContainerStatus: Creating container with image: appsvc/node:24-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:24-lts_20260504.4.tuxprod
+2026-08-24T02:08:07.6283784+00:00 ContainerStatus: Starting container: 3c12175d3a4c_cw2-videoshare-api.
+2026-08-24T02:08:07.6788885+00:00 ContainerStatus: Starting watchers and probes.
+2026-08-24T02:08:07.6792186+00:00 ContainerStatus: Starting metrics collection.
+2026-08-24T02:08:07.6795886+00:00 ContainerStatus: Container is running.
+2026-08-24T02:08:07.6802195+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T02:08:07.8188840+00:00 ContainerStatus: Container start method finished after 18001 ms.
+2026-08-24T02:08:07.8269634+00:00 ContainerStatus: State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Container cw2-videoshare-api successfully created and is running., DetailsLevel: INFO
+2026-08-24T02:08:07.8270174+00:00 ContainerStatus: State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-24T02:08:07.9661971+00:00 ContainerStream:    _____                               
+2026-08-24T02:08:07.9662250+00:00 ContainerStream:   /  _  \ __________ _________   ____  
+2026-08-24T02:08:07.9662267+00:00 ContainerStream:  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-08-24T02:08:07.9662320+00:00 ContainerStream: /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-08-24T02:08:07.9662334+00:00 ContainerStream: \____|__  /_____ \____/ |__|    \___  >
+2026-08-24T02:08:07.9662345+00:00 ContainerStream:         \/      \/                  \/ 
+2026-08-24T02:08:07.9662356+00:00 ContainerStream: A P P   S E R V I C E   O N   L I N U X
+2026-08-24T02:08:07.9662365+00:00 ContainerStream: 
+2026-08-24T02:08:07.9662377+00:00 ContainerStream: Documentation    : http://aka.ms/webapp-linux
+2026-08-24T02:08:07.9662389+00:00 ContainerStream: NodeJS quickstart: https://aka.ms/node-qs
+2026-08-24T02:08:07.9662401+00:00 ContainerStream: NodeJS Version   : v24.15.0
+2026-08-24T02:08:07.9662413+00:00 ContainerStream: Instance Name    : lw0sdlwk0002L1
+2026-08-24T02:08:07.9662428+00:00 ContainerStream: Instance Id      : 3161b1ae9ca0a5f9e11e0146671e855c259b1ac7397ab581598a95aa31f15f3f
+2026-08-24T02:08:07.9662438+00:00 ContainerStream: 
+2026-08-24T02:08:07.9662450+00:00 ContainerStream: Note: Any data outside '/home' is not persisted
+2026-08-24T02:08:16.1055808+00:00 ContainerStream:  * Starting OpenBSD Secure Shell server sshd
+2026-08-24T02:08:16.1430436+00:00 ContainerStream:    ...done.
+2026-08-24T02:08:16.1547710+00:00 ContainerStream: WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-08-24T02:08:16.1937468+00:00 ContainerStream: Updating certificates in /etc/ssl/certs...
+2026-08-24T02:08:28.8614631+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-ECC.pem
+2026-08-24T02:08:28.8620193+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in SSLcom-TLS-Root-2022-RSA.pem
+2026-08-24T02:08:29.1702314+00:00 ContainerStream: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-08-24T02:08:29.2104640+00:00 ContainerStream: 4 added, 0 removed; done.
+2026-08-24T02:08:29.2126880+00:00 ContainerStream: Running hooks in /etc/ca-certificates/update.d...
+2026-08-24T02:08:29.2323575+00:00 ContainerStream: done.
+2026-08-24T02:08:29.2515135+00:00 ContainerStream: CA certificates copied and updated successfully.
+2026-08-24T02:08:29.3914730+00:00 ContainerStream:  * Starting periodic command scheduler cron
+2026-08-24T02:08:29.4114735+00:00 ContainerStream:    ...done.
+2026-08-24T02:08:29.6978180+00:00 ContainerStream: Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2026-08-24T02:08:29.6983517+00:00 ContainerStream: Could not find operation ID in manifest. Generating an operation id...
+2026-08-24T02:08:29.6987500+00:00 ContainerStream: Build Operation ID: dff5c830-cd3e-42f1-925d-79218b72d95a
+2026-08-24T02:08:30.1642930+00:00 ContainerStream: Environment Variables for Application Insight's IPA Codeless Configuration exists..
+2026-08-24T02:08:30.2135951+00:00 ContainerStream: Writing output script to '/opt/startup/startup.sh'
+2026-08-24T02:08:30.3221287+00:00 ContainerStream: Running #!/bin/sh
+2026-08-24T02:08:30.3221891+00:00 ContainerStream: 
+2026-08-24T02:08:30.3221911+00:00 ContainerStream: # Enter the source directory to make sure the script runs where the user expects
+2026-08-24T02:08:30.3221923+00:00 ContainerStream: cd "/home/site/wwwroot"
+2026-08-24T02:08:30.3221932+00:00 ContainerStream: 
+2026-08-24T02:08:30.3222016+00:00 ContainerStream: export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+2026-08-24T02:08:30.3222027+00:00 ContainerStream: if [ -z "$PORT" ]; then
+2026-08-24T02:08:30.3222038+00:00 ContainerStream: 		export PORT=8080
+2026-08-24T02:08:30.3222048+00:00 ContainerStream: fi
+2026-08-24T02:08:30.3222059+00:00 ContainerStream: 
+2026-08-24T02:08:30.3222071+00:00 ContainerStream: PATH="$PATH:/home/site/wwwroot" npm start
+2026-08-24T02:08:32.8245977+00:00 ContainerStream: npm info using npm@10.9.2
+2026-08-24T02:08:32.8257438+00:00 ContainerStream: npm info using node@v24.15.0
+2026-08-24T02:08:35.6334805+00:00 ContainerStream: 
+2026-08-24T02:08:35.6335171+00:00 ContainerStream: > react-instagram-clone-2.0@1.0.0 start
+2026-08-24T02:08:35.6335189+00:00 ContainerStream: > node app.js
+2026-08-24T02:08:35.6335200+00:00 ContainerStream: 
+2026-08-24T02:08:35.9873983+00:00 ContainerStream: node:internal/modules/cjs/loader:1479
+2026-08-24T02:08:35.9874330+00:00 ContainerStream:   throw err;
+2026-08-24T02:08:35.9874420+00:00 ContainerStream:   ^
+2026-08-24T02:08:35.9874438+00:00 ContainerStream: 
+2026-08-24T02:08:35.9874454+00:00 ContainerStream: Error: Cannot find module 'dotenv'
+2026-08-24T02:08:35.9874470+00:00 ContainerStream: Require stack:
+2026-08-24T02:08:35.9874562+00:00 ContainerStream: - /home/site/wwwroot/app.js
+2026-08-24T02:08:35.9874580+00:00 ContainerStream:     at Module._resolveFilename (node:internal/modules/cjs/loader:1476:15)
+2026-08-24T02:08:35.9874598+00:00 ContainerStream:     at wrapResolveFilename (node:internal/modules/cjs/loader:1049:27)
+2026-08-24T02:08:35.9874615+00:00 ContainerStream:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1073:10)
+2026-08-24T02:08:35.9874633+00:00 ContainerStream:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1094:12)
+2026-08-24T02:08:35.9874650+00:00 ContainerStream:     at Module._load (node:internal/modules/cjs/loader:1262:25)
+2026-08-24T02:08:35.9874668+00:00 ContainerStream:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-08-24T02:08:35.9874684+00:00 ContainerStream:     at Module.require (node:internal/modules/cjs/loader:1576:12)
+2026-08-24T02:08:35.9874702+00:00 ContainerStream:     at require (node:internal/modules/helpers:153:16)
+2026-08-24T02:08:35.9874718+00:00 ContainerStream:     at Object.<anonymous> (/home/site/wwwroot/app.js:4:1)
+2026-08-24T02:08:35.9874736+00:00 ContainerStream:     at Module._compile (node:internal/modules/cjs/loader:1830:14) {
+2026-08-24T02:08:35.9874751+00:00 ContainerStream:   code: 'MODULE_NOT_FOUND',
+2026-08-24T02:08:35.9874789+00:00 ContainerStream:   requireStack: [ '/home/site/wwwroot/app.js' ]
+2026-08-24T02:08:35.9874803+00:00 ContainerStream: }
+2026-08-24T02:08:35.9876943+00:00 ContainerStream: 
+2026-08-24T02:08:35.9876989+00:00 ContainerStream: Node.js v24.15.0
+2026-08-24T02:08:36.0777294+00:00 ContainerStream: npm http fetch GET 200 https://registry.npmjs.org/npm 417ms
+2026-08-24T02:08:36.1286937+00:00 ContainerStream: npm notice
+2026-08-24T02:08:36.1287271+00:00 ContainerStream: npm notice New major version of npm available! 10.9.2 -> 12.0.2
+2026-08-24T02:08:36.1287292+00:00 ContainerStream: npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+2026-08-24T02:08:36.1287306+00:00 ContainerStream: npm notice To update run: npm install -g npm@12.0.2
+2026-08-24T02:08:36.1291561+00:00 ContainerStream: npm notice
+2026-08-24T02:08:36.2248132+00:00 ContainerStatus: Container has finished running with exit code: 1.
+2026-08-24T02:08:36.2273560+00:00 ContainerStatus: Container is terminating. Grace period: 5 seconds.
+2026-08-24T02:08:36.2287802+00:00 ContainerStatus: Stop and delete container. Retry count = 0
+2026-08-24T02:08:36.2291356+00:00 ContainerStatus: Stopping container: 3c12175d3a4c_cw2-videoshare-api.
+2026-08-24T02:08:36.3001518+00:00 ContainerStatus: Deleting container: 3c12175d3a4c_cw2-videoshare-api. Retry count = 0
+2026-08-24T02:08:36.5853447+00:00 ContainerStatus: Container spec TerminationMessagePolicy  path 
+2026-08-24T02:08:36.5946321+00:00 ContainerStatus: Container is terminated. Total time elapsed: 359 ms.
+2026-08-24T02:08:36.5947198+00:00 ContainerStatus: Site container: cw2-videoshare-api terminated during site startup.
+2026-08-24T02:08:36.5953906+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:02:58, LastErrorDetails: Container exited with exit code 1 during startup after 38.1s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:08:36.6266054+00:00 ContainerStatus: Site startup probe failed after 28.7991666 seconds.
+2026-08-24T02:08:36.8347702+00:00 ContainerStatus: State: Stopping, Action: CancellingStartup, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:08:36, LastErrorDetails: Container exited with exit code 1 during startup after 28.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:08:36.8463021+00:00 ContainerStatus: Failed to start site. Revert by stopping site.
+2026-08-24T02:08:36.8464217+00:00 ContainerStatus: State: Stopping, Action: StoppingSite, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:08:36, LastErrorDetails: Container exited with exit code 1 during startup after 28.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:08:36.8465669+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/24/2026 02:08:36, LastErrorDetails: Container exited with exit code 1 during startup after 28.9s. Please inspect your container logs for more details., Details: Site container: cw2-videoshare-api terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-24T02:08:36.8465820+00:00 ContainerStatus: Site: cw2-videoshare-api stopped.

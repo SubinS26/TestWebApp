@@ -1,0 +1,8 @@
+<step title="Incoming Request" date="2026-08-24T02:09:14.565" instance="3161b1" url="/api/deployments/latest?deployer=OneDeploy&amp;time=2026-08-24_02-08-34Z" method="GET" type="request" pid="852,1,18" Host="cw2-videoshare-api-arbuhrh8ghcgghgz.scm.italynorth-01.azurewebsites.net" User-Agent="GITHUBACTIONS_DeployWebAppToAzure_2bcf23efb62c70943827e46a6c731a996542bd546c4c75b1a3782ef303f37b22_v3.0.8" Authorization="Bea..." Content-Type="application/json; charset=utf-8" Cookie="ARRAffinity=3161b1ae9ca0a5f9e11e0146671e855c259b1ac7397ab581598a95aa31f15f3f; ARRAffinitySameSite=3161b1ae9ca0a5f9e11e0146671e855c259b1ac7397ab581598a95aa31f15f3f" Content-Length="0" X-ARR-LOG-ID="24747608-c834-4215-a594-ef59e56efc0b" CLIENT-IP="4.154.76.31:15360" X-SITE-DEPLOYMENT-ID="cw2-videoshare-api" WAS-DEFAULT-HOSTNAME="cw2-videoshare-api-arbuhrh8ghcgghgz.scm.italynorth-01.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/deployments/latest?deployer=OneDeploy&amp;time=2026-08-24_02-08-34Z" X-Client-IP="4.154.76.31" X-Client-Port="15360" >
+  <step title="DeploymentService.GetResult" date="2026-08-24T02:09:14.583" >
+    <step title="DeploymentService.GetLatestDeployment" date="2026-08-24T02:09:14.585" >
+      <step title="DeploymentManager.GetResults" date="2026-08-24T02:09:14.594" /><!-- duration: 714ms -->
+    </step><!-- duration: 725ms -->
+  </step><!-- duration: 736ms -->
+  <step title="Outgoing response" date="2026-08-24T02:09:15.328" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 22ms -->
+</step><!-- duration: 794ms -->

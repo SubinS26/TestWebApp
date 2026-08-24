@@ -81,6 +81,7 @@ app.use(
     secret: sessionSecret,
     duration: 24 * 60 * 60 * 1000,
     activeDuration: 5 * 60 * 1000,
+    proxy: true,
     cookie: {
       ephemeral: false,
       httpOnly: true,
