@@ -17,13 +17,19 @@ const ImageTheatre = props => {
           <div className="img_s_img">
             {/\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)$/i.test(imgSrc) || (imgSrc.startsWith('http') && /\.(mp4|webm|ogg|mov|mkv|avi|m4v|flv|wmv|3gp|ogv)/i.test(imgSrc)) ? (
               <video
+                key={imgSrc}
                 src={imgSrc}
                 className={filter}
                 controls
-                autoPlay
                 playsInline
+                preload="metadata"
+                controlsList="nodownload"
                 style={{ maxWidth: '100%', maxHeight: '80vh', backgroundColor: '#000', borderRadius: '6px' }}
-              />
+              >
+                <source src={imgSrc} type="video/mp4" />
+                <source src={imgSrc} type="video/webm" />
+                Your browser does not support HTML5 video playback.
+              </video>
             ) : (
               <img src={imgSrc} className={filter} />
             )}

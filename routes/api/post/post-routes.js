@@ -55,13 +55,13 @@ app.post('/post-it', upload.single('image'), async (req, res) => {
       }
     }
 
-    // Azure Blob Storage Upload in background for high speed
+    // Azure Blob Storage Upload (persisted in cloud before returning)
     try {
       const { uploadToAzureBlob } = require('../../../config/AzureBlob')
-      uploadToAzureBlob(localDest, filename, req.file.mimetype).catch(blobErr => {
-        console.warn('[Azure Blob] Background sync warning:', blobErr.message)
-      })
-    } catch (blobErr) {}
+      await uploadToAzureBlob(localDest, filename, isVideo ? 'video/mp4' : (req.file.mimetype || 'image/jpeg'))
+    } catch (blobErr) {
+      console.warn('[Azure Blob] Upload warning:', blobErr.message)
+    }
 
     // Safely remove temporary file
     try {

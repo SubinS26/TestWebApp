@@ -69,6 +69,7 @@ export default class PostImage extends Component {
               {isVideo ? (
                 <video
                   key={mediaSrc}
+                  src={mediaSrc}
                   className={classNames('p_img', filter)}
                   controls
                   playsInline
