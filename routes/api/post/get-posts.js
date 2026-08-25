@@ -50,7 +50,7 @@ const batchAttachCounts = async postsList => {
 app.post('/get-user-posts', async (req, res) => {
   let id = await User.getId(req.body.username),
     _posts = await db.query(
-      'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.post_time FROM posts, users WHERE posts.user=? AND posts.user = users.id AND posts.type=? ORDER BY posts.post_time DESC LIMIT 40',
+      'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.post_time FROM posts, users WHERE posts.user=? AND posts.user = users.id AND posts.type=? ORDER BY posts.post_id DESC LIMIT 40',
       [id, 'user']
     )
 
@@ -61,7 +61,7 @@ app.post('/get-user-posts', async (req, res) => {
 // GET BOOKMARKED POSTS [REQ = USER]
 app.post('/get-bookmarked-posts', async (req, res) => {
   let _posts = await db.query(
-    'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time FROM posts, users, bookmarks WHERE bookmarks.bkmrk_by=? AND posts.user = users.id AND bookmarks.post_id = posts.post_id ORDER BY bookmarks.bkmrk_time DESC LIMIT 40',
+    'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time FROM posts, users, bookmarks WHERE bookmarks.bkmrk_by=? AND posts.user = users.id AND bookmarks.post_id = posts.post_id ORDER BY bookmarks.bkmrk_id DESC LIMIT 40',
     [req.body.user]
   )
 
@@ -72,7 +72,7 @@ app.post('/get-bookmarked-posts', async (req, res) => {
 // GET TAGGED POSTS [REQ = USER]
 app.post('/get-tagged-posts', async (req, res) => {
   let _posts = await db.query(
-    'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time FROM post_tags, posts, users WHERE post_tags.user = ? AND post_tags.post_id = posts.post_id AND posts.user = users.id ORDER BY posts.post_time DESC LIMIT 40',
+    'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time FROM post_tags, posts, users WHERE post_tags.user = ? AND post_tags.post_id = posts.post_id AND posts.user = users.id ORDER BY post_tags.post_tag_id DESC LIMIT 40',
     [req.body.user]
   )
 
@@ -83,7 +83,7 @@ app.post('/get-tagged-posts', async (req, res) => {
 // GET SHARED POSTS [REQ = USER]
 app.post('/get-shared-posts', async (req, res) => {
   let _posts = await db.query(
-    'SELECT posts.post_id, shares.share_id, posts.user, users.username, users.firstname, users.surname, shares.share_by, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time, shares.share_time FROM shares, posts, users WHERE shares.share_to = ? AND shares.post_id = posts.post_id AND posts.user = users.id ORDER BY shares.share_time DESC LIMIT 40',
+    'SELECT posts.post_id, shares.share_id, posts.user, users.username, users.firstname, users.surname, shares.share_by, posts.description, posts.imgSrc, posts.filter, posts.location, posts.type, posts.group_id, posts.post_time, shares.share_time FROM shares, posts, users WHERE shares.share_to = ? AND shares.post_id = posts.post_id AND posts.user = users.id ORDER BY shares.share_id DESC LIMIT 40',
     [req.body.user]
   )
 
@@ -94,7 +94,7 @@ app.post('/get-shared-posts', async (req, res) => {
 // GET PHOTOS [REQ = USER]
 app.post('/get-photos', async (req, res) => {
   let _photos = await db.query(
-    'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.imgSrc AS imgsrc, posts.filter, posts.post_time FROM posts, users WHERE posts.user = ? AND posts.user = users.id AND posts.type = ? ORDER BY posts.post_time DESC LIMIT 40',
+    'SELECT posts.post_id, posts.user, users.username, users.firstname, users.surname, posts.imgSrc AS imgsrc, posts.filter, posts.post_time FROM posts, users WHERE posts.user = ? AND posts.user = users.id AND posts.type = ? ORDER BY posts.post_id DESC LIMIT 40',
     [req.body.user, 'user']
   )
 
